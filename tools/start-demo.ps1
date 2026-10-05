@@ -3,6 +3,12 @@ $ErrorActionPreference='Stop'
 $repoPath=(Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $workspacePath=(Resolve-Path (Join-Path $repoPath 'example-workspace')).Path
 $instancePath=Join-Path $repoPath 'engine/instances/example-workspace'
+$snapshotPath=Join-Path $workspacePath 'default/rapid/channel_snapshot.json'
+$seedPath=Join-Path $workspacePath '.startup/channel_snapshot.json'
+if (!(Test-Path -LiteralPath $snapshotPath)) {
+    New-Item -ItemType Directory -Force -Path (Split-Path $snapshotPath) | Out-Null
+    Copy-Item -LiteralPath $seedPath -Destination $snapshotPath
+}
 $enginePath=(Resolve-Path -LiteralPath $EngineExecutable).Path
 $groundPeerPort=$Port+10200
 $flightPeerPort=$Port+10201
