@@ -29,10 +29,12 @@ if (!$EngineOnly) {
     $peer=Get-Content -LiteralPath $peerPath -Raw | ConvertFrom-Json -AsHashtable
     $peer.receive_endpoint="tcp://127.0.0.1:$groundPeerPort"
     $peer.send_endpoint="tcp://127.0.0.1:$flightPeerPort"
-    $peer | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $peerPath -Encoding utf8
     $connections=@($peer)
 }
-@{schema_version=1;connections=$connections} | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath (Join-Path $workspacePath 'default/edge_node_connections.json') -Encoding utf8
+$connectionsPath=Join-Path $workspacePath 'default/edge_node_connections.json'
+if (!$EngineOnly -and ($Port -ne 7400 -or !(Test-Path -LiteralPath $connectionsPath))) {
+    @{schema_version=1;connections=$connections} | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $connectionsPath -Encoding utf8
+}
 $env:DARTWIC_CONFIG_DIR=$instancePath
 $engineProcess=Start-Process -FilePath $enginePath -WorkingDirectory (Split-Path $enginePath) -WindowStyle Hidden -RedirectStandardOutput (Join-Path $instancePath 'engine.stdout.log') -RedirectStandardError (Join-Path $instancePath 'engine.stderr.log') -PassThru
 @{engine_pid=$engineProcess.Id;engine_path=$enginePath;port=$Port} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $instancePath 'demo-processes.json')

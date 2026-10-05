@@ -50,13 +50,19 @@ def main():
         wait('idle and valid', lambda v: v['phase']==0 and v['sensor_valid']==1 and v['abort_active']==0)
         first = values()['sample_counter']
         wait('read task advances', lambda v: v['sample_counter']>first+5)
-        frame = client.operation('rapid/dataframes/start', {'name':'Rocket acceptance', 'channels':channels, 'events':'all', 'logs':'all'})
+        initial_tanks = values()
+        record_channels = ['rocket_sim_'+name for name in
+                           ['phase', 'pressure', 'temperature_voted', 'abort_active', 'fuel_position', 'igniter_applied']]
+        frame = client.operation('rapid/dataframes/start', {'name':'Rocket acceptance', 'channels':record_channels, 'events':'all', 'logs':'all'})
         write('fault_overtemperature', 1)
         time.sleep(.4)
         assert values()['abort_active']==0, 'High-temp switch must wait for ignition'
         write('timeline_run', 1)
         wait('high-temp switch aborts at ignition', lambda v: v['phase']==2 and v['abort_active']==1 and v['igniter_applied']==0, 20)
-        assert values()['run_fill']>=59.5 and values()['supply_fill']<100, 'Supply-to-run transfer missing'
+        filled = values()
+        assert filled['run_fill']>=59.5, 'Run tank did not reach the fill target'
+        if initial_tanks['run_fill']<59.5:
+            assert filled['supply_fill']<initial_tanks['supply_fill'], 'Supply-to-run transfer missing'
         write('fault_overtemperature', 0)
         wait('fill and ignition reach firing', lambda v: v['phase']==3 and v['igniter_applied']==1, 20)
         wait('pressure and temperature respond', lambda v: v['pressure']>40 and v['temperature_voted']>900)

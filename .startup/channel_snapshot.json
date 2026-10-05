@@ -59,7 +59,7 @@
     },
     {
       "key": "rocket_sim_fault_disconnect",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -73,7 +73,7 @@
     },
     {
       "key": "rocket_sim_fault_missing_sensor",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -87,7 +87,7 @@
     },
     {
       "key": "rocket_sim_fault_overtemperature",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -101,7 +101,7 @@
     },
     {
       "key": "rocket_sim_fault_sensor_bias",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -115,7 +115,7 @@
     },
     {
       "key": "rocket_sim_fill_close_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -129,7 +129,7 @@
     },
     {
       "key": "rocket_sim_fill_open_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -199,7 +199,7 @@
     },
     {
       "key": "rocket_sim_fuel_close_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -227,7 +227,7 @@
     },
     {
       "key": "rocket_sim_fuel_open_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -297,7 +297,7 @@
     },
     {
       "key": "rocket_sim_igniter_command",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -311,7 +311,7 @@
     },
     {
       "key": "rocket_sim_oxidizer_close_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -339,7 +339,7 @@
     },
     {
       "key": "rocket_sim_oxidizer_open_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -381,7 +381,7 @@
     },
     {
       "key": "rocket_sim_phase",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -549,7 +549,7 @@
     },
     {
       "key": "rocket_sim_vent_close_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",
@@ -563,7 +563,7 @@
     },
     {
       "key": "rocket_sim_vent_open_coil",
-      "storage": "dynamic",
+      "storage": "fixed",
       "units": "",
       "stale_timeout": 0,
       "control_policy": "free",

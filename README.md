@@ -4,8 +4,8 @@ Learn drivers, Lua DCode, clients, and TEMPEST Peer using one simulated system. 
 
 ## Start
 
-1. Install Engine and Interface **2.0.0-beta.3 or newer** and the matching example plugin from `default/downloads/plugin.zip`. The workspace runs seven tasks; your license must permit them. Running the download does not need a C++ compiler.
-2. Extract `mock-rocket-test.zip` under `workspaces/`. Keep `default/`, `global_data/`, `default/tools/`, assets, and walkthroughs together.
+1. Install Engine and Interface **2.0.0-beta.3 or newer** and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). The packaged workspace ZIP includes the built plugin at `default/downloads/plugin.zip`, so running that download needs no C++ compiler. The workspace runs seven tasks; your license must permit them.
+2. Clone this repository or extract `mock-rocket-test.zip` under `workspaces/`. Keep `default/`, `global_data/`, `default/tools/`, assets, and walkthroughs together.
 3. Run the launcher in PowerShell 7 with your installed engine executable. It creates a separate local instance and prompts for your own license and password on first use.
 
 ```powershell
@@ -13,7 +13,7 @@ Learn drivers, Lua DCode, clients, and TEMPEST Peer using one simulated system. 
 ```
 
 4. In the Interface, choose **Add workspace** and select this `mock-rocket-test` folder. It detects and connects to the running instance using `../engine/instances/mock-rocket-test/config.json`. You can also use **New connection** with the address and password shown by the launcher. Open **Schematics -> Mock Rocket Test**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off.
-5. Start the supplied flight application in a second terminal:
+5. Start the flight application in a second terminal. The packaged ZIP includes this executable; for a source clone, build it from the example plugin or use its Windows download:
 
 ```powershell
 ./default/tools/flight-peer/bin/rocket-flight-peer.exe --transport custom

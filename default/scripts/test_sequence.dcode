@@ -19,14 +19,15 @@ task_timeline rocket_test 20:
                     command |rocket_sim_igniter_command| = 0
                 wait_for 100ms
 
+            command |rocket_sim_fill_request| = 0
             set |rocket_sim_phase| = 2
             log("Rocket sequence", "Ignition: close fill valve, apply igniter, wait two seconds")
-            ignition_seconds = 0
-            while ignition_seconds < 2:
-                if |rocket_sim_abort_active| == 0:
-                    command |rocket_sim_fill_request| = 0
-                    command |rocket_sim_igniter_command| = 1
-                    ignition_seconds = ignition_seconds + 0.1
+            wait_for 200ms
+            while |rocket_sim_abort_active| == 1:
+                wait_for 100ms
+            command |rocket_sim_igniter_command| = 1
+            wait_for 2s
+            while |rocket_sim_abort_active| == 1:
                 wait_for 100ms
 
             set |rocket_sim_phase| = 3
