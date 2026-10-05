@@ -4,7 +4,7 @@ This repository pairs with [dartwic-example-plugin](https://github.com/kemptonbu
 
 ## Start
 
-1. Use the updated storage-enabled development Engine and Interface and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). The original public beta.3 downloads predate the layered settings and shared assets used here. The downloadable ZIP includes the built plugin at `example-workspace/default/downloads/plugin.zip`, so running that download needs no C++ compiler. The workspace runs seven tasks; your license must permit them.
+1. Use DARTWIC Engine and Interface 2.0.0 or newer and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). Core 2.0.0 packages will be published separately. The downloadable ZIP includes the built plugin at `example-workspace/default/downloads/plugin.zip`, so running that download needs no C++ compiler. The workspace runs seven tasks; your license must permit them.
 2. Clone this repository into `workspaces/dartwic-example-workspace`, or extract `dartwic-example-workspace.zip` under `workspaces/`. Keep `example-workspace/`, `tools/`, `flight-computer/`, and `walkthroughs/` together.
 3. Run the launcher in PowerShell 7 with your installed engine executable. It creates a separate local instance and prompts for your own license and password on first use.
 
@@ -29,7 +29,7 @@ You can add `example-workspace/` directly without the launcher. The authored idl
 
 The workspace's portable settings live in `global_data/settings.json`; project overrides belong in `default/settings.json`. The rocket model is a shared asset at `global_data/assets/models/`, referenced as `assets/models/...` by its schematic. Tasks, scripts, modules, and authored channel definitions are portable too. Local instance configuration, passwords, license keys, recordings, and caches are not part of this repository or release archive.
 
-Use the updated storage-enabled development Engine/Interface for layered settings and shared asset APIs. The original public beta.3 host predates those APIs. See the plugin's [storage and settings guide](https://github.com/kemptonburton/dartwic-example-plugin/blob/main/docs/storage-and-settings.md) for plugin settings, module settings, and Model3D asset examples.
+Use Engine and Interface 2.0.0 or newer for layered settings and shared asset APIs. See the plugin's [storage and settings guide](https://github.com/kemptonburton/dartwic-example-plugin/blob/main/docs/storage-and-settings.md) for plugin settings, module settings, and Model3D asset examples.
 
 The example plugin's settings panel saves a run label at workspace or project scope.
 Open Example Notes after saving to see the effective label. Reset removes only

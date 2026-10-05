@@ -3,14 +3,14 @@
   "plugins": [
     {
       "id": "example_device_plugin",
-      "version": "2.0.0-beta.2",
+      "version": "2.0.0",
       "repo": "kemptonburton/dartwic-example-plugin"
     }
   ],
   "interface_plugins": [
     {
       "id": "example_device_plugin",
-      "version": "2.0.0-beta.2",
+      "version": "2.0.0",
       "repo": "kemptonburton/dartwic-example-plugin"
     }
   ],
