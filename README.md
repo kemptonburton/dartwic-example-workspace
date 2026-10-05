@@ -13,7 +13,7 @@ This repository pairs with [dartwic-example-plugin](https://github.com/kemptonbu
 ```
 
 4. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. It detects and connects to the running instance using `workspaces/dartwic-example-workspace/engine/instances/example-workspace/config.json`. You can also use **New connection** with the address and password shown by the launcher. Open **Schematics -> Mock Rocket Test**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off.
-5. Start the flight application in a second terminal. The packaged ZIP includes this executable; for a source clone, build it from the example plugin or use its Windows download:
+5. Start the flight application in a second terminal. The packaged ZIP includes this executable; for a source clone, build it with this repository's CMake project or use its Windows download:
 
 ```powershell
 ./flight-computer/bin/rocket-flight-peer.exe --transport custom
