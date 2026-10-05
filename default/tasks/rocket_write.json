@@ -1,60 +1,48 @@
 {
-  "arguments": {
-    "channel_prefix": "rocket_sim",
-    "module_instance_name": "rocket_device",
-    "write_mappings": [
-      {
-        "device_field": "fuel_open_coil",
-        "channel": "rocket_sim_fuel_open_coil"
-      },
-      {
-        "device_field": "fuel_close_coil",
-        "channel": "rocket_sim_fuel_close_coil"
-      },
-      {
-        "device_field": "oxidizer_open_coil",
-        "channel": "rocket_sim_oxidizer_open_coil"
-      },
-      {
-        "device_field": "oxidizer_close_coil",
-        "channel": "rocket_sim_oxidizer_close_coil"
-      },
-      {
-        "device_field": "fill_open_coil",
-        "channel": "rocket_sim_fill_open_coil"
-      },
-      {
-        "device_field": "fill_close_coil",
-        "channel": "rocket_sim_fill_close_coil"
-      },
-      {
-        "device_field": "vent_open_coil",
-        "channel": "rocket_sim_vent_open_coil"
-      },
-      {
-        "device_field": "vent_close_coil",
-        "channel": "rocket_sim_vent_close_coil"
-      },
-      {
-        "device_field": "igniter_command",
-        "channel": "rocket_sim_igniter_command"
-      }
-    ]
-  },
-  "metadata": {
-    "fixed_input_channels": [
-      "rocket_sim_fuel_open_coil",
-      "rocket_sim_fuel_close_coil",
-      "rocket_sim_oxidizer_open_coil",
-      "rocket_sim_oxidizer_close_coil",
-      "rocket_sim_fill_open_coil",
-      "rocket_sim_fill_close_coil",
-      "rocket_sim_vent_open_coil",
-      "rocket_sim_vent_close_coil",
-      "rocket_sim_igniter_command"
-    ]
-  },
-  "schema_version": 2,
-  "task_name": "rocket_write",
-  "task_type": "example_device_plugin.rocket_write"
+    "arguments": {
+        "channel_prefix": "rocket_sim",
+        "module_instance_name": "rocket_device",
+        "write_mappings": [
+            {
+                "channel": "rocket_sim_fuel_open_coil",
+                "device_field": "fuel_open_coil"
+            },
+            {
+                "channel": "rocket_sim_fuel_close_coil",
+                "device_field": "fuel_close_coil"
+            },
+            {
+                "channel": "rocket_sim_oxidizer_open_coil",
+                "device_field": "oxidizer_open_coil"
+            },
+            {
+                "channel": "rocket_sim_oxidizer_close_coil",
+                "device_field": "oxidizer_close_coil"
+            },
+            {
+                "channel": "rocket_sim_fill_open_coil",
+                "device_field": "fill_open_coil"
+            },
+            {
+                "channel": "rocket_sim_fill_close_coil",
+                "device_field": "fill_close_coil"
+            },
+            {
+                "channel": "rocket_sim_vent_open_coil",
+                "device_field": "vent_open_coil"
+            },
+            {
+                "channel": "rocket_sim_vent_close_coil",
+                "device_field": "vent_close_coil"
+            },
+            {
+                "channel": "rocket_sim_igniter_command",
+                "device_field": "igniter_command"
+            }
+        ]
+    },
+    "metadata": {},
+    "schema_version": 2,
+    "task_name": "rocket_write",
+    "task_type": "example_device_plugin.rocket_write"
 }
