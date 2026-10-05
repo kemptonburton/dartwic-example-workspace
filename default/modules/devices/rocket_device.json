@@ -1,0 +1,6 @@
+{
+  "module_type": "rocket_sim",
+  "name": "rocket_device",
+  "plugin": "example_device_plugin",
+  "parameters": {}
+}

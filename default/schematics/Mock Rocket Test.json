@@ -1,0 +1,1479 @@
+{
+  "flow_instance": {
+    "nodes": [
+      {
+        "id": "xray-engine-side",
+        "type": "model_3d",
+        "position": {
+          "x": 440,
+          "y": 150
+        },
+        "data": {
+          "asset_path": "schematic_assets/models/96bc2f4d97f4025900282341c44464859fe571097a5b2ee4e9fd2750c6b94654.model.json",
+          "asset_name": "ROCKET ENGINE",
+          "bindings": {
+            "node:5": {
+              "color_rule": {
+                "mode": "gradient",
+                "source_channel": "|rocket_sim_temperature_voted|",
+                "min": 300,
+                "max": 1800,
+                "fallback": "#64748b",
+                "stops": [
+                  {
+                    "value": 300,
+                    "color": "#58baff"
+                  },
+                  {
+                    "value": 1050,
+                    "color": "#ffb75e"
+                  },
+                  {
+                    "value": 1800,
+                    "color": "#ff5348"
+                  }
+                ]
+              }
+            },
+            "node:22": {
+              "color_rule": {
+                "mode": "gradient",
+                "source_channel": "|rocket_sim_temperature_voted|",
+                "min": 300,
+                "max": 1800,
+                "fallback": "#64748b",
+                "stops": [
+                  {
+                    "value": 300,
+                    "color": "#58baff"
+                  },
+                  {
+                    "value": 1050,
+                    "color": "#ffb75e"
+                  },
+                  {
+                    "value": 1800,
+                    "color": "#ff5348"
+                  }
+                ]
+              }
+            },
+            "node:8": {
+              "color_rule": {
+                "mode": "gradient",
+                "source_channel": "|rocket_sim_pressure|",
+                "min": 0,
+                "max": 100,
+                "fallback": "#64748b",
+                "stops": [
+                  {
+                    "value": 0,
+                    "color": "#58baff"
+                  },
+                  {
+                    "value": 50,
+                    "color": "#ffb75e"
+                  },
+                  {
+                    "value": 100,
+                    "color": "#ff5348"
+                  }
+                ]
+              }
+            },
+            "node:24": {
+              "color_rule": {
+                "mode": "gradient",
+                "source_channel": "|rocket_sim_flow|",
+                "min": 0,
+                "max": 20,
+                "fallback": "#64748b",
+                "stops": [
+                  {
+                    "value": 0,
+                    "color": "#58baff"
+                  },
+                  {
+                    "value": 10,
+                    "color": "#ffb75e"
+                  },
+                  {
+                    "value": 20,
+                    "color": "#ff5348"
+                  }
+                ]
+              }
+            }
+          },
+          "camera": {
+            "preset": "custom",
+            "position": [
+              0.057035803794860854,
+              0.4500000149011619,
+              12.457271335090544
+            ],
+            "target": [
+              0.057035803794860854,
+              0.45000001490116115,
+              0
+            ],
+            "up": [
+              0,
+              1,
+              0
+            ],
+            "zoom": 1,
+            "frame": {
+              "left": -0.6029156089915931,
+              "right": 0.6029156089915931,
+              "top": 0.409640267835354,
+              "bottom": -0.40964026783535407,
+              "aspect": 1.1288459525036567
+            }
+          },
+          "orientation": {
+            "x": 0,
+            "y": 0,
+            "z": 90
+          },
+          "appearance": {
+            "color": "light-dark(#000000, #555555)",
+            "glow": 0.8,
+            "surface": 0.06,
+            "edges": 1,
+            "opacity": 0.35,
+            "background": "transparent",
+            "preset": "technical"
+          },
+          "general_settings": {
+            "top_label": "",
+            "general_alarming_tags": [],
+            "bottom_label": "",
+            "config_selected_tab": "model-3d"
+          },
+          "style_groups": []
+        },
+        "width": 275,
+        "height": 250
+      },
+      {
+        "id": "display-rocket_sim_temperature_voted",
+        "type": "channel_display",
+        "position": {
+          "x": 20,
+          "y": 110
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_temperature_voted",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_temperature_voted|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "VOTED TEMPERATURE"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "K"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_pressure",
+        "type": "channel_display",
+        "position": {
+          "x": 20,
+          "y": 185
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_pressure",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_pressure|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "CHAMBER PRESSURE"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "bar"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_flow",
+        "type": "channel_display",
+        "position": {
+          "x": 20,
+          "y": 260
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_flow",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_flow|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "FLOW"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "kg/s"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_run_fill",
+        "type": "channel_display",
+        "position": {
+          "x": 235,
+          "y": 480
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_run_fill",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_run_fill|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "RUN TANK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "%"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_supply_fill",
+        "type": "channel_display",
+        "position": {
+          "x": 235,
+          "y": 110
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_supply_fill",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_supply_fill|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "SUPPLY TANK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "%"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_sensor_valid",
+        "type": "channel_display",
+        "position": {
+          "x": 740,
+          "y": 185
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_sensor_valid",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_sensor_valid|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "SENSOR VALID"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_connected",
+        "type": "channel_display",
+        "position": {
+          "x": 740,
+          "y": 260
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_connected",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_connected|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "DEVICE CONNECTED"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_abort_active",
+        "type": "channel_display",
+        "position": {
+          "x": 740,
+          "y": 335
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_abort_active",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_abort_active|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "ABORT ACTIVE"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_test_running",
+        "type": "switch",
+        "position": {
+          "x": 20,
+          "y": 20
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_test_running|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_test_running|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "RUN TEST",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_fault_overtemperature",
+        "type": "switch",
+        "position": {
+          "x": 200,
+          "y": 20
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_fault_overtemperature|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_fault_overtemperature|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "HIGH TEMP ON IGNITION",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_fault_sensor_bias",
+        "type": "switch",
+        "position": {
+          "x": 380,
+          "y": 20
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_fault_sensor_bias|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_fault_sensor_bias|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "SENSOR BIAS",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_fault_missing_sensor",
+        "type": "switch",
+        "position": {
+          "x": 560,
+          "y": 20
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_fault_missing_sensor|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_fault_missing_sensor|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "MISSING READINGS",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_fault_disconnect",
+        "type": "switch",
+        "position": {
+          "x": 740,
+          "y": 20
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_fault_disconnect|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_fault_disconnect|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "DISCONNECT DEVICE",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_fuel_request",
+        "type": "switch",
+        "position": {
+          "x": 20,
+          "y": 560
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_fuel_request|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_fuel_request|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "FUEL REQUEST",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_fuel_position",
+        "type": "channel_display",
+        "position": {
+          "x": 20,
+          "y": 635
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_fuel_position",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_fuel_position|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "FUEL FEEDBACK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 2,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_oxidizer_request",
+        "type": "switch",
+        "position": {
+          "x": 200,
+          "y": 560
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_oxidizer_request|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_oxidizer_request|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "OXIDIZER REQUEST",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_oxidizer_position",
+        "type": "channel_display",
+        "position": {
+          "x": 200,
+          "y": 635
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_oxidizer_position",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_oxidizer_position|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "OXIDIZER FEEDBACK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 2,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_fill_request",
+        "type": "switch",
+        "position": {
+          "x": 380,
+          "y": 560
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_fill_request|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_fill_request|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "FILL REQUEST",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_fill_position",
+        "type": "channel_display",
+        "position": {
+          "x": 380,
+          "y": 635
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_fill_position",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_fill_position|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "FILL FEEDBACK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 2,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "switch-rocket_sim_vent_request",
+        "type": "switch",
+        "position": {
+          "x": 560,
+          "y": 560
+        },
+        "width": 160,
+        "height": 60,
+        "data": {
+          "selected_tag": "|rocket_sim_vent_request|",
+          "actualValueConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_vent_request|"
+          },
+          "true_value": "1",
+          "false_value": "0",
+          "show_commanded_position": true,
+          "general_settings": {
+            "top_label": "VENT REQUEST",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_sim_vent_position",
+        "type": "channel_display",
+        "position": {
+          "x": 560,
+          "y": 635
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_vent_position",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_vent_position|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "VENT FEEDBACK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 2,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "task-rocket_read",
+        "type": "task_control",
+        "position": {
+          "x": 20,
+          "y": 720
+        },
+        "width": 280,
+        "height": 85,
+        "data": {
+          "task_instance_key": "rocket_read",
+          "show_task_name": true,
+          "show_frequency": true,
+          "show_target_frequency": true,
+          "general_settings": {
+            "top_label": "ROCKET_READ",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "task-rocket_write",
+        "type": "task_control",
+        "position": {
+          "x": 320,
+          "y": 720
+        },
+        "width": 280,
+        "height": 85,
+        "data": {
+          "task_instance_key": "rocket_write",
+          "show_task_name": true,
+          "show_frequency": true,
+          "show_target_frequency": true,
+          "general_settings": {
+            "top_label": "ROCKET_WRITE",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "task-rocket_test",
+        "type": "task_control",
+        "position": {
+          "x": 620,
+          "y": 720
+        },
+        "width": 280,
+        "height": 85,
+        "data": {
+          "task_instance_key": "rocket_test",
+          "show_task_name": true,
+          "show_frequency": true,
+          "show_target_frequency": true,
+          "general_settings": {
+            "top_label": "ROCKET_TEST",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-FLIGHT_COMPUTER:battery_voltage",
+        "type": "channel_display",
+        "position": {
+          "x": 740,
+          "y": 560
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:battery_voltage",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:battery_voltage|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "FLIGHT BATTERY"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "V"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-FLIGHT_COMPUTER:ground_ambient",
+        "type": "channel_display",
+        "position": {
+          "x": 740,
+          "y": 635
+        },
+        "width": 160,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:ground_ambient",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:ground_ambient|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "GROUND \u2192 FLIGHT"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "K"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "graph-1110",
+        "type": "channel_graph",
+        "position": {
+          "x": 20,
+          "y": 825
+        },
+        "width": 880,
+        "height": 190,
+        "data": {
+          "width": 880,
+          "height": 190,
+          "title": "Pressure and flow",
+          "settings": {
+            "showCard": true
+          },
+          "realtimeWindowSeconds": 30,
+          "series": [
+            {
+              "channel_reference": "|rocket_sim_pressure|",
+              "label": "Pressure",
+              "yAxis": 1,
+              "color": "#38bdf8"
+            },
+            {
+              "channel_reference": "|rocket_sim_flow|",
+              "label": "Flow",
+              "yAxis": 2,
+              "color": "#f97316"
+            }
+          ]
+        }
+      },
+      {
+        "id": "graph-1400",
+        "type": "channel_graph",
+        "position": {
+          "x": 20,
+          "y": 1035
+        },
+        "width": 880,
+        "height": 190,
+        "data": {
+          "width": 880,
+          "height": 190,
+          "title": "Sensor voting",
+          "settings": {
+            "showCard": true
+          },
+          "realtimeWindowSeconds": 30,
+          "series": [
+            {
+              "channel_reference": "|rocket_sim_temperature_1|",
+              "label": "T1",
+              "yAxis": 1,
+              "color": "#38bdf8"
+            },
+            {
+              "channel_reference": "|rocket_sim_temperature_2|",
+              "label": "T2",
+              "yAxis": 1,
+              "color": "#f97316"
+            },
+            {
+              "channel_reference": "|rocket_sim_temperature_3|",
+              "label": "T3",
+              "yAxis": 1,
+              "color": "#22c55e"
+            },
+            {
+              "channel_reference": "|rocket_sim_temperature_voted|",
+              "label": "Median",
+              "yAxis": 1,
+              "color": "#a855f7"
+            }
+          ]
+        }
+      },
+      {
+        "id": "supply-tank",
+        "type": "tank",
+        "position": {
+          "x": 250,
+          "y": 170
+        },
+        "width": 120,
+        "height": 100,
+        "data": {
+          "fillColorConfigurableInput": {
+            "type": "hex_color",
+            "value": "#4FC6D3"
+          },
+          "fillPercentageConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_supply_fill|"
+          },
+          "general_settings": {
+            "top_label": "SUPPLY TANK",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "run-tank",
+        "type": "tank",
+        "position": {
+          "x": 250,
+          "y": 365
+        },
+        "width": 120,
+        "height": 100,
+        "data": {
+          "fillColorConfigurableInput": {
+            "type": "hex_color",
+            "value": "#4FC6D3"
+          },
+          "fillPercentageConfigurableInput": {
+            "type": "tag_value",
+            "value": "|rocket_sim_run_fill|"
+          },
+          "general_settings": {
+            "top_label": "RUN TANK",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "data": {
+          "discrete_input": {
+            "input_type": "discrete",
+            "selected_tag": ""
+          },
+          "function_call": {
+            "inputList": [],
+            "selected_function": ""
+          },
+          "general_settings": {
+            "top_label": "FILL",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          },
+          "openStateIfElseBlock": {
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_fill_position|"
+            },
+            "ifChecks": [],
+            "ifConfigurableInput": {}
+          },
+          "orientation": "vertical",
+          "selected_tab": "toggle",
+          "tag_update": {
+            "ifElseBlock": {
+              "elseConfigurableInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "ifChecks": [],
+              "ifConfigurableInput": {}
+            },
+            "selected_tag": "|rocket_sim_fill_request|"
+          },
+          "show_commanded_position": true
+        },
+        "height": 41,
+        "type": "valve",
+        "width": 41,
+        "id": "fill-valve",
+        "position": {
+          "x": 290,
+          "y": 295
+        }
+      },
+      {
+        "id": "display-phase",
+        "type": "channel_display",
+        "position": {
+          "x": 740,
+          "y": 430
+        },
+        "width": 275,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_sim_phase",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_phase|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "PHASE: 0 IDLE / 1 FILL / 2 IGNITION / 3 FIRE"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 0,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "data": {
+          "discrete_input": {
+            "input_type": "discrete",
+            "selected_tag": ""
+          },
+          "function_call": {
+            "inputList": [],
+            "selected_function": ""
+          },
+          "general_settings": {
+            "top_label": "FUEL",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          },
+          "openStateIfElseBlock": {
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_fuel_position|"
+            },
+            "ifChecks": [],
+            "ifConfigurableInput": {}
+          },
+          "orientation": "horizontal",
+          "selected_tab": "toggle",
+          "tag_update": {
+            "ifElseBlock": {
+              "elseConfigurableInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "ifChecks": [],
+              "ifConfigurableInput": {}
+            },
+            "selected_tag": "|rocket_sim_fuel_request|"
+          },
+          "show_commanded_position": true
+        },
+        "height": 41,
+        "type": "valve",
+        "width": 41,
+        "id": "fuel-valve",
+        "position": {
+          "x": 445,
+          "y": 414
+        }
+      },
+      {
+        "data": {
+          "discrete_input": {
+            "input_type": "discrete",
+            "selected_tag": ""
+          },
+          "function_call": {
+            "inputList": [],
+            "selected_function": ""
+          },
+          "general_settings": {
+            "top_label": "OXIDIZER",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          },
+          "openStateIfElseBlock": {
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_oxidizer_position|"
+            },
+            "ifChecks": [],
+            "ifConfigurableInput": {}
+          },
+          "orientation": "horizontal",
+          "selected_tab": "toggle",
+          "tag_update": {
+            "ifElseBlock": {
+              "elseConfigurableInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "ifChecks": [],
+              "ifConfigurableInput": {}
+            },
+            "selected_tag": "|rocket_sim_oxidizer_request|"
+          },
+          "show_commanded_position": true
+        },
+        "height": 41,
+        "type": "valve",
+        "width": 41,
+        "id": "oxidizer-valve",
+        "position": {
+          "x": 445,
+          "y": 475
+        }
+      },
+      {
+        "data": {
+          "discrete_input": {
+            "input_type": "discrete",
+            "selected_tag": ""
+          },
+          "function_call": {
+            "inputList": [],
+            "selected_function": ""
+          },
+          "general_settings": {
+            "top_label": "VENT",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          },
+          "openStateIfElseBlock": {
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_sim_vent_position|"
+            },
+            "ifChecks": [],
+            "ifConfigurableInput": {}
+          },
+          "orientation": "horizontal",
+          "selected_tab": "toggle",
+          "tag_update": {
+            "ifElseBlock": {
+              "elseConfigurableInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "ifChecks": [],
+              "ifConfigurableInput": {}
+            },
+            "selected_tag": "|rocket_sim_vent_request|"
+          },
+          "show_commanded_position": true
+        },
+        "height": 41,
+        "type": "valve",
+        "width": 41,
+        "id": "vent-valve",
+        "position": {
+          "x": 185,
+          "y": 420
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "supply-fill",
+        "type": "edge",
+        "source": "supply-tank",
+        "target": "fill-valve",
+        "sourceHandle": "tank-bottom-50-1",
+        "targetHandle": "top-2",
+        "style": {
+          "stroke": "#4FC6D3",
+          "strokeWidth": 3
+        },
+        "data": {
+          "fillColorConfigurableInput": {
+            "type": "hex_color",
+            "value": "#4FC6D3"
+          },
+          "strokeWidthConfigurableInput": {
+            "type": "discrete_input_numerical",
+            "value": 3
+          }
+        }
+      },
+      {
+        "id": "fill-run",
+        "type": "edge",
+        "source": "fill-valve",
+        "target": "run-tank",
+        "sourceHandle": "bottom-1",
+        "targetHandle": "tank-top-50-2",
+        "style": {
+          "stroke": "#4FC6D3",
+          "strokeWidth": 3
+        },
+        "data": {
+          "fillColorConfigurableInput": {
+            "type": "hex_color",
+            "value": "#4FC6D3"
+          },
+          "strokeWidthConfigurableInput": {
+            "type": "discrete_input_numerical",
+            "value": 3
+          }
+        }
+      },
+      {
+        "id": "run-fuel",
+        "type": "edge",
+        "source": "run-tank",
+        "target": "fuel-valve",
+        "sourceHandle": "tank-right-50-1",
+        "targetHandle": "left-2",
+        "style": {
+          "stroke": "#4FC6D3",
+          "strokeWidth": 3
+        },
+        "data": {
+          "fillColorConfigurableInput": {
+            "type": "hex_color",
+            "value": "#4FC6D3"
+          },
+          "strokeWidthConfigurableInput": {
+            "type": "discrete_input_numerical",
+            "value": 3
+          }
+        }
+      },
+      {
+        "id": "run-oxidizer",
+        "type": "edge",
+        "source": "run-tank",
+        "target": "oxidizer-valve",
+        "sourceHandle": "tank-right-50-1",
+        "targetHandle": "left-2",
+        "style": {
+          "stroke": "#4FC6D3",
+          "strokeWidth": 3
+        },
+        "data": {
+          "fillColorConfigurableInput": {
+            "type": "hex_color",
+            "value": "#4FC6D3"
+          },
+          "strokeWidthConfigurableInput": {
+            "type": "discrete_input_numerical",
+            "value": 3
+          }
+        }
+      },
+      {
+        "id": "run-vent",
+        "type": "edge",
+        "source": "run-tank",
+        "target": "vent-valve",
+        "sourceHandle": "tank-left-50-1",
+        "targetHandle": "right-2",
+        "style": {
+          "stroke": "#4FC6D3",
+          "strokeWidth": 3
+        },
+        "data": {
+          "fillColorConfigurableInput": {
+            "type": "hex_color",
+            "value": "#4FC6D3"
+          },
+          "strokeWidthConfigurableInput": {
+            "type": "discrete_input_numerical",
+            "value": 3
+          }
+        }
+      }
+    ],
+    "viewport": {
+      "x": 30,
+      "y": 25,
+      "zoom": 0.72
+    }
+  },
+  "background_settings": {
+    "variant": "blank",
+    "color": "#606060",
+    "gap": 12,
+    "size": 1
+  },
+  "view_settings": {
+    "zoom": 0.72,
+    "view_mode": "manual",
+    "two_click_commands_enabled": false
+  },
+  "version": 1
+}

@@ -1,0 +1,24 @@
+{
+  "node": {
+    "data": {
+      "task_instance_key": "",
+      "bound_task_snapshot": {
+        "name": "",
+        "task_type": "",
+        "structure": "state machine",
+        "running_channel": "",
+        "current_state_channel": "",
+        "target_state_channel": "",
+        "states": []
+      },
+      "show_task_name": true,
+      "general_settings": {
+        "top_label": "",
+        "bottom_label": ""
+      }
+    },
+    "height": 112,
+    "type": "state_machine_control",
+    "width": 280
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "connections": [
+    {
+      "argus": {
+        "enabled": true
+      },
+      "host": "127.0.0.1",
+      "node_name": "FLIGHT_COMPUTER",
+      "peer_id": "example_device_plugin.example_flight_link",
+      "poll_interval_ms": 5000,
+      "port": 7200,
+      "rapid": {
+        "channels": [
+          "rocket_sim_ground_ambient",
+          "rocket_test_running"
+        ],
+        "enabled": true,
+        "publish_all": false
+      },
+      "receive_endpoint": "tcp://127.0.0.1:17600",
+      "secret_fields": [],
+      "send_endpoint": "tcp://127.0.0.1:17601"
+    }
+  ],
+  "schema_version": 1
+}

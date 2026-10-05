@@ -1,0 +1,5 @@
+valves:
+  - valve: fuel
+  - valve: oxidizer
+  - valve: fill
+  - valve: vent

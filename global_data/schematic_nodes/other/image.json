@@ -1,0 +1,22 @@
+{
+  "node": {
+    "data": {
+      "source_type": "image",
+      "image_src": "",
+      "svg_data": {
+        "svg_string": "",
+        "vb_h": 100,
+        "vb_min_x": 100,
+        "vb_min_x_scale": 1,
+        "vb_min_y": 100,
+        "vb_min_y_scale": 1,
+        "vb_w": 100,
+        "vb_w_scale": 1,
+        "vb_h_scale": 1
+      }
+    },
+    "height": 100,
+    "type": "image",
+    "width": 100
+  }
+}

@@ -1,0 +1,9 @@
+# Median voting tolerates one biased input; validity is checked separately.
+channel_calculation rocket_sim_temperature_voted:
+    a = |rocket_sim_temperature_1|
+    b = |rocket_sim_temperature_2|
+    c = |rocket_sim_temperature_3|
+    return a + b + c - math.min(a, b, c) - math.max(a, b, c)
+
+channel_calculation rocket_sim_temperature_spread:
+    return math.max(|rocket_sim_temperature_1|, |rocket_sim_temperature_2|, |rocket_sim_temperature_3|) - math.min(|rocket_sim_temperature_1|, |rocket_sim_temperature_2|, |rocket_sim_temperature_3|)

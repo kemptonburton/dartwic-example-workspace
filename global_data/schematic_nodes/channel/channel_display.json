@@ -1,0 +1,27 @@
+{
+  "node": {
+    "data": {
+      "ifElseBlock": {
+        "elseConfigurableInput": {
+          "type": "discrete_input",
+          "value": "0.0"
+        },
+        "ifChecks": [],
+        "ifConfigurableInput": {}
+      },
+      "labelConfigurableInput": {
+        "type": "discrete_input",
+        "value": "parameter"
+      },
+      "show_label": true,
+      "symbol": "P",
+      "unitsConfigurableInput": {
+        "type": "discrete_input",
+        "value": "units"
+      }
+    },
+    "height": 10,
+    "type": "channel_display",
+    "width": 10
+  }
+}

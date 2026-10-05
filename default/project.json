@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "plugins": [
+    {
+      "id": "example_device_plugin",
+      "version": "2.0.0-beta.1",
+      "repo": "kemptonburton/dartwic-example-plugin"
+    }
+  ],
+  "interface_plugins": [
+    {
+      "id": "example_device_plugin",
+      "version": "2.0.0-beta.1",
+      "repo": "kemptonburton/dartwic-example-plugin"
+    }
+  ],
+  "required_files": [
+    "schematics/Mock Rocket Test.json",
+    "scripts/test_sequence.dcode"
+  ]
+}

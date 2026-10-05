@@ -1,0 +1,3 @@
+# The driver reads current; this calculation supplies engineering units.
+channel_calculation rocket_sim_pressure:
+    return (|rocket_sim_pressure_current_ma| - 4) * 100 / 16

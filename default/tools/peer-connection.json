@@ -1,0 +1,18 @@
+{
+  "peer_id": "example_device_plugin.example_flight_link",
+  "node_name": "FLIGHT_COMPUTER",
+  "receive_endpoint": "tcp://127.0.0.1:17600",
+  "send_endpoint": "tcp://127.0.0.1:17601",
+  "rapid": {
+    "enabled": true,
+    "publish_all": false,
+    "channels": [
+      "rocket_sim_ground_ambient",
+      "rocket_test_running"
+    ]
+  },
+  "argus": {
+    "enabled": true
+  },
+  "remember": true
+}

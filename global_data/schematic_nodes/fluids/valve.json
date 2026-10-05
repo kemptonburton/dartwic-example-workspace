@@ -1,0 +1,41 @@
+{
+  "node": {
+    "data": {
+      "discrete_input": {
+        "input_type": "discrete",
+        "selected_tag": ""
+      },
+      "function_call": {
+        "inputList": [],
+        "selected_function": ""
+      },
+      "general_settings": {
+        "allow_button_click_tag": ""
+      },
+      "openStateIfElseBlock": {
+        "elseConfigurableInput": {
+          "type": "discrete_input",
+          "value": ""
+        },
+        "ifChecks": [],
+        "ifConfigurableInput": {}
+      },
+      "orientation": "horizontal",
+      "selected_tab": "function_call",
+      "tag_update": {
+        "ifElseBlock": {
+          "elseConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "ifChecks": [],
+          "ifConfigurableInput": {}
+        },
+        "selected_tag": ""
+      }
+    },
+    "height": 41,
+    "type": "valve",
+    "width": 41
+  }
+}

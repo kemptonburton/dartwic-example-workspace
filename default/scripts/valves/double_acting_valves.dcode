@@ -1,0 +1,42 @@
+params = yaml "./valves.yaml#valves"
+
+template(params) task_periodic rocket_valve_{params.valve}:
+    start:
+        state.last_request = -1
+        state.pulse_until = 0
+        claim |rocket_sim_{params.valve}_open_coil|
+        claim |rocket_sim_{params.valve}_close_coil|
+
+    task elapsed_seconds:
+        request = |rocket_sim_{params.valve}_request|
+        connected = |rocket_sim_connected|
+        set |rocket_sim_{params.valve}_feedback_ok| = connected == 1 and math.abs(|rocket_sim_{params.valve}_position| - request) < 0.05
+        if connected != 1:
+            command |rocket_sim_{params.valve}_open_coil| = 0
+            command |rocket_sim_{params.valve}_close_coil| = 0
+            state.last_request = -1
+            return
+        if request != 0 and request != 1:
+            command |rocket_sim_{params.valve}_open_coil| = 0
+            command |rocket_sim_{params.valve}_close_coil| = 0
+            return
+        if request != state.last_request:
+            # Cancel the opposite coil before starting the new pulse.
+            command |rocket_sim_{params.valve}_open_coil| = 0
+            command |rocket_sim_{params.valve}_close_coil| = 0
+            state.last_request = request
+            state.pulse_until = elapsed_seconds + 0.2
+            if request == 1:
+                command |rocket_sim_{params.valve}_open_coil| = 1
+            else:
+                command |rocket_sim_{params.valve}_close_coil| = 1
+        if elapsed_seconds >= state.pulse_until:
+            command |rocket_sim_{params.valve}_open_coil| = 0
+            command |rocket_sim_{params.valve}_close_coil| = 0
+
+    end:
+        command |rocket_sim_{params.valve}_open_coil| = 0
+        command |rocket_sim_{params.valve}_close_coil| = 0
+        free |rocket_sim_{params.valve}_open_coil|
+        free |rocket_sim_{params.valve}_close_coil|
+        free |rocket_sim_{params.valve}_feedback_ok|

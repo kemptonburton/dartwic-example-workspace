@@ -1,0 +1,761 @@
+{
+  "schema_version": 4,
+  "channels": [
+    {
+      "key": "rocket_read_running",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 1
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_read_target_frequency",
+      "storage": "dynamic",
+      "units": "Hz",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 20
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_abort_active",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_connected",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fault_disconnect",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fault_missing_sensor",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fault_overtemperature",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fault_sensor_bias",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fill_close_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fill_open_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fill_position",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fill_request",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_flight_check",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_flow",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fuel_close_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_run_fill",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fuel_open_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fuel_position",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_fuel_request",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_ground_ambient",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 295
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_igniter_applied",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_igniter_command",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_oxidizer_close_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_supply_fill",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 100
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_oxidizer_open_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_oxidizer_position",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_oxidizer_request",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_phase",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_pressure",
+      "storage": "dynamic",
+      "units": "bar",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_pressure_current_ma",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_test_running",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_sample_age_s",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_sample_counter",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_sensor_valid",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_temperature_1",
+      "storage": "dynamic",
+      "units": "K",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_temperature_2",
+      "storage": "dynamic",
+      "units": "K",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_temperature_3",
+      "storage": "dynamic",
+      "units": "K",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_temperature_spread",
+      "storage": "dynamic",
+      "units": "K",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_temperature_voted",
+      "storage": "dynamic",
+      "units": "K",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_vent_close_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_vent_open_coil",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_vent_position",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_sim_vent_request",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 0
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_test_target_frequency",
+      "storage": "dynamic",
+      "units": "Hz",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 20
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_fill_running",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 1
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_fill_target_frequency",
+      "storage": "dynamic",
+      "units": "Hz",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 20
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_fuel_running",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 1
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_fuel_target_frequency",
+      "storage": "dynamic",
+      "units": "Hz",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 20
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_oxidizer_running",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 1
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_oxidizer_target_frequency",
+      "storage": "dynamic",
+      "units": "Hz",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 20
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_vent_running",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 1
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_valve_vent_target_frequency",
+      "storage": "dynamic",
+      "units": "Hz",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 20
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_write_running",
+      "storage": "dynamic",
+      "units": "",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 1
+      },
+      "data_frame": ""
+    },
+    {
+      "key": "rocket_write_target_frequency",
+      "storage": "dynamic",
+      "units": "Hz",
+      "stale_timeout": 0,
+      "control_policy": "free",
+      "control_owner": "",
+      "record_mode": "on_value_change",
+      "startup_value": {
+        "enabled": true,
+        "value": 20
+      },
+      "data_frame": ""
+    }
+  ]
+}

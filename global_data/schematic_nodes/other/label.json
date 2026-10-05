@@ -1,0 +1,25 @@
+{
+  "node": {
+    "data": {
+      "ifElseBlock": {
+        "elseConfigurableInput": {
+          "type": "discrete_input",
+          "value": "value"
+        },
+        "ifChecks": [],
+        "ifConfigurableInput": {}
+      },
+      "labelConfigurableInput": {
+        "type": "discrete_input",
+        "value": "label"
+      },
+      "unitsConfigurableInput": {
+        "type": "discrete_input",
+        "value": "units"
+      }
+    },
+    "height": 10,
+    "type": "label",
+    "width": 10
+  }
+}

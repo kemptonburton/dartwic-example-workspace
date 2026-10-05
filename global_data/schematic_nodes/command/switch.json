@@ -1,0 +1,22 @@
+{
+  "node": {
+    "data": {
+      "selected_tag": "",
+      "trueValueConfigurableInput": {
+        "type": "discrete_input",
+        "value": "1"
+      },
+      "falseValueConfigurableInput": {
+        "type": "discrete_input",
+        "value": "0"
+      },
+      "general_settings": {
+        "top_label": "",
+        "bottom_label": ""
+      }
+    },
+    "height": 30,
+    "type": "switch",
+    "width": 50
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "node": {
+    "data": {
+      "task_instance_key": "",
+      "bound_task_snapshot": {
+        "name": "",
+        "task_type": "",
+        "target_frequency_channel": "",
+        "actual_frequency_channel": "",
+        "running_channel": "",
+        "hold_channel": ""
+      },
+      "show_task_name": true,
+      "show_frequency": true,
+      "show_target_frequency": true,
+      "general_settings": {
+        "top_label": "",
+        "bottom_label": ""
+      }
+    },
+    "height": 64,
+    "type": "task_control",
+    "width": 260
+  }
+}

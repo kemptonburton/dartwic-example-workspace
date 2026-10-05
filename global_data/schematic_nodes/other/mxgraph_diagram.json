@@ -1,0 +1,25 @@
+{
+  "node": {
+    "data": {
+      "update_rules": [
+        {
+          "id": "",
+          "ifElseBlock": {
+            "elseConfigurableInput": {
+              "type": "discrete_input",
+              "value": ""
+            },
+            "ifChecks": [],
+            "ifConfigurableInput": {}
+          },
+          "property": "",
+          "property_type": "style"
+        }
+      ],
+      "xml_compressed": ""
+    },
+    "height": 100,
+    "type": "mxgraph_diagram",
+    "width": 100
+  }
+}

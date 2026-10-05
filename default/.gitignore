@@ -1,0 +1,10 @@
+# Engine runtime data does not belong in a project.
+/argus/
+/runtime/
+/.dartwic/
+*.duckdb*
+*.dmp
+*.log
+*.tmp.*
+.DS_Store
+Thumbs.db

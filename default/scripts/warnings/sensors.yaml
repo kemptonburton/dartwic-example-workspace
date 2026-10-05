@@ -1,0 +1,26 @@
+sensors:
+  - name: temperature_1
+    channel: rocket_sim_temperature_1
+    title: Temperature sensor 1
+    low: 250
+    high: 1500
+  - name: temperature_2
+    channel: rocket_sim_temperature_2
+    title: Temperature sensor 2
+    low: 250
+    high: 1500
+  - name: temperature_3
+    channel: rocket_sim_temperature_3
+    title: Temperature sensor 3
+    low: 250
+    high: 1500
+  - name: pressure
+    channel: rocket_sim_pressure
+    title: Chamber pressure
+    low: -1
+    high: 80
+  - name: disagreement
+    channel: rocket_sim_temperature_spread
+    title: Temperature disagreement
+    low: 0
+    high: 100

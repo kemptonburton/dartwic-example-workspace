@@ -1,0 +1,51 @@
+{
+  "node": {
+    "data": {
+      "general_settings": {
+        "allow_button_click_tag": "",
+        "bottom_label": ""
+      },
+      "discrete_input": {
+        "input_type": "discrete",
+        "selected_tag": ""
+      },
+      "function_call": {
+        "inputList": [],
+        "selected_function": ""
+      },
+      "selected_tab": "function_call",
+      "tag_update": {
+        "ifElseBlock": {
+          "elseConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "ifChecks": [],
+          "ifConfigurableInput": {}
+        },
+        "selected_tag": ""
+      },
+      "ifElseBlock": {
+        "elseConfigurableInput": {
+          "type": "discrete_input",
+          "value": "0.0"
+        },
+        "ifChecks": [],
+        "ifConfigurableInput": {}
+      },
+      "labelConfigurableInput": {
+        "type": "discrete_input",
+        "value": "control"
+      },
+      "show_label": true,
+      "symbol": "C",
+      "unitsConfigurableInput": {
+        "type": "discrete_input",
+        "value": ""
+      }
+    },
+    "height": 10,
+    "type": "channel_control",
+    "width": 10
+  }
+}

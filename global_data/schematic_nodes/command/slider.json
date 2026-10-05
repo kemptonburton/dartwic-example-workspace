@@ -1,0 +1,31 @@
+{
+  "node": {
+    "data": {
+      "selected_tag": "",
+      "minConfigurableInput": {
+        "type": "discrete_input",
+        "value": 0
+      },
+      "maxConfigurableInput": {
+        "type": "discrete_input",
+        "value": 100
+      },
+      "stepConfigurableInput": {
+        "type": "discrete_input",
+        "value": 1
+      },
+      "defaultValueConfigurableInput": {
+        "type": "discrete_input",
+        "value": 0
+      },
+      "show_value": true,
+      "general_settings": {
+        "top_label": "",
+        "bottom_label": ""
+      }
+    },
+    "height": 30,
+    "type": "slider",
+    "width": 130
+  }
+}

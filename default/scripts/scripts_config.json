@@ -1,0 +1,26 @@
+{
+  "engine_abort.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  },
+  "pressure_scaling.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  },
+  "sensor_voting.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  },
+  "test_sequence.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  },
+  "valves/double_acting_valves.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  },
+  "warnings/sensor_warnings.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  }
+}

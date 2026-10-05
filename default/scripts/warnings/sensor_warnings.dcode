@@ -1,0 +1,20 @@
+params = yaml "./sensors.yaml#sensors"
+
+template(params) event rocket_warning_{params.name}:
+    title: "{params.title} warning"
+    type: warning
+    description: "The reading is unavailable or outside the example limits."
+    resolution: "Inspect the graph and injected faults; clear the fault, then acknowledge the occurrence."
+    system: "MOCK ROCKET"
+    subsystem: "SENSORS"
+    channels: |{params.channel}|, >{params.high}; |rocket_sim_sensor_valid|, |rocket_sim_sample_age_s|
+    trigger:
+        if |rocket_sim_sensor_valid| != 1 or |rocket_sim_sample_age_s| > 0.3:
+            return 1
+        if |{params.channel}| < {params.low} or |{params.channel}| > {params.high}:
+            return 1
+    on_firing:
+        if value:
+            log("Rocket warnings", "{params.title}: warning asserted")
+        else:
+            log("Rocket warnings", "{params.title}: condition cleared")

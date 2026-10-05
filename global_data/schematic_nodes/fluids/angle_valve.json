@@ -1,0 +1,64 @@
+{
+  "node": {
+    "data": {
+      "angleConfigurableInput": {
+        "type": "discrete_input",
+        "value": 0
+      },
+      "angleLabelDisplayIfElseBlock": {
+        "elseConfigurableInput": {
+          "type": "discrete_input",
+          "value": 0
+        },
+        "ifChecks": [],
+        "ifConfigurableInput": {}
+      },
+      "angleLabelConfigurableInput": {
+        "type": "discrete_input",
+        "value": "ANGLE"
+      },
+      "angleShowLabel": true,
+      "angleUnitsConfigurableInput": {
+        "type": "discrete_input",
+        "value": "deg"
+      },
+      "discrete_input": {
+        "input_type": "discrete",
+        "selected_tag": ""
+      },
+      "function_call": {
+        "inputList": [],
+        "selected_function": ""
+      },
+      "general_settings": {
+        "allow_button_click_tag": ""
+      },
+      "orientation": "horizontal",
+      "selected_tab": "toggle",
+      "tag_update": {
+        "ifElseBlock": {
+          "elseConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "ifChecks": [],
+          "ifConfigurableInput": {}
+        },
+        "selected_tag": ""
+      },
+      "toggle_update": {
+        "falseValueConfigurableInput": {
+          "type": "discrete_input",
+          "value": "0"
+        },
+        "trueValueConfigurableInput": {
+          "type": "discrete_input",
+          "value": "360"
+        }
+      }
+    },
+    "height": 41,
+    "type": "angle_valve",
+    "width": 41
+  }
+}

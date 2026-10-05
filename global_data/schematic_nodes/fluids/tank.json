@@ -1,0 +1,17 @@
+{
+  "node": {
+    "data": {
+      "fillColorConfigurableInput": {
+        "type": "hex_color",
+        "value": "#4FC6D3"
+      },
+      "fillPercentageConfigurableInput": {
+        "type": "discrete_input",
+        "value": 0
+      }
+    },
+    "height": 150,
+    "type": "tank",
+    "width": 100
+  }
+}
