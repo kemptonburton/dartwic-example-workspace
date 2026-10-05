@@ -10,8 +10,8 @@ event rocket_engine_abort:
         if |rocket_sim_temperature_voted| > 1500 or |rocket_sim_sensor_valid| != 1:
             return 1
     on_firing:
-        |rocket_sim_abort_active| = value
         if value:
+            |rocket_sim_abort_active| = 1
             override |rocket_sim_fuel_request| = 0
             override |rocket_sim_oxidizer_request| = 0
             override |rocket_sim_fill_request| = 0
@@ -22,4 +22,5 @@ event rocket_engine_abort:
             free |rocket_sim_oxidizer_request|
             free |rocket_sim_fill_request|
             free |rocket_sim_igniter_command|
+            |rocket_sim_abort_active| = 0
             log("Rocket sequence", "Abort cleared: released overrides; active controller can resume")

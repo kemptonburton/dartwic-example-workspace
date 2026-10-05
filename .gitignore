@@ -3,6 +3,8 @@
 /build/
 /flight-computer/bin/
 /example-workspace/default/downloads/
+/example-workspace/.gitattributes
+/example-workspace/.gitignore
 
 # Runtime state in the authored workspace.
 /example-workspace/default/argus/
