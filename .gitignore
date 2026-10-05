@@ -1,12 +1,15 @@
-default/tools/flight-peer/bin/
+# Local engine instance and downloaded/build outputs.
+/engine/instances/
+/build/
+/flight-computer/bin/
+/example-workspace/default/downloads/
+
+# Runtime state in the authored workspace.
+/example-workspace/default/argus/
+/example-workspace/default/runtime/
+/example-workspace/default/dataframes.json
+/example-workspace/default/rapid/channel_snapshot.json
+/example-workspace/global_data/client_info.json
+**/__pycache__/
 *.log
 *.duckdb*
-
-**/__pycache__/
-default/dataframes.json
-global_data/client_info.json
-default/rapid/channel_snapshot.json
-default/argus/
-default/runtime/
-default/dataframes.json
-default/downloads/

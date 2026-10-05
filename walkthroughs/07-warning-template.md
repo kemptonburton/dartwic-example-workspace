@@ -1,6 +1,6 @@
 # Generate sensor warnings
 
-Open `default/scripts/warnings/sensor_warnings.dcode` and `sensors.yaml`. The YAML supplies channel names and low/high limits for temperature, pressure, and disagreement warnings.
+Open `example-workspace/default/scripts/warnings/sensor_warnings.dcode` and `sensors.yaml`. The YAML supplies channel names and low/high limits for temperature, pressure, and disagreement warnings.
 
 1. Start the workspace and a dataframe with the sensor channels and ARGUS events/logs.
 2. Inject SENSOR BIAS. The disagreement event fires when spread exceeds 100 K.
@@ -11,4 +11,4 @@ The template checks validity and freshness before comparing bounds. `on_firing` 
 
 Failure exercise: silence a warning while its condition is active, then clear the fault. Inspect the live firing state and the recorded occurrence separately. Reactivate after changing a YAML limit and verify which generated events use the new limit.
 
-[Review the dataframe](../../README.md#operate-and-record) with sensor values, validity, age, and **Rocket warnings** logs. Add a warning by adding a YAML row; avoid copying a separate event block for every sensor.
+[Review the dataframe](../README.md#operate-and-record) with sensor values, validity, age, and **Rocket warnings** logs. Add a warning by adding a YAML row; avoid copying a separate event block for every sensor.

@@ -1,6 +1,6 @@
 # Run a fill and ignition timeline
 
-Open `default/scripts/test_sequence.dcode` and its `rocket_test` task. The file runs as **Lua**; no native compilation is needed.
+Open `example-workspace/default/scripts/test_sequence.dcode` and its `rocket_test` task. The file runs as **Lua**; no native compilation is needed.
 
 1. Start a dataframe, then turn **RUN TEST** on.
 2. Observe phase 1: the double-acting fill valve opens, the supply level falls, and the run tank rises to 60%.
@@ -12,4 +12,4 @@ The timeline starts one ordered operation at T+0. Its fill loop checks measured 
 
 Failure exercise: turn **HIGH TEMP ON IGNITION** on before RUN TEST. Filling still works. At ignition, temperature becomes 1800 K and the abort disables the igniter and closes the valves. Clear the switch to release the override and continue ignition/firing. Turn RUN TEST off first if you want to remain stopped. Acknowledging or silencing the event does not release it.
 
-[Review the dataframe](../../README.md#operate-and-record): compare both tank levels, phase, requests, applied outputs, valve positions, and stage logs. Change the 60% target or two-second ignition delay in this file, save/activate it, and repeat.
+[Review the dataframe](../README.md#operate-and-record): compare both tank levels, phase, requests, applied outputs, valve positions, and stage logs. Change the 60% target or two-second ignition delay in this file, save/activate it, and repeat.

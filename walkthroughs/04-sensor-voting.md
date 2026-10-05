@@ -1,6 +1,6 @@
 # Vote three temperature sensors
 
-Open `default/scripts/sensor_voting.dcode`. One calculation publishes the median of T1/T2/T3; another publishes their spread. Voting and detecting disagreement are separate jobs.
+Open `example-workspace/default/scripts/sensor_voting.dcode`. One calculation publishes the median of T1/T2/T3; another publishes their spread. Voting and detecting disagreement are separate jobs.
 
 1. Start a dataframe with all three temperatures, the voted value, and spread.
 2. Run the test. Normal temperatures differ by about 2 K overall; the median approaches 1200 K.
@@ -11,4 +11,4 @@ A median does not prove three sensors are healthy. This simulation has one share
 
 Failure exercise: inject **MISSING READINGS** instead. All readings are retained and invalid, so voting cannot manufacture a fresh measurement. The abort fires despite a plausible median. Clear the fault and confirm resumed samples.
 
-[Review the dataframe](../../README.md#operate-and-record) with the warning occurrence and raw series. This shows why a voted value alone is insufficient for operational review.
+[Review the dataframe](../README.md#operate-and-record) with the warning occurrence and raw series. This shows why a voted value alone is insufficient for operational review.

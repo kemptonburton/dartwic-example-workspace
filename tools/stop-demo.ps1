@@ -1,6 +1,6 @@
-$workspacePath=(Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
+$repoPath=(Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $ErrorActionPreference='Stop'
-$instancePath=Join-Path (Split-Path $workspacePath) ('engine/instances/' + (Split-Path $workspacePath -Leaf))
+$instancePath=Join-Path $repoPath 'engine/instances/example-workspace'
 $record=Get-Content -LiteralPath (Join-Path $instancePath 'demo-processes.json') -Raw | ConvertFrom-Json
 if ($record.flight_pid) {
     $flightProcess=Get-Process -Id $record.flight_pid -ErrorAction SilentlyContinue

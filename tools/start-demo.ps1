@@ -1,7 +1,8 @@
 param([Parameter(Mandatory=$true)][string]$EngineExecutable, [int]$Port=7400, [switch]$EngineOnly)
 $ErrorActionPreference='Stop'
-$workspacePath=(Resolve-Path (Join-Path $PSScriptRoot '../..')).Path
-$instancePath=Join-Path (Split-Path $workspacePath) ('engine/instances/' + (Split-Path $workspacePath -Leaf))
+$repoPath=(Resolve-Path (Join-Path $PSScriptRoot '..')).Path
+$workspacePath=(Resolve-Path (Join-Path $repoPath 'example-workspace')).Path
+$instancePath=Join-Path $repoPath 'engine/instances/example-workspace'
 $enginePath=(Resolve-Path -LiteralPath $EngineExecutable).Path
 $groundPeerPort=$Port+10200
 $flightPeerPort=$Port+10201
@@ -32,11 +33,11 @@ if (!$EngineOnly) {
     $connections=@($peer)
 }
 $connectionsPath=Join-Path $workspacePath 'default/edge_node_connections.json'
-if (!$EngineOnly -and ($Port -ne 7400 -or !(Test-Path -LiteralPath $connectionsPath))) {
+if ($EngineOnly -or $Port -ne 7400 -or !(Test-Path -LiteralPath $connectionsPath)) {
     @{schema_version=1;connections=$connections} | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $connectionsPath -Encoding utf8
 }
 $env:DARTWIC_CONFIG_DIR=$instancePath
 $engineProcess=Start-Process -FilePath $enginePath -WorkingDirectory (Split-Path $enginePath) -WindowStyle Hidden -RedirectStandardOutput (Join-Path $instancePath 'engine.stdout.log') -RedirectStandardError (Join-Path $instancePath 'engine.stderr.log') -PassThru
 @{engine_pid=$engineProcess.Id;engine_path=$enginePath;port=$Port} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $instancePath 'demo-processes.json')
 Write-Host "Engine PID $($engineProcess.Id); connect to 127.0.0.1:$Port and open Mock Rocket Test."
-if (!$EngineOnly) { Write-Host "Flight command: ./default/tools/flight-peer/bin/rocket-flight-peer.exe --transport custom --receive-endpoint tcp://127.0.0.1:$flightPeerPort --send-endpoint tcp://127.0.0.1:$groundPeerPort" }
+if (!$EngineOnly) { Write-Host "Flight command: ./flight-computer/bin/rocket-flight-peer.exe --transport custom --receive-endpoint tcp://127.0.0.1:$flightPeerPort --send-endpoint tcp://127.0.0.1:$groundPeerPort" }

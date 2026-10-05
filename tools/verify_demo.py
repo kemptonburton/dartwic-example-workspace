@@ -1,6 +1,6 @@
 """Exercise the simulated device, automation, and recording. Leaves idle and faults clear.
 Run only against a disposable simulated workspace: this deliberately commands
-the sequence and fault controls. Set DARTWIC_PASSWORD, then python default/tools/verify_demo.py.
+the sequence and fault controls. Set DARTWIC_PASSWORD, then python tools/verify_demo.py.
 """
 import argparse
 import json
