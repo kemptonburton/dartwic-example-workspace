@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "plugins": {
+    "example_device_plugin": {
+      "operator": {
+        "run_label": "Mock Rocket Test"
+      }
+    }
+  },
+  "recording": {
+    "options": {}
+  }
+}

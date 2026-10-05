@@ -15,7 +15,7 @@ if(NOT DARTWIC_EXAMPLE_PLUGIN_SOURCE)
         include(FetchContent)
         FetchContent_Declare(example_plugin
             GIT_REPOSITORY https://github.com/kemptonburton/dartwic-example-plugin.git
-            GIT_TAG ed3a1137ca936747980c8d666a05ec71a12fa1a9)
+            GIT_TAG 3b98bfc47288d8d3071fd9cc6a582f27c4b405e9)
         FetchContent_GetProperties(example_plugin)
         if(NOT example_plugin_POPULATED)
             FetchContent_Populate(example_plugin)
@@ -41,3 +41,9 @@ add_executable(rocket-flight-peer
 target_include_directories(rocket-flight-peer PRIVATE "${plugin}/engine/include")
 target_link_libraries(rocket-flight-peer PRIVATE
     TEMPEST::Peer DARTWIC::EngineProtocol cppzmq nlohmann_json::nlohmann_json)
+if(WIN32)
+    add_custom_command(TARGET rocket-flight-peer POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_if_different
+            $<TARGET_RUNTIME_DLLS:rocket-flight-peer> $<TARGET_FILE_DIR:rocket-flight-peer>
+        COMMAND_EXPAND_LISTS)
+endif()

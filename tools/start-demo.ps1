@@ -1,4 +1,4 @@
-param([Parameter(Mandatory=$true)][string]$EngineExecutable, [int]$Port=7400, [switch]$EngineOnly)
+param([Parameter(Mandatory=$true)][string]$EngineExecutable, [string]$EngineInstallation, [int]$Port=7400, [switch]$EngineOnly)
 $ErrorActionPreference='Stop'
 $repoPath=(Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $workspacePath=(Resolve-Path (Join-Path $repoPath 'example-workspace')).Path
@@ -27,7 +27,13 @@ else {
     $config=@{server_admin_password=$password;license_key=$license;allow_viewers=$true;run_caesar_startup_benchmark=$false;run_rapid_startup_benchmark=$false;run_rapid_recording_startup_benchmark=$false;rapid_fixed_channel_capacity=4096}
 }
 $config.workspace_root_directory=$workspacePath
-if (!$config.engine_installation_directory) { $config.engine_installation_directory=Split-Path $enginePath }
+if ($EngineInstallation) {
+    $config.engine_installation_directory=(Resolve-Path -LiteralPath $EngineInstallation).Path
+} elseif (!$config.engine_installation_directory) {
+    $installationPath=Split-Path $enginePath
+    if ((Split-Path $installationPath -Leaf) -eq 'bin') { $installationPath=Split-Path $installationPath }
+    $config.engine_installation_directory=$installationPath
+}
 $config.active_project_name='default'; $config.server_ip='127.0.0.1'; $config.server_port=$Port
 $config | ConvertTo-Json -Depth 10 | Set-Content -LiteralPath $configPath -Encoding utf8
 $connections=@()

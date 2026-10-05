@@ -9,7 +9,7 @@
           "y": 150
         },
         "data": {
-          "asset_path": "schematic_assets/models/96bc2f4d97f4025900282341c44464859fe571097a5b2ee4e9fd2750c6b94654.model.json",
+          "asset_path": "assets/models/96bc2f4d97f4025900282341c44464859fe571097a5b2ee4e9fd2750c6b94654.model.json",
           "asset_name": "ROCKET ENGINE",
           "bindings": {
             "node:5": {

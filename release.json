@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0-beta.2",
+  "plugin": "example_device_plugin",
+  "plugin_version": "2.0.0-beta.2",
+  "workspace_directory": "example-workspace",
+  "platform": "windows-x64",
+  "storage_host": "Updated storage-enabled Engine and Interface; original public beta.3 downloads predate these APIs."
+}

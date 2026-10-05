@@ -4,7 +4,7 @@ This repository pairs with [dartwic-example-plugin](https://github.com/kemptonbu
 
 ## Start
 
-1. Install Engine and Interface **2.0.0-beta.3 or newer** and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). The downloadable ZIP includes the built plugin at `example-workspace/default/downloads/plugin.zip`, so running that download needs no C++ compiler. The workspace runs seven tasks; your license must permit them.
+1. Use the updated storage-enabled development Engine and Interface and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). The original public beta.3 downloads predate the layered settings and shared assets used here. The downloadable ZIP includes the built plugin at `example-workspace/default/downloads/plugin.zip`, so running that download needs no C++ compiler. The workspace runs seven tasks; your license must permit them.
 2. Clone this repository into `workspaces/dartwic-example-workspace`, or extract `dartwic-example-workspace.zip` under `workspaces/`. Keep `example-workspace/`, `tools/`, `flight-computer/`, and `walkthroughs/` together.
 3. Run the launcher in PowerShell 7 with your installed engine executable. It creates a separate local instance and prompts for your own license and password on first use.
 
@@ -12,7 +12,7 @@ This repository pairs with [dartwic-example-plugin](https://github.com/kemptonbu
 ./tools/start-demo.ps1 -EngineExecutable 'C:/DARTWIC/engine/DARTWIC Engine.exe'
 ```
 
-4. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. It detects and connects to the running instance using `workspaces/dartwic-example-workspace/engine/instances/example-workspace/config.json`. You can also use **New connection** with the address and password shown by the launcher. Open **Schematics -> Mock Rocket Test**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off.
+4. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. The updated development Interface also accepts the repository root and resolves its nested workspace automatically; older Interface releases require the explicit `example-workspace/` folder. Do not select `default/` or `engine/`. It detects and connects to the running instance using `workspaces/dartwic-example-workspace/engine/instances/example-workspace/config.json`. You can also use **New connection** with the address and password shown by the launcher. Open **Schematics -> Mock Rocket Test**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off.
 5. Start the flight application in a second terminal. The packaged ZIP includes this executable; for a source clone, build it with this repository's CMake project or use its Windows download:
 
 ```powershell
@@ -22,6 +22,19 @@ This repository pairs with [dartwic-example-plugin](https://github.com/kemptonbu
 Ground receives on 17600 and sends to 17601. Flight uses the reverse endpoints. Flight-owned channels appear as `FLIGHT_COMPUTER:<name>`. The workspace sends only ambient temperature and run request to flight.
 
 All walkthroughs use this workspace. Only the optional engine-to-engine exercise starts another engine; it does not require a second authored example workspace.
+
+You can add `example-workspace/` directly without the launcher. The authored idle channels are tracked under `default/rapid/channel_snapshot.json`, and the Interface installs the plugin dependencies declared in `default/project.json`. Start that local instance from the Interface, then start the flight peer separately if needed.
+
+## Storage layout
+
+The workspace's portable settings live in `global_data/settings.json`; project overrides belong in `default/settings.json`. The rocket model is a shared asset at `global_data/assets/models/`, referenced as `assets/models/...` by its schematic. Tasks, scripts, modules, and authored channel definitions are portable too. Local instance configuration, passwords, license keys, recordings, and caches are not part of this repository or release archive.
+
+Use the updated storage-enabled development Engine/Interface for layered settings and shared asset APIs. The original public beta.3 host predates those APIs. See the plugin's [storage and settings guide](https://github.com/kemptonburton/dartwic-example-plugin/blob/main/docs/storage-and-settings.md) for plugin settings, module settings, and Model3D asset examples.
+
+The example plugin's settings panel saves a run label at workspace or project scope.
+Open Example Notes after saving to see the effective label. Reset removes only
+the chosen override; a project reset reveals the workspace label again. This
+setting is operator metadata and does not change the simulated hardware.
 
 ## Operate and record
 
