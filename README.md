@@ -6,14 +6,15 @@ This repository pairs with [dartwic-example-plugin](https://github.com/kemptonbu
 
 1. Use DARTWIC Engine and Interface 2.0.0 or newer and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). Core 2.0.0 packages will be published separately. The downloadable ZIP includes the built plugin at `example-workspace/default/downloads/plugin.zip`, so running that download needs no C++ compiler. The workspace runs seven tasks; your license must permit them.
 2. Clone this repository into `workspaces/dartwic-example-workspace`, or extract `dartwic-example-workspace.zip` under `workspaces/`. Keep `example-workspace/`, `tools/`, `flight-computer/`, and `walkthroughs/` together.
-3. Run the launcher in PowerShell 7 with your installed engine executable. It creates a separate local instance and prompts for your own license and password on first use.
+3. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. The updated development Interface also accepts the repository root and resolves its nested workspace automatically; older Interface releases require the explicit `example-workspace/` folder. Do not select `default/`. Install the required plugins and start the local Engine from the Interface. Engine installation, instance configuration, credentials, and runtime storage are managed by DARTWIC, not by this repository's scripts.
+4. Open **Schematics -> Mock Rocket Test**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off.
+5. Start the flight-computer demo in PowerShell 7:
 
 ```powershell
-./tools/start-demo.ps1 -EngineExecutable 'C:/DARTWIC/engine/DARTWIC Engine.exe'
+./tools/start-demo.ps1
 ```
 
-4. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. The updated development Interface also accepts the repository root and resolves its nested workspace automatically; older Interface releases require the explicit `example-workspace/` folder. Do not select `default/` or `engine/`. It detects and connects to the running instance using `workspaces/dartwic-example-workspace/engine/instances/example-workspace/config.json`. You can also use **New connection** with the address and password shown by the launcher. Open **Schematics -> Mock Rocket Test**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off.
-5. Start the flight application in a second terminal. The packaged ZIP includes this executable; for a source clone, build it with this repository's CMake project or use its Windows download:
+The script starts only `flight-computer/bin/rocket-flight-peer.exe`, in the background. It does not start or stop an Engine, install plugins, prompt for Engine credentials, or change workspace files. The packaged ZIP includes the flight executable; for a source clone, build it with this repository's CMake project or use its Windows download. Pass `-FlightExecutable` to use another build. You can also run the flight peer directly in a terminal:
 
 ```powershell
 ./flight-computer/bin/rocket-flight-peer.exe --transport custom
@@ -23,11 +24,15 @@ Ground receives on 17600 and sends to 17601. Flight uses the reverse endpoints. 
 
 All walkthroughs use this workspace. Only the optional engine-to-engine exercise starts another engine; it does not require a second authored example workspace.
 
-You can add `example-workspace/` directly without the launcher. The authored idle channels are tracked under `default/rapid/channel_snapshot.json`, and the Interface installs the plugin dependencies declared in `default/project.json`. Start that local instance from the Interface, then start the flight peer separately if needed.
+The authored idle channels are tracked under `default/rapid/channel_snapshot.json`, and the Interface installs the plugin dependencies declared in `default/project.json`. The workspace's simulated device can run without the separate flight peer; start the peer when doing flight-computer exercises.
 
 ## Storage layout
 
 The workspace's portable settings live in `global_data/settings.json`; project overrides belong in `default/settings.json`. The rocket model is a shared asset at `global_data/assets/models/`, referenced as `assets/models/...` by its schematic. Tasks, scripts, modules, and authored channel definitions are portable too. Local instance configuration, passwords, license keys, recordings, and caches are not part of this repository or release archive.
+
+The flight scripts keep only a process record and flight stdout/stderr logs under `%LOCALAPPDATA%/DARTWIC Flight Demo/<repository-hash>/`. The hash keeps separate clones independent. Engine binaries and shared plugins remain in your Engine installation; this repository does not ship or create an `engine/` directory.
+
+Older versions of `start-demo.ps1` also launched an Engine and created an ignored `engine/instances/example-workspace/` folder locally. The current scripts no longer manage that Engine. Stop any old instance through the Interface before moving or removing its local runtime data; preserve recordings and configuration you still need.
 
 Use Engine and Interface 2.0.0 or newer for layered settings and shared asset APIs. See the plugin's [storage and settings guide](https://github.com/kemptonburton/dartwic-example-plugin/blob/main/docs/storage-and-settings.md) for plugin settings, module settings, and Model3D asset examples.
 
@@ -64,6 +69,6 @@ Stop the dataframe after each exercise. Open its graph, events, and logs for the
 
 ## Stop
 
-Turn RUN TEST off and clear injected faults. Stop the flight-peer terminal with Ctrl+C, then run `./tools/stop-demo.ps1`. The stop script stops this workspace's recorded engine and any recorded background flight peer, checking their executable paths first. An instance started through the Interface should be stopped there. Stopping a dataframe does not stop the device.
+Turn RUN TEST off and clear injected faults. Run `./tools/stop-demo.ps1` to stop only the background flight peer started by the start script. It checks both the executable path and process start time before stopping the recorded PID. For a flight peer started directly in a terminal, use Ctrl+C instead. Stop the Engine through the Interface. Stopping a dataframe does not stop the device.
 
 The plugin contains `engine/src/rocket_sim_driver.cpp`, `engine/include/rocket_sim_module.h`, `engine/src/rocket_discovery.cpp`, and `engine/src/example_transport.cpp`. This repository keeps the matching flight application in `flight-computer/main.cpp`; its build fetches a locked copy of the public plugin dependencies. Building source requires CMake, C++20, and vcpkg, but no private DARTWIC checkout. See [flight-computer/README.md](flight-computer/README.md).

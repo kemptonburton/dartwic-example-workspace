@@ -1,14 +1,11 @@
-$repoPath=(Resolve-Path (Join-Path $PSScriptRoot '..')).Path
 $ErrorActionPreference='Stop'
-$instancePath=Join-Path $repoPath 'engine/instances/example-workspace'
-$record=Get-Content -LiteralPath (Join-Path $instancePath 'demo-processes.json') -Raw | ConvertFrom-Json
-if ($record.flight_pid) {
-    $flightProcess=Get-Process -Id $record.flight_pid -ErrorAction SilentlyContinue
-    if ($flightProcess -and $flightProcess.Path -eq $record.flight_path) { Stop-Process -Id $flightProcess.Id; $flightProcess.WaitForExit(10000) | Out-Null; Write-Host 'Stopped the recorded background flight peer.' }
-}
-$engineProcess=Get-Process -Id $record.engine_pid -ErrorAction SilentlyContinue
-if ($engineProcess -and $engineProcess.Path -eq $record.engine_path) {
-    Stop-Process -Id $engineProcess.Id
-    $engineProcess.WaitForExit(10000) | Out-Null
-    Write-Host 'Stopped the demo engine. Stop the flight terminal with Ctrl+C.'
-} else { Write-Host 'The recorded demo engine is already stopped.' }
+. (Join-Path $PSScriptRoot 'flight-demo-process.ps1')
+$repoPath=(Resolve-Path -LiteralPath (Join-Path $PSScriptRoot '..')).Path
+$recordPath=Join-Path (Get-FlightDemoStatePath -RepositoryPath $repoPath) 'process.json'
+$flightProcess=Get-RecordedFlightDemoProcess -RecordPath $recordPath
+if ($flightProcess) {
+    Stop-Process -Id $flightProcess.Id -ErrorAction Stop
+    if (!$flightProcess.WaitForExit(10000)) { throw 'The flight demo did not exit within 10 seconds.' }
+    Write-Host 'Stopped the flight demo.'
+} else { Write-Host 'The recorded flight demo is already stopped or its PID belongs to another process.' }
+if (Test-Path -LiteralPath $recordPath) { Remove-Item -LiteralPath $recordPath }

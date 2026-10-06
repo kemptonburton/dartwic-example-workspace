@@ -1,4 +1,14 @@
-# Example Workspace 2.0.0
+# Example Workspace 2.0.1
+
+- Start and stop scripts now manage only the separate flight-computer demo process. Engine configuration, plugin installation, and Engine lifecycle belong to the Interface.
+- No script creates an `engine/` folder or writes Engine credentials or workspace configuration.
+- Flight process records and logs live outside the repository in local application data. Shutdown verifies executable identity and process start time to avoid stopping a reused PID.
+- Updated repository and website guides, including the optional second-Engine exercise.
+- Added flight-only script tests for custom/native startup, duplicate prevention, shutdown, and PID reuse.
+
+Requires Engine and Interface 2.0.0 or newer and Example Plugin 2.0.0. Core packages remain a separate release.
+
+## Example Workspace 2.0.0
 
 - Pinned both plugin dependencies to Example Plugin 2.0.0 and requires Engine and Interface 2.0.0 or newer.
 - Tracked the authored idle channel snapshot, so adding a clean clone no longer depends on the launcher to create it.

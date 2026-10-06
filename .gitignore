@@ -1,5 +1,5 @@
-# Local engine instance and downloaded/build outputs.
-/engine/instances/
+# Legacy launcher runtime and downloaded/build outputs.
+/engine/
 /build/
 /flight-computer/bin/
 /example-workspace/default/downloads/

@@ -10,10 +10,9 @@ Set-Location ./peer-test/dartwic-example-workspace
 $workspace = Get-Content ./example-workspace/workspace.json -Raw | ConvertFrom-Json
 $workspace.node_name = 'MOCK_ROCKET_SECONDARY'
 $workspace | ConvertTo-Json | Set-Content ./example-workspace/workspace.json -Encoding utf8
-./tools/start-demo.ps1 -EngineExecutable 'C:/DARTWIC/engine/DARTWIC Engine.exe' -Port 7800 -EngineOnly
 ```
 
-The launcher creates separate runtime storage and prompts for that instance's credentials. `-EngineOnly` omits the custom flight link. Leave its local RUN TEST off.
+In the Interface, add this copy's `example-workspace/`, set its local Engine port to 7800, and prepare its plugin dependencies. Before starting it, remove or disable the copied custom flight connection so it does not bind ground's custom transport port. Start this second Engine through the Interface and leave its local RUN TEST off. The flight start/stop scripts do not manage either Engine.
 
 2. Connect an Interface to 127.0.0.1:7800. In **Engine peers**, add a built-in **TEMPEST Engine Peer** to 127.0.0.1:7400 using the ground engine's password. Enable RAPID and ARGUS, then connect.
 3. In **Channels**, inspect `MOCK_ROCKET_GROUND:rocket_sim_pressure`, `MOCK_ROCKET_GROUND:rocket_sim_phase`, and `MOCK_ROCKET_GROUND:rocket_sim_fuel_position`. Run the test from ground and confirm those remote readings follow it. Network Map identifies the two owning nodes. Unqualified channels belong to the secondary instance's own idle simulator.
@@ -21,4 +20,4 @@ The launcher creates separate runtime storage and prompts for that instance's cr
 
 Failure exercise: stop ground. Secondary retains last-known records, presents unavailable data, and rejects a new ground command. Restart ground and reconnect; confirm sample counters and snapshot timestamps advance again before commanding.
 
-Record at ground and [review its dataframe](../README.md#operate-and-record). Remote observations include network delay; keep the abort and valve controllers on ground. Stop secondary with its copy's stop script afterward.
+Record at ground and [review its dataframe](../README.md#operate-and-record). Remote observations include network delay; keep the abort and valve controllers on ground. Stop secondary through the Interface afterward.
