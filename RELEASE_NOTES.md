@@ -1,4 +1,10 @@
-# Example Workspace 2.0.2
+# Example Workspace 2.0.3
+
+- Pinned Example Plugin 2.0.2 with the debounced, project-scoped formatting settings demo.
+- Replaced the unused run-label override with shared sample precision and unit defaults.
+- Engine and Interface minimum versions remain 2.0.0. Both Windows plugin binary variants remain included.
+
+## Example Workspace 2.0.2
 
 - Pinned Example Plugin 2.0.1, whose download contains matching Debug and Release Engine binaries.
 - Included both plugin variants in the workspace download; development Debug Engines no longer fail preparation because `engine-debug` is missing.
