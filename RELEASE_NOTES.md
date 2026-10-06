@@ -1,4 +1,10 @@
-# Example Workspace 2.0.1
+# Example Workspace 2.0.2
+
+- Pinned Example Plugin 2.0.1, whose download contains matching Debug and Release Engine binaries.
+- Included both plugin variants in the workspace download; development Debug Engines no longer fail preparation because `engine-debug` is missing.
+- Engine and Interface minimum versions remain 2.0.0. The full seven-task example needs a license permitting those tasks; unregistered FREE mode permits three.
+
+## Example Workspace 2.0.1
 
 - Start and stop scripts now manage only the separate flight-computer demo process. Engine configuration, plugin installation, and Engine lifecycle belong to the Interface.
 - No script creates an `engine/` folder or writes Engine credentials or workspace configuration.
