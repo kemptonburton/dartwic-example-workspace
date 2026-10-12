@@ -103,6 +103,7 @@ int main(int argc, char** argv) {
             if (value < 1 || value > 20) throw TEMPEST::RemoteError("Telemetry rate must be 1 through 20 Hz", "invalid_argument");
             rate = value;
             log("Ground commanded telemetry rate: " + std::to_string(value) + " Hz");
+            return DARTWIC::ChannelMutationResult{DARTWIC::ChannelMutationState::Accepted};
         };
         channels.snapshot = [&](const DARTWIC::ChannelSnapshotTelemetry& snapshot) {
             if (++ground_snapshots == 1) log("Received first ground channel snapshot");

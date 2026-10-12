@@ -1,5 +1,9 @@
 {
-  "schema_version": 1,
+  "diagnostics": {
+    "internal_caesar_warnings": {
+      "loop|dartwic/project_action_telemetry_loop": false
+    }
+  },
   "plugins": {
     "example_device_plugin": {
       "display": {
@@ -10,5 +14,6 @@
   },
   "recording": {
     "options": {}
-  }
+  },
+  "schema_version": 1
 }

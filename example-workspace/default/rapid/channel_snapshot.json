@@ -1,761 +1,4407 @@
 {
-  "schema_version": 4,
   "channels": [
     {
-      "key": "rocket_read_running",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_argus_event_no_progress_seconds",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
       "startup_value": {
-        "enabled": true,
-        "value": 1
+        "enabled": false,
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "seconds",
+      "value_options": []
     },
     {
-      "key": "rocket_read_target_frequency",
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_argus_event_write_errors_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_argus_log_dropped_records_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "records",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_argus_log_no_progress_seconds",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "seconds",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_argus_log_queue_used_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_argus_log_write_errors_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_cpu_logical_processors",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "processors",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_cpu_sample_interval_seconds",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "seconds",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_dartwic_cpu_seconds",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "CPU seconds",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_dartwic_cpu_usage_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_dartwic_memory_resident_bytes",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "bytes",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_dartwic_memory_usage_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "engine_rapid_autorecord_enabled",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "engine_rapid_autorecord_interval_seconds",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "sec",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_dynamic_reads_per_sec",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ops/sec",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_dynamic_writes_per_sec",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ops/sec",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_fixed_capacity_used_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_fixed_reads_per_sec",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ops/sec",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_fixed_slots_capacity",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "slots",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_fixed_slots_used",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "slots",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_fixed_writes_per_sec",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ops/sec",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_publication_observer_failures_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_publication_overwritten_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_publication_queue_used_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_recording_committed_rows_per_sec",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "rows/sec",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_recording_dropped_rows_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "rows",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_recording_failed_rows_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "rows",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_recording_no_progress_seconds",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "seconds",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_recording_queue_used_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_recording_rows_per_sec",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "rows/sec",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_rapid_recording_write_errors_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "engine_rapid_writer_threads_batch_flush_timeout_ms",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "engine_rapid_writer_threads_buffer_batch_size",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_storage_available_mb",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "MB",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_system_cpu_busy_seconds",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "CPU seconds",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_system_cpu_total_seconds",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "CPU seconds",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_system_cpu_usage_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_system_memory_available_bytes",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "bytes",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_system_memory_total_bytes",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "bytes",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_system_memory_usage_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_system_memory_used_bytes",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "bytes",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_dropped_messages_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_operation_timeouts_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_tempest_peer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_peer_FLIGHT_COMPUTER_connected",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "bool",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_tempest_peer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_peer_FLIGHT_COMPUTER_rx_mbps",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Mbps",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_tempest_peer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_peer_FLIGHT_COMPUTER_tx_mbps",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Mbps",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_queue_used_percent",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "%",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_rejected_operations_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_rejected_snapshots_total",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "operations",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_rx_mbps",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Mbps",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "engine_tempest_tx_mbps",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Mbps",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.heartbeat_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "Hz",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
-      "startup_value": {
-        "enabled": true,
-        "value": 20
-      },
-      "data_frame": ""
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.heartbeat_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.heartbeat_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.heartbeat_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.heartbeat_target_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.mock_device_discovery_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.mock_device_discovery_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.mock_device_discovery_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.mock_device_discovery_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.mock_device_discovery_target_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.rocket_device_discovery_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.rocket_device_discovery_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.rocket_device_discovery_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.rocket_device_discovery_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "example_device_plugin.rocket_device_discovery_target_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_engine_abort",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 12,
+          "relationship": "target",
+          "script": "engine_abort.dcode#event_firing:rocket_engine_abort"
+        }
+      ],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_engine_abort_firing",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 9,
+          "relationship": "target",
+          "script": "engine_abort.dcode#event_trigger:rocket_engine_abort"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_engine_abort_trigger",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_read",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_read_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_read",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_read_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_read",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_read_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_read_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_read",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_read_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_read_running",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": true,
+        "value": 1.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_read_target_frequency",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": true,
+        "value": 20.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_abort_active",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_connected",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fault_disconnect",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fault_missing_sensor",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fault_overtemperature",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fault_sensor_bias",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_fill_close_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fill_close_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fill",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_sim_fill_feedback_ok",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_fill_open_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fill_open_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_fill_position",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_fill_request",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_flight_check",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_flow",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_fuel_close_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fuel_close_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
-      "key": "rocket_sim_run_fill",
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fuel",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_sim_fuel_feedback_ok",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
-      "startup_value": {
-        "enabled": true,
-        "value": 0
-      },
-      "data_frame": ""
+      "value_options": []
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_fuel_open_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_fuel_open_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_fuel_position",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_fuel_request",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_ground_ambient",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 295
+        "value": 295.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_igniter_applied",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_igniter_command",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_oxidizer_close_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_oxidizer_close_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
-      "key": "rocket_sim_supply_fill",
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_oxidizer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_sim_oxidizer_feedback_ok",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
-      "startup_value": {
-        "enabled": true,
-        "value": 100
-      },
-      "data_frame": ""
+      "value_options": []
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_oxidizer_open_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_oxidizer_open_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_oxidizer_position",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_oxidizer_request",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": true,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
-      "startup_value": {
-        "enabled": true,
-        "value": 0
-      },
-      "data_frame": ""
+      "value_options": []
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_phase",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [
+        {
+          "line_number": 2,
+          "relationship": "target",
+          "script": "pressure_scaling.dcode#channel_calculation:rocket_sim_pressure"
+        },
+        {
+          "line_number": 11,
+          "relationship": "dependency",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_pressure"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_pressure",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": true,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "bar",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
-      "startup_value": {
-        "enabled": true,
-        "value": 0
-      },
-      "data_frame": ""
+      "value_options": []
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_pressure_current_ma",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
-      "key": "rocket_test_running",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
+      "key": "rocket_sim_run_fill",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_sample_age_s",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_sample_counter",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_sensor_valid",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
+      "key": "rocket_sim_supply_fill",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": true,
+        "value": 100.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_temperature_1",
-      "storage": "dynamic",
-      "units": "K",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_temperature_2",
-      "storage": "dynamic",
-      "units": "K",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_temperature_3",
-      "storage": "dynamic",
-      "units": "K",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [
+        {
+          "line_number": 8,
+          "relationship": "target",
+          "script": "sensor_voting.dcode#channel_calculation:rocket_sim_temperature_spread"
+        },
+        {
+          "line_number": 11,
+          "relationship": "dependency",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_disagreement"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_temperature_spread",
-      "storage": "dynamic",
-      "units": "K",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "K",
+      "value_options": []
     },
     {
+      "calculation_scripts": [
+        {
+          "line_number": 9,
+          "relationship": "dependency",
+          "script": "engine_abort.dcode#event_trigger:rocket_engine_abort"
+        },
+        {
+          "line_number": 2,
+          "relationship": "target",
+          "script": "sensor_voting.dcode#channel_calculation:rocket_sim_temperature_voted"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_temperature_voted",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": true,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "K",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
-      "startup_value": {
-        "enabled": true,
-        "value": 0
-      },
-      "data_frame": ""
+      "value_options": []
     },
     {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_vent_close_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_vent_close_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_vent",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_sim_vent_feedback_ok",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_read",
+          "kind": "task"
+        },
+        "creator_instance": "23385714512500",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
+      "key": "rocket_sim_vent_open_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "rocket_device",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "rocket_write",
+          "kind": "task"
+        },
+        "creator_instance": "23385741909200",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "49648",
+        "version": 2
+      },
       "key": "rocket_sim_vent_open_coil",
-      "storage": "fixed",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": true,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "inferred",
+        "script": "",
+        "thread": "",
+        "version": 2
+      },
       "key": "rocket_sim_vent_position",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "fixed"
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_sim_vent_request",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 0
+        "value": 0.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_aborted",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_test_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_bucket_fill_ignite_fire_current_line",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "line",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_bucket_fill_ignite_fire_duration",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "s",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_bucket_fill_ignite_fire_started_at",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_bucket_fill_ignite_fire_status",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": [
+        {
+          "label": "pending",
+          "value": 0.0
+        },
+        {
+          "label": "running",
+          "value": 1.0
+        },
+        {
+          "label": "waiting",
+          "value": 2.0
+        },
+        {
+          "label": "completed",
+          "value": 3.0
+        },
+        {
+          "label": "failed",
+          "value": 4.0
+        },
+        {
+          "label": "skipped",
+          "value": 5.0
+        },
+        {
+          "label": "cancelled",
+          "value": 6.0
+        },
+        {
+          "label": "uncertain",
+          "value": 7.0
+        }
+      ]
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_clock_absolute",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_clock_prepared",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_clock_running",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_current_line",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "line",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_effective_t0",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=unix-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_test_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_test_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_test_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_mission_time",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_recovered",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_revision",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_test_running",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": true,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_test_target_frequency",
-      "storage": "dynamic",
-      "units": "Hz",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 20
+        "value": 20.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fill",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fill_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fill",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fill_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fill",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fill_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_valve_fill_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fill",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fill_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_fill_running",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 1
+        "value": 1.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_fill_target_frequency",
-      "storage": "dynamic",
-      "units": "Hz",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 20
+        "value": 20.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fuel",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fuel_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fuel",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fuel_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fuel",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fuel_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_valve_fuel_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_fuel",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_fuel_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_fuel_running",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 1
+        "value": 1.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_fuel_target_frequency",
-      "storage": "dynamic",
-      "units": "Hz",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 20
+        "value": 20.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_oxidizer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_oxidizer_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_oxidizer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_oxidizer_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_oxidizer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_oxidizer_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_valve_oxidizer_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_oxidizer",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_oxidizer_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_oxidizer_running",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 1
+        "value": 1.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_oxidizer_target_frequency",
-      "storage": "dynamic",
-      "units": "Hz",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 20
+        "value": 20.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_vent",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_vent_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_vent",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_vent_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_vent",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_vent_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_valve_vent_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_valve_vent",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_valve_vent_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_vent_running",
-      "storage": "dynamic",
-      "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 1
+        "value": 1.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
       "key": "rocket_valve_vent_target_frequency",
-      "storage": "dynamic",
-      "units": "Hz",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 20
+        "value": 20.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
     },
     {
-      "key": "rocket_write_running",
+      "calculation_scripts": [],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_disagreement",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "",
-      "stale_timeout": 0,
-      "control_policy": "free",
-      "control_owner": "",
-      "record_mode": "on_value_change",
-      "startup_value": {
-        "enabled": true,
-        "value": 1
-      },
-      "data_frame": ""
+      "value_options": []
     },
     {
-      "key": "rocket_write_target_frequency",
+      "calculation_scripts": [
+        {
+          "line_number": 16,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_disagreement"
+        }
+      ],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_disagreement_firing",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 11,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_disagreement"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_warning_disagreement_trigger",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_pressure",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 16,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_pressure"
+        }
+      ],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_pressure_firing",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 11,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_pressure"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_warning_pressure_trigger",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_1",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 16,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_temperature_1"
+        }
+      ],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_1_firing",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 11,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_temperature_1"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_1_trigger",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_2",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 16,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_temperature_2"
+        }
+      ],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_2_firing",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 11,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_temperature_2"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_2_trigger",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_3",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 16,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_temperature_3"
+        }
+      ],
+      "control_owner": "loop:dcode-declared-events",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_3_firing",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 11,
+          "relationship": "target",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_temperature_3"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_warning_temperature_3_trigger",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_write",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_write_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
       "storage": "dynamic",
       "units": "Hz",
-      "stale_timeout": 0,
-      "control_policy": "free",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_write",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_write_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_write",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_write_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
       "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_write_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_write",
+      "control_policy": "observe_only",
+      "data_frame": "",
+      "key": "rocket_write_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_write_running",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": true,
-        "value": 20
+        "value": 1.0
       },
-      "data_frame": ""
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "data_frame": "",
+      "key": "rocket_write_target_frequency",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": true,
+        "value": 20.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
     }
-  ]
+  ],
+  "schema_version": 4
 }
