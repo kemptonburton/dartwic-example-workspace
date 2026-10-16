@@ -1,7 +1,7 @@
 {
     "arguments": {
         "channel_prefix": "rocket_sim",
-        "module_instance_name": "rocket_device",
+        "module_instance_name": "example_device_1",
         "read_mappings": [
             {
                 "channel": "rocket_sim_pressure_current_ma",
@@ -18,14 +18,6 @@
             {
                 "channel": "rocket_sim_temperature_3",
                 "device_field": "temperature_3"
-            },
-            {
-                "channel": "rocket_sim_run_fill",
-                "device_field": "run_fill"
-            },
-            {
-                "channel": "rocket_sim_supply_fill",
-                "device_field": "supply_fill"
             },
             {
                 "channel": "rocket_sim_flow",
@@ -101,8 +93,16 @@
             }
         ]
     },
-    "metadata": {},
+    "metadata": {
+        "fixed_input_channels": [
+            "rocket_sim_fault_disconnect",
+            "rocket_sim_fault_overtemperature",
+            "rocket_sim_fault_sensor_bias",
+            "rocket_sim_fault_missing_sensor",
+            "rocket_sim_run_fill"
+        ]
+    },
     "schema_version": 2,
-    "task_name": "rocket_read",
-    "task_type": "example_device_plugin.rocket_read"
+    "task_name": "example_device_read",
+    "task_type": "example_device_plugin.example_read"
 }

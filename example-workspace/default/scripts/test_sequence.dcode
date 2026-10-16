@@ -1,63 +1,167 @@
-# RUN TEST controls rocket_test_running. Driver and valve tasks run independently.
-task_timeline rocket_test 20:
-    clock:
-        start: T+0s
+# The periodic ox-tank task supplies tank values. This state machine controls
+# the fill and vent requests; the device read task supplies applied positions.
+task_state_machine engine_tank_fill:
+    start:
+        |engine_tank_fill_complete| = 0
 
-    at T+0s (fill_ignite_fire):
-        execute:
-            function command_outputs(fill, fuel, oxidizer, igniter):
-                command |rocket_sim_fill_request| = fill
-                command |rocket_sim_fuel_request| = fuel
-                command |rocket_sim_oxidizer_request| = oxidizer
-                command |rocket_sim_igniter_command| = igniter
-            function request_outputs(fill, fuel, oxidizer, igniter):
-                if |rocket_sim_abort_active| == 1:
-                    return
-                local ok, reason = pcall(command_outputs, fill, fuel, oxidizer, igniter)
-                # An ARGUS override can arrive between the check and a command.
-                if not ok and |rocket_sim_abort_active| != 1:
-                    assert(false, reason)
-            claim |rocket_sim_fill_request|
-            claim |rocket_sim_fuel_request|
-            claim |rocket_sim_oxidizer_request|
-            claim |rocket_sim_igniter_command|
-            # Allow the first device readings and ARGUS state to settle.
-            wait(0.5)
-            set |rocket_sim_phase| = 1
-            log("Rocket sequence", "Fill: transferring supply into the run tank to 60 percent")
-            while |rocket_sim_run_fill| < 60 or |rocket_sim_sensor_valid| != 1:
-                if |rocket_sim_abort_active| == 0:
-                    request_outputs(1, 0, 0, 0)
-                wait(0.1)
+    states:
+        isolate
+        fill
+        vent
+        manual
 
-            request_outputs(0, 0, 0, 0)
-            set |rocket_sim_phase| = 2
-            log("Rocket sequence", "Ignition: close fill valve, apply igniter, wait two seconds")
-            wait(0.2)
-            while |rocket_sim_abort_active| == 1:
-                wait(0.1)
-            request_outputs(0, 0, 0, 1)
-            wait(2)
-            while |rocket_sim_abort_active| == 1:
-                wait(0.1)
-
-            set |rocket_sim_phase| = 3
-            log("Rocket sequence", "Firing: open engine feed valves; abort overrides take precedence")
-            while true:
-                if |rocket_sim_abort_active| == 0:
-                    feed = (|rocket_sim_run_fill| > 1) and 1 or 0
-                    request_outputs(0, feed, feed, feed)
-                wait(0.1)
-
-    stop:
-        set |rocket_sim_phase| = 0
+    state isolate:
         if |rocket_sim_abort_active| == 0:
             command |rocket_sim_fill_request| = 0
-            command |rocket_sim_fuel_request| = 0
-            command |rocket_sim_oxidizer_request| = 0
-            command |rocket_sim_igniter_command| = 0
+            command |rocket_sim_vent_request| = 0
+        if target_state == states.fill:
+            |engine_tank_fill_complete| = 0
+            fill_target = promptNumerical(
+                "Ox tank fill target",
+                "Enter the target fill percentage for this engine test.",
+                ["rocket_sim_run_fill_target"],
+                "Enter a percentage from 1 to 100.",
+                0,
+                0
+            )
+            if fill_target <= 0 or fill_target > 100:
+                error("Ox tank fill target must be between 1 and 100 percent.")
+            |rocket_sim_run_fill_target| = fill_target
+            transition fill
+        if target_state == states.manual:
+            transition manual
+
+    state fill:
+        if |rocket_sim_abort_active| != 0 or |rocket_sim_sensor_valid| != 1 or target_state == states.isolate:
+            transition isolate
+        elif target_state == states.manual:
+            transition manual
+        elif |rocket_sim_run_fill| >= |rocket_sim_run_fill_target|:
+            |engine_tank_fill_complete| = 1
+            transition isolate
+        elif |rocket_sim_run_tank_pressure| >= |rocket_sim_supply_tank_pressure| * 0.9:
+            transition vent
+        else:
+            command |rocket_sim_vent_request| = 0
+            command |rocket_sim_fill_request| = 1
+
+    state vent:
+        if |rocket_sim_abort_active| != 0 or |rocket_sim_sensor_valid| != 1 or target_state == states.isolate:
+            transition isolate
+        elif target_state == states.manual:
+            transition manual
+        elif |rocket_sim_run_fill| >= |rocket_sim_run_fill_target|:
+            |engine_tank_fill_complete| = 1
+            transition isolate
+        elif |rocket_sim_run_tank_pressure| <= 500:
+            transition fill
+        else:
+            command |rocket_sim_fill_request| = 0
+            command |rocket_sim_vent_request| = 1
+
+    state manual:
+        once:
+            free |rocket_sim_fill_request|
+            free |rocket_sim_vent_request|
+        if target_state == states.isolate:
+            transition isolate
+        if target_state == states.fill:
+            transition fill
+
+    end:
+        if |rocket_sim_abort_active| == 0:
+            command |rocket_sim_fill_request| = 0
+            command |rocket_sim_vent_request| = 0
         free |rocket_sim_fill_request|
-        free |rocket_sim_fuel_request|
-        free |rocket_sim_oxidizer_request|
-        free |rocket_sim_igniter_command|
-        log("Rocket sequence", "Idle: timeline stopped, outputs requested off, ownership released")
+        free |rocket_sim_vent_request|
+
+task_sequence engine_ignition:
+    start:
+        |engine_ignition_complete| = 0
+
+    wait_until(|rocket_sim_abort_active| == 0 and |rocket_sim_sensor_valid| == 1, 0, 30)
+    wait_until(|rocket_sim_abort_active| == 0 and |rocket_sim_sensor_valid| == 1, 0, 30)
+    log("Engine test", "Ignition: energizing the simulated igniter")
+    command |rocket_sim_igniter_command| = 1
+    wait(2)
+    wait_until(|rocket_sim_abort_active| == 0 and |rocket_sim_sensor_valid| == 1, 0, 30)
+    log("Engine test", "Firing: opening the simulated feed valves")
+    |rocket_sim_phase| = 3
+    command |rocket_sim_fuel_request| = 1
+    command |rocket_sim_oxidizer_request| = 1
+    wait(8)
+    |engine_ignition_complete| = 1
+
+    end:
+        command |rocket_sim_fuel_request| = 0
+        command |rocket_sim_oxidizer_request| = 0
+        command |rocket_sim_igniter_command| = 0
+
+task_timeline rocket_test 20:
+    clock:
+        start: T-2m
+
+    at T-2m (setup):
+        hold_at: next_bucket
+        execute:
+            test_name = promptString(
+                "Engine test recording",
+                "Name the data frame for this engine test.",
+                [],
+                "Enter a test name.",
+                0,
+                0
+            )
+            test_data_frame = startDataFrame(test_name, {"channels": [
+                "rocket_sim_run_fill", "rocket_sim_run_fill_target", "rocket_sim_run_tank_pressure",
+                "rocket_sim_fill_position", "rocket_sim_vent_position", "rocket_sim_phase",
+                "rocket_sim_temperature_voted", "rocket_sim_pressure", "rocket_sim_flow"
+            ]})
+
+    at T-1m (tank_fill):
+        hold_at: next_bucket
+        execute:
+            wait_until(|rocket_sim_sensor_valid| == 1 and |rocket_sim_abort_active| == 0, 0, 15)
+            |rocket_sim_phase| = 1
+            |engine_tank_fill_complete| = 0
+            command |engine_tank_fill_running| = 1
+            command |engine_tank_fill_target_state| = 1
+            wait_until(|engine_tank_fill_complete| == 1, 0)
+            command |engine_tank_fill_target_state| = 0
+            wait_until(|engine_tank_fill_current_state| == 0, 0)
+            free |engine_tank_fill_target_state|
+            free |engine_tank_fill_running|
+
+    at T+0s (ignition):
+        hold_at: next_bucket
+        execute:
+            wait_until(|engine_tank_fill_complete| == 1, 0)
+            wait_until(|rocket_sim_sensor_valid| == 1 and |rocket_sim_abort_active| == 0, 0, 15)
+            |rocket_sim_phase| = 2
+            |engine_ignition_complete| = 0
+            command |engine_ignition_running| = 1
+            wait_until(|engine_ignition_complete| == 1, 0, 60)
+            |rocket_sim_phase| = 0
+            log("Engine test", "Test fire complete")
+
+    at T+15s (cleanup):
+        execute:
+            stopDataFrame(test_data_frame)
+            test_data_frame = nil
+            log("Engine test", "Recording saved")
+
+    abort:
+        if test_data_frame:
+            stopDataFrame(test_data_frame)
+            test_data_frame = nil
+        command |engine_tank_fill_target_state| = 0
+        command |engine_ignition_running| = 0
+        |rocket_sim_phase| = 0
+
+    stop:
+        if test_data_frame:
+            stopDataFrame(test_data_frame)
+            test_data_frame = nil
+        command |engine_tank_fill_target_state| = 0
+        command |engine_ignition_running| = 0
+        |rocket_sim_phase| = 0

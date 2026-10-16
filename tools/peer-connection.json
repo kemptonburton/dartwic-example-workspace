@@ -7,8 +7,7 @@
     "enabled": true,
     "publish_all": false,
     "channels": [
-      "rocket_sim_ground_ambient",
-      "rocket_test_running"
+      "rocket_qd_released"
     ]
   },
   "argus": {

@@ -1,0 +1,417 @@
+{
+  "flow_instance": {
+    "nodes": [
+      {
+        "id": "display-FLIGHT_COMPUTER:flight_phase",
+        "type": "channel_display",
+        "position": {
+          "x": 30,
+          "y": 210
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:flight_phase",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:flight_phase|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "FLIGHT PHASE"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-FLIGHT_COMPUTER:altitude_m",
+        "type": "channel_display",
+        "position": {
+          "x": 265,
+          "y": 210
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:altitude_m",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:altitude_m|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "ALTITUDE"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "m"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-FLIGHT_COMPUTER:velocity_mps",
+        "type": "channel_display",
+        "position": {
+          "x": 500,
+          "y": 210
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:velocity_mps",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:velocity_mps|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "VELOCITY"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "m/s"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-FLIGHT_COMPUTER:battery_voltage",
+        "type": "channel_display",
+        "position": {
+          "x": 30,
+          "y": 310
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:battery_voltage",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:battery_voltage|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "BATTERY"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": "V"
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-FLIGHT_COMPUTER:sample_counter",
+        "type": "channel_display",
+        "position": {
+          "x": 265,
+          "y": 310
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:sample_counter",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:sample_counter|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "FLIGHT SAMPLES"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-FLIGHT_COMPUTER:ground_qd_released",
+        "type": "channel_display",
+        "position": {
+          "x": 500,
+          "y": 310
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "FLIGHT_COMPUTER:ground_qd_released",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|FLIGHT_COMPUTER:ground_qd_released|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "PEER QD READBACK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_qd_released",
+        "type": "channel_display",
+        "position": {
+          "x": 30,
+          "y": 410
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_qd_released",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_qd_released|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "GROUND QD RELEASED"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_launch_acknowledged",
+        "type": "channel_display",
+        "position": {
+          "x": 265,
+          "y": 410
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_launch_acknowledged",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_launch_acknowledged|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "LAUNCH ACK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "display-rocket_land_acknowledged",
+        "type": "channel_display",
+        "position": {
+          "x": 500,
+          "y": 410
+        },
+        "width": 210,
+        "height": 62,
+        "data": {
+          "source_channel": "rocket_land_acknowledged",
+          "ifElseBlock": {
+            "ifChecks": [],
+            "ifConfigurableInput": {},
+            "elseConfigurableInput": {
+              "type": "tag_value",
+              "value": "|rocket_land_acknowledged|"
+            }
+          },
+          "labelConfigurableInput": {
+            "type": "discrete_input",
+            "value": "LAND ACK"
+          },
+          "unitsConfigurableInput": {
+            "type": "discrete_input",
+            "value": ""
+          },
+          "show_label": true,
+          "display_style": "card",
+          "decimal_places": 1,
+          "symbol": "",
+          "show_sparkline": true,
+          "general_settings": {
+            "top_label": "",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "task-rocket_launch_sequence",
+        "type": "task_control",
+        "position": {
+          "x": 30,
+          "y": 45
+        },
+        "width": 315,
+        "height": 85,
+        "data": {
+          "task_instance_key": "rocket_launch_sequence",
+          "show_task_name": true,
+          "show_frequency": true,
+          "show_target_frequency": true,
+          "general_settings": {
+            "top_label": "GROUND LAUNCH SEQUENCE",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      },
+      {
+        "id": "task-rocket_land_sequence",
+        "type": "task_control",
+        "position": {
+          "x": 390,
+          "y": 45
+        },
+        "width": 315,
+        "height": 85,
+        "data": {
+          "task_instance_key": "rocket_land_sequence",
+          "show_task_name": true,
+          "show_frequency": true,
+          "show_target_frequency": true,
+          "general_settings": {
+            "top_label": "LAND COMMAND SEQUENCE",
+            "bottom_label": "",
+            "general_alarming_tags": []
+          }
+        }
+      }
+    ],
+    "edges": [],
+    "viewport": {
+      "x": 30,
+      "y": 25,
+      "zoom": 0.72
+    }
+  },
+  "background_settings": {
+    "variant": "blank",
+    "color": "#606060",
+    "gap": 12,
+    "size": 1
+  },
+  "view_settings": {
+    "zoom": 0.72,
+    "view_mode": "manual",
+    "two_click_commands_enabled": false
+  },
+  "version": 1
+}

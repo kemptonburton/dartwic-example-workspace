@@ -1,0 +1,34 @@
+# The periodic physics task advances tank measurements from applied valve positions.
+# The fill controller in test_sequence.dcode owns the requests.
+task_periodic rocket_ox_tank_sim:
+    start:
+        |rocket_sim_supply_tank_pressure| = 1000.0
+        |rocket_sim_run_tank_pressure| = 0.0
+        |rocket_sim_supply_fill| = 100.0
+        |rocket_sim_run_fill| = 0.0
+        |rocket_sim_run_fill_target| = 60.0
+
+    task:
+        local run_fill = |rocket_sim_run_fill|
+        local run_pressure = |rocket_sim_run_tank_pressure|
+        if run_pressure < 900:
+            if |rocket_sim_fill_position| > 0:
+                if run_fill < 99.8:
+                    run_fill = run_fill + 0.2
+                else:
+                    run_fill = 100
+                if run_pressure < 1000:
+                    run_pressure = run_pressure + 5
+
+        if |rocket_sim_vent_position| > 0:
+            if run_fill > 0.1:
+                run_fill = run_fill - 0.1
+            else:
+                run_fill = 0
+            if run_pressure > 0:
+                run_pressure = run_pressure - 5
+
+        |rocket_sim_supply_tank_pressure| = 1000.0
+        |rocket_sim_supply_fill| = 100.0
+        |rocket_sim_run_fill| = run_fill
+        |rocket_sim_run_tank_pressure| = run_pressure

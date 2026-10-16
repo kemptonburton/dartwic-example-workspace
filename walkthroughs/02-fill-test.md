@@ -1,15 +1,13 @@
 # Run a fill and ignition timeline
 
-Open `example-workspace/default/scripts/test_sequence.dcode` and its `rocket_test` task. The file runs as **Lua**; no native compilation is needed.
+Open **Engine Test Fire**, `example-workspace/default/scripts/ox_tank_sim.dcode`, and `test_sequence.dcode`. The periodic physics task computes tank fill and pressure from applied valve positions. The `engine_tank_fill` state machine commands fill and vent; `engine_ignition` runs the firing sequence. The device read task supplies chamber measurements and valve feedback.
 
-1. Start a dataframe, then turn **RUN TEST** on.
-2. Observe phase 1: the double-acting fill valve opens, the supply level falls, and the run tank rises to 60%.
-3. Observe phase 2: fill closes and the igniter is applied for two seconds. Feed valves stay closed.
-4. Observe phase 3: the engine feed valves open. Pressure approaches 60 bar and temperature approaches 1200 K while the run tank drains.
-5. Turn RUN TEST off. Phase returns to 0, feed valves close, and igniter applied becomes 0.
+1. Turn **RUN TEST** on. At T-2m, answer **Engine test recording** with a run name. The setup bucket creates a dataframe; the mission clock holds at the next bucket if setup is unfinished.
+2. At T-1m, answer **Ox tank fill target** with `60`. Watch the measured fill approach that percentage. Supply level stays at 100%; the controller vents when ox pressure reaches 90% of supply pressure, then resumes filling after pressure falls to 500.
+3. The tank-fill bucket waits for completion and a return to isolate. If it reaches T0 first, its scheduled hold keeps ignition from starting early.
+4. At T+0s, the ignition sequence energizes the simulated igniter for two seconds, then opens the feed valves. During its eight-second firing interval, pressure approaches 60 bar and voted temperature approaches 1200 K.
+5. After ignition completes, its end handler closes and releases the outputs. The T+15s cleanup bucket stops the dataframe. Turn RUN TEST off to stop early; the stop handler ends the recording and stops ignition.
 
-The timeline starts one ordered operation at T+0. Its fill loop checks measured level before moving to ignition; `wait(0.1)` lets the timeline continue ticking while that operation waits. Ignition advances only while the abort is clear. The request helper handles an ARGUS override arriving between the condition check and a command, then retries on the next loop. Firing keeps applying its requests after an automatically released abort. The supply replenishes in idle so you can repeat the exercise.
+Confirm the current state and completion channels as well as the task cards. An abort reaction can take control of outputs while the timeline is still running. Stop the test before clearing a fault when you want to remain idle.
 
-Failure exercise: turn **HIGH TEMP ON IGNITION** on before RUN TEST. Filling still works. At ignition, temperature becomes 1800 K and the abort disables the igniter and closes the valves. Clear the switch to release the override and continue ignition/firing. Turn RUN TEST off first if you want to remain stopped. Acknowledging or silencing the event does not release it.
-
-[Review the dataframe](../README.md#operate-and-record): compare both tank levels, phase, requests, applied outputs, valve positions, and stage logs. Change the 60% target or two-second ignition delay in this file, save/activate it, and repeat.
+[Review the dataframe](../README.md#operate-and-record): compare fill target, fill, pressure, valve position, and phase. Repeat with another fill target through the prompt. To change ignition duration, edit the waits in `test_sequence.dcode`, activate it while the procedure is stopped, and run a fresh test.

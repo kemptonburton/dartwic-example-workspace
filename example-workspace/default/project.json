@@ -15,7 +15,10 @@
     }
   ],
   "required_files": [
-    "schematics/Mock Rocket Test.json",
-    "scripts/test_sequence.dcode"
+    "schematics/Engine Test Fire.json",
+    "schematics/Rocket Flight.json",
+    "scripts/test_sequence.dcode",
+    "scripts/rocket_flight.dcode",
+    "command_presets.json"
   ]
 }

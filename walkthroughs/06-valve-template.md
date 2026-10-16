@@ -1,14 +1,14 @@
 # Generate double-acting valve controllers
 
-Open `example-workspace/default/scripts/valves/double_acting_valves.dcode` and `valves.yaml`. The YAML generates one periodic controller for fuel, oxidizer, fill, and vent.
+Open `example-workspace/default/scripts/valves/double_acting_valves.dcode` and `valves.yaml`. Each YAML row creates a 10 Hz loop for fuel, oxidizer, fill, or vent, using the same simple pattern as the primary workspace.
 
-1. Turn RUN TEST off, then stop the `rocket_test` task to release its valve requests.
-2. Use a valve switch to request open, then close. Compare request, open/close coils, applied coils, and position.
-3. Observe a 0.2-second command pulse followed by both coils off. The opposite coil is cancelled before starting a new pulse.
-4. Stop that valve task during a pulse. Its `end:` requests both coils off and releases their authority. Restart it to initialize a new pulse state.
+The loop remembers the last request. When the request changes to `1`, it pulses the open coil for half a second; `0` pulses the close coil. After the pulse, it updates `rocket_sim_<valve>_state`. That channel records the completed command, while `rocket_sim_<valve>_position` comes from the simulated device.
 
-The driver independently rejects simultaneous coils and logs the rejection. The template pulse bounds the command; it is not a hardware safety timer or a guaranteed physical pulse duration. Position remains latched after a pulse in this simulated double-acting device.
+1. Turn RUN TEST off and stop `rocket_test` before trying individual valves.
+2. Request open, then close. Compare the request, commanded coil, applied coil, completed-command state, and measured position.
+3. Leave the request unchanged and check that the loop does not repeat the pulse.
+4. Wait for both coils to return to zero before stopping the valve loop.
 
-Failure exercise: disconnect the device mid-pulse, then reconnect. The controller resets its remembered request while disconnected and retries the requested position after valid connection. Confirm both applied coils are never on together.
+A request that changes during the half-second wait is handled on a later iteration. This small example does not retry after a device disconnect or confirm movement from feedback. The driver rejects simultaneous coils. If you interrupt a pulse, check and clear the coil commands before restarting; stopping the loop does not itself write zero.
 
-[Record and review](../README.md#operate-and-record) command versus applied pulse lengths. Add a valve by adding one YAML row with a new `valve` name and corresponding driver channels. Reactivate the template after editing YAML; verify the generated task before starting it. Restart `rocket_test` with RUN TEST off afterward.
+[Record and review](../README.md#operate-and-record) command versus applied pulse lengths. Add a valve with another YAML row and matching driver channels, then reactivate the DCode file. Keep RUN TEST off while checking the generated loop.

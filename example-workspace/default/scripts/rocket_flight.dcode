@@ -1,0 +1,22 @@
+# Flight commands belong to the separate TEMPEST peer, not the engine test device.
+task_sequence rocket_launch_sequence:
+    start:
+        |rocket_launch_acknowledged| = 0
+
+    command |rocket_qd_released| = 1
+    log("Rocket launch", "Ground quick disconnect released")
+    wait(1)
+    tempest_pinned_operation("FLIGHT_COMPUTER", "launch-rocket", {})
+    |rocket_launch_acknowledged| = 1
+    log("Rocket launch", "Flight computer acknowledged launch")
+
+    end:
+        free |rocket_qd_released|
+
+task_sequence rocket_land_sequence:
+    start:
+        |rocket_land_acknowledged| = 0
+
+    tempest_pinned_operation("FLIGHT_COMPUTER", "land-rocket", {})
+    |rocket_land_acknowledged| = 1
+    log("Rocket launch", "Flight computer acknowledged land command")

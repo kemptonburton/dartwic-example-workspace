@@ -2,9 +2,352 @@
   "channels": [
     {
       "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "observe_only",
+      "key": "FLIGHT_COMPUTER:altitude_m",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691286400,
+        "value": 0.0
+      },
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "m",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "observe_only",
+      "key": "FLIGHT_COMPUTER:battery_voltage",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691273300,
+        "value": 23.93508303718482
+      },
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "V",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "observe_only",
+      "key": "FLIGHT_COMPUTER:flight_phase",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691296200,
+        "value": 0.0
+      },
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "state",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "observe_only",
+      "key": "FLIGHT_COMPUTER:ground_qd_released",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691297300,
+        "value": 0.0
+      },
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "observe_only",
+      "key": "FLIGHT_COMPUTER:ground_snapshot_counter",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691304400,
+        "value": 147793.0
+      },
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "snapshots",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "observe_only",
+      "key": "FLIGHT_COMPUTER:sample_counter",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691277900,
+        "value": 674533.0
+      },
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "samples",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "FLIGHT_COMPUTER:telemetry_rate_hz",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691281800,
+        "value": 5.0
+      },
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "observe_only",
+      "key": "FLIGHT_COMPUTER:velocity_mps",
+      "last_known": {
+        "active_controller": "",
+        "commanded_by": "",
+        "created_by": "thread:61916|node:MOCK_ROCKET_GROUND",
+        "created_by_inferred": true,
+        "creation_provenance": {
+          "ancestry": [],
+          "creator": {
+            "id": "",
+            "kind": ""
+          },
+          "creator_instance": "",
+          "dependencies": [],
+          "initiator": [],
+          "node": "",
+          "quality": "inferred",
+          "script": "",
+          "thread": "",
+          "version": 1
+        },
+        "legacy_creation_enrichment": "",
+        "override_restore_active_controller": "",
+        "timestamp": 1792043477691291100,
+        "value": 0.0
+      },
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": true,
+      "stale_timeout": 2.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "m/s",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_argus_event_no_progress_seconds",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -23,7 +366,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_argus_event_write_errors_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -42,7 +384,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_argus_log_dropped_records_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -61,7 +402,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_argus_log_no_progress_seconds",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -80,7 +420,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_argus_log_queue_used_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -99,7 +438,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_argus_log_write_errors_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -118,7 +456,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_cpu_logical_processors",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -137,7 +474,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_cpu_sample_interval_seconds",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -156,7 +492,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_dartwic_cpu_seconds",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -175,7 +510,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_dartwic_cpu_usage_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -194,7 +528,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_dartwic_memory_resident_bytes",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -213,7 +546,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_dartwic_memory_usage_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -232,7 +564,96 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
+      "key": "engine_ignition_complete",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:engine_ignition",
+      "control_policy": "observe_only",
+      "key": "engine_ignition_current_line",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "line",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:engine_ignition",
+      "control_policy": "observe_only",
+      "key": "engine_ignition_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_ignition_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_ignition_running",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
       "key": "engine_rapid_autorecord_enabled",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
@@ -251,7 +672,6 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "engine_rapid_autorecord_interval_seconds",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
@@ -270,7 +690,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_dynamic_reads_per_sec",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -289,7 +708,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_dynamic_writes_per_sec",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -308,7 +726,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_fixed_capacity_used_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -327,7 +744,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_fixed_reads_per_sec",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -346,7 +762,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_fixed_slots_capacity",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -365,7 +780,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_fixed_slots_used",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -384,7 +798,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_fixed_writes_per_sec",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -403,7 +816,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_publication_observer_failures_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -422,7 +834,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_publication_overwritten_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -441,7 +852,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_publication_queue_used_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -460,7 +870,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_recording_committed_rows_per_sec",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -479,7 +888,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_recording_dropped_rows_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -498,7 +906,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_recording_failed_rows_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -517,7 +924,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_recording_no_progress_seconds",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -536,7 +942,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_recording_queue_used_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -555,7 +960,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_recording_rows_per_sec",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -574,7 +978,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_rapid_recording_write_errors_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -593,7 +996,6 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "engine_rapid_writer_threads_batch_flush_timeout_ms",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
@@ -612,7 +1014,6 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "engine_rapid_writer_threads_buffer_batch_size",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
@@ -631,7 +1032,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_storage_available_mb",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -650,7 +1050,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_system_cpu_busy_seconds",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -669,7 +1068,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_system_cpu_total_seconds",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -688,7 +1086,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_system_cpu_usage_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -707,7 +1104,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_system_memory_available_bytes",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -726,7 +1122,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_system_memory_total_bytes",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -745,7 +1140,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_system_memory_usage_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -764,7 +1158,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_system_memory_used_bytes",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -781,9 +1174,240 @@
     },
     {
       "calculation_scripts": [],
+      "control_owner": "task:engine_tank_fill",
+      "control_policy": "observe_only",
+      "key": "engine_tank_fill_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_tank_fill_complete",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_tank_fill_current_line",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:engine_tank_fill",
+      "control_policy": "observe_only",
+      "key": "engine_tank_fill_current_state",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": [
+        {
+          "label": "isolate",
+          "value": 0.0
+        },
+        {
+          "label": "fill",
+          "value": 1.0
+        },
+        {
+          "label": "vent",
+          "value": 2.0
+        },
+        {
+          "label": "manual",
+          "value": 3.0
+        }
+      ]
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:engine_tank_fill",
+      "control_policy": "observe_only",
+      "key": "engine_tank_fill_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:engine_tank_fill",
+      "control_policy": "observe_only",
+      "key": "engine_tank_fill_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_tank_fill_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:engine_tank_fill",
+      "control_policy": "observe_only",
+      "key": "engine_tank_fill_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_tank_fill_running",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_tank_fill_target_frequency",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "engine_tank_fill_target_state",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": [
+        {
+          "label": "isolate",
+          "value": 0.0
+        },
+        {
+          "label": "fill",
+          "value": 1.0
+        },
+        {
+          "label": "vent",
+          "value": 2.0
+        },
+        {
+          "label": "manual",
+          "value": 3.0
+        }
+      ]
+    },
+    {
+      "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_dropped_messages_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -802,7 +1426,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_operation_timeouts_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -821,7 +1444,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_tempest_peer",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_peer_FLIGHT_COMPUTER_connected",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -840,7 +1462,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_tempest_peer",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_peer_FLIGHT_COMPUTER_rx_mbps",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -859,7 +1480,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_tempest_peer",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_peer_FLIGHT_COMPUTER_tx_mbps",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -878,7 +1498,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_queue_used_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -897,7 +1516,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_rejected_operations_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -916,7 +1534,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_rejected_snapshots_total",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -935,7 +1552,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_rx_mbps",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -954,7 +1570,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "engine_tempest_tx_mbps",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -973,7 +1588,96 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
+      "key": "example_device_plugin.example_device_1_discovery_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "key": "example_device_plugin.example_device_1_discovery_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "key": "example_device_plugin.example_device_1_discovery_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "key": "example_device_plugin.example_device_1_discovery_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 2.5,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
+      "key": "example_device_plugin.example_device_1_discovery_target_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:engine_diagnostics",
+      "control_policy": "observe_only",
       "key": "example_device_plugin.heartbeat_actual_frequency",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -992,7 +1696,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "example_device_plugin.heartbeat_execution_time",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -1011,7 +1714,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "example_device_plugin.heartbeat_failed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -1030,7 +1732,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "example_device_plugin.heartbeat_missed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -1049,7 +1750,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "example_device_plugin.heartbeat_target_frequency",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -1066,86 +1766,9 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
+      "control_owner": "task:example_device_read",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.mock_device_discovery_actual_frequency",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.mock_device_discovery_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ms",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.mock_device_discovery_failed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.mock_device_discovery_missed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.mock_device_discovery_target_frequency",
+      "key": "example_device_read_actual_frequency",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "never",
@@ -1161,34 +1784,14 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
+      "control_owner": "task:example_device_read",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.rocket_device_discovery_actual_frequency",
+      "key": "example_device_read_execution_time",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "never",
       "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.rocket_device_discovery_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
@@ -1199,15 +1802,14 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
+      "control_owner": "task:example_device_read",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.rocket_device_discovery_failed_cycles",
+      "key": "example_device_read_failed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "never",
       "remote_mirror": false,
-      "stale_timeout": 2.5,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
@@ -1218,15 +1820,32 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "example_device_read_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:example_device_read",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.rocket_device_discovery_missed_cycles",
+      "key": "example_device_read_missed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "never",
       "remote_mirror": false,
-      "stale_timeout": 2.5,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
@@ -1237,13 +1856,156 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "example_device_read_running",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "example_device_read_target_frequency",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:example_device_write",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "example_device_plugin.rocket_device_discovery_target_frequency",
+      "key": "example_device_write_actual_frequency",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:example_device_write",
+      "control_policy": "observe_only",
+      "key": "example_device_write_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:example_device_write",
+      "control_policy": "observe_only",
+      "key": "example_device_write_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "example_device_write_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:example_device_write",
+      "control_policy": "observe_only",
+      "key": "example_device_write_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "example_device_write_running",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "example_device_write_target_frequency",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
@@ -1258,7 +2020,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_engine_abort",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -1276,14 +2037,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 12,
+          "line_number": 13,
           "relationship": "target",
           "script": "engine_abort.dcode#event_firing:rocket_engine_abort"
         }
       ],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_engine_abort_firing",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -1301,14 +2061,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 9,
+          "line_number": 10,
           "relationship": "target",
           "script": "engine_abort.dcode#event_trigger:rocket_engine_abort"
         }
       ],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_engine_abort_trigger",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -1325,13 +2084,12 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "task:rocket_read",
+      "control_owner": "task:rocket_land_sequence",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_read_actual_frequency",
+      "key": "rocket_land_sequence_current_line",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
-      "record_mode": "never",
+      "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
@@ -1339,34 +2097,14 @@
         "value": 0.0
       },
       "storage": "dynamic",
-      "units": "Hz",
+      "units": "line",
       "value_options": []
     },
     {
       "calculation_scripts": [],
-      "control_owner": "task:rocket_read",
+      "control_owner": "task:rocket_land_sequence",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_read_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ms",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_read",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_read_failed_cycles",
+      "key": "rocket_land_sequence_failed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "never",
@@ -1384,8 +2122,7 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_read_hold",
+      "key": "rocket_land_sequence_hold",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
@@ -1401,10 +2138,45 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "task:rocket_read",
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_land_sequence_running",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_launch_sequence",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_read_missed_cycles",
+      "key": "rocket_launch_sequence_current_line",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "line",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_launch_sequence",
+      "control_policy": "observe_only",
+      "key": "rocket_launch_sequence_failed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "never",
@@ -1422,16 +2194,15 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_read_running",
-      "manual_restore_policy": "free",
+      "key": "rocket_launch_sequence_hold",
+      "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
-        "enabled": true,
-        "value": 1.0
+        "enabled": false,
+        "value": 0.0
       },
       "storage": "dynamic",
       "units": "",
@@ -1441,16 +2212,141 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_read_target_frequency",
-      "manual_restore_policy": "free",
+      "key": "rocket_launch_sequence_running",
+      "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
-        "enabled": true,
-        "value": 20.0
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_ox_tank_sim",
+      "control_policy": "observe_only",
+      "key": "rocket_ox_tank_sim_actual_frequency",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "Hz",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_ox_tank_sim",
+      "control_policy": "observe_only",
+      "key": "rocket_ox_tank_sim_execution_time",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "ms",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_ox_tank_sim",
+      "control_policy": "observe_only",
+      "key": "rocket_ox_tank_sim_failed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_ox_tank_sim_hold",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:rocket_ox_tank_sim",
+      "control_policy": "observe_only",
+      "key": "rocket_ox_tank_sim_missed_cycles",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "never",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "cycles",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_ox_tank_sim_running",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_ox_tank_sim_target_frequency",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
       },
       "storage": "dynamic",
       "units": "Hz",
@@ -1460,15 +2356,14 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_sim_abort_active",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "dynamic",
@@ -1476,39 +2371,48 @@
       "value_options": []
     },
     {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [],
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
         "creator": {
-          "id": "",
-          "kind": ""
+          "id": "example_device_read",
+          "kind": "task"
         },
-        "creator_instance": "",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
-        "node": "",
-        "quality": "inferred",
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
         "script": "",
-        "thread": "",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_connected",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1517,34 +2421,34 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fault_disconnect",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1553,34 +2457,34 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fault_missing_sensor",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1589,34 +2493,34 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fault_overtemperature",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1625,34 +2529,34 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fault_sensor_bias",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1661,16 +2565,16 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fill_close_applied",
@@ -1683,67 +2587,39 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "loop:rocket_valve_fill|script:valves/double_acting_valves.dcode|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "rocket_device",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
+        "ancestry": [],
         "creator": {
-          "id": "rocket_write",
-          "kind": "task"
+          "id": "rocket_valve_fill",
+          "kind": "loop"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
-        "script": "",
-        "thread": "49648",
+        "script": "valves/double_acting_valves.dcode",
+        "thread": "64728",
         "version": 2
       },
       "key": "rocket_sim_fill_close_coil",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fill",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_sim_fill_feedback_ok",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1752,16 +2628,16 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fill_open_applied",
@@ -1774,12 +2650,12 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1788,126 +2664,34 @@
           }
         ],
         "creator": {
-          "id": "rocket_write",
+          "id": "example_device_write",
           "kind": "task"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "26739926296800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fill_open_coil",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_fill_position",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_sim_fill_request",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_sim_flight_check",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_flow",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -1916,16 +2700,124 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
+        "version": 2
+      },
+      "key": "rocket_sim_fill_position",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "task:engine_tank_fill",
+      "control_policy": "automatic",
+      "key": "rocket_sim_fill_request",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:rocket_valve_fill",
+      "control_policy": "observe_only",
+      "key": "rocket_sim_fill_state",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "example_device_read",
+          "kind": "task"
+        },
+        "creator_instance": "26739876916800",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "47300",
+        "version": 2
+      },
+      "key": "rocket_sim_flow",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "example_device_read",
+          "kind": "task"
+        },
+        "creator_instance": "26739876916800",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fuel_close_applied",
@@ -1938,67 +2830,39 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "loop:rocket_valve_fuel|script:valves/double_acting_valves.dcode|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "rocket_device",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
+        "ancestry": [],
         "creator": {
-          "id": "rocket_write",
-          "kind": "task"
+          "id": "rocket_valve_fuel",
+          "kind": "loop"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
-        "script": "",
-        "thread": "49648",
+        "script": "valves/double_acting_valves.dcode",
+        "thread": "70296",
         "version": 2
       },
       "key": "rocket_sim_fuel_close_coil",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fuel",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_sim_fuel_feedback_ok",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2007,16 +2871,16 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fuel_open_applied",
@@ -2029,12 +2893,12 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2043,50 +2907,59 @@
           }
         ],
         "creator": {
-          "id": "rocket_write",
+          "id": "example_device_write",
           "kind": "task"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "26739926296800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fuel_open_coil",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [],
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
         "creator": {
-          "id": "",
-          "kind": ""
+          "id": "example_device_read",
+          "kind": "task"
         },
-        "creator_instance": "",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
-        "node": "",
-        "quality": "inferred",
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
         "script": "",
-        "thread": "",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_fuel_position",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
@@ -2095,7 +2968,6 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_sim_fuel_request",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -2103,7 +2975,7 @@
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "dynamic",
@@ -2112,93 +2984,92 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_sim_ground_ambient",
-      "manual_restore_policy": "free",
+      "control_owner": "loop:rocket_valve_fuel",
+      "control_policy": "observe_only",
+      "key": "rocket_sim_fuel_state",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
-        "enabled": true,
-        "value": 295.0
+        "enabled": false,
+        "value": 0.0
       },
       "storage": "dynamic",
       "units": "",
       "value_options": []
     },
     {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [],
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
         "creator": {
-          "id": "",
-          "kind": ""
+          "id": "example_device_read",
+          "kind": "task"
         },
-        "creator_instance": "",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
-        "node": "",
-        "quality": "inferred",
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
         "script": "",
-        "thread": "",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_igniter_applied",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "loop:dcode-declared-events|script:engine_abort.dcode|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "rocket_device",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
+        "ancestry": [],
         "creator": {
-          "id": "rocket_write",
-          "kind": "task"
+          "id": "dcode-declared-events",
+          "kind": "loop"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
-        "script": "",
-        "thread": "49648",
+        "script": "engine_abort.dcode",
+        "thread": "38316",
         "version": 2
       },
       "key": "rocket_sim_igniter_command",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2207,16 +3078,16 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_oxidizer_close_applied",
@@ -2229,67 +3100,39 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "loop:rocket_valve_oxidizer|script:valves/double_acting_valves.dcode|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "rocket_device",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
+        "ancestry": [],
         "creator": {
-          "id": "rocket_write",
-          "kind": "task"
+          "id": "rocket_valve_oxidizer",
+          "kind": "loop"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
-        "script": "",
-        "thread": "49648",
+        "script": "valves/double_acting_valves.dcode",
+        "thread": "60812",
         "version": 2
       },
       "key": "rocket_sim_oxidizer_close_coil",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_oxidizer",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_sim_oxidizer_feedback_ok",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2298,16 +3141,16 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_oxidizer_open_applied",
@@ -2320,12 +3163,12 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2334,470 +3177,19 @@
           }
         ],
         "creator": {
-          "id": "rocket_write",
+          "id": "example_device_write",
           "kind": "task"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "26739926296800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_oxidizer_open_coil",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_oxidizer_position",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_sim_oxidizer_request",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "rocket_device",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "rocket_read",
-          "kind": "task"
-        },
-        "creator_instance": "23385714512500",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "49648",
-        "version": 2
-      },
-      "key": "rocket_sim_phase",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [
-        {
-          "line_number": 2,
-          "relationship": "target",
-          "script": "pressure_scaling.dcode#channel_calculation:rocket_sim_pressure"
-        },
-        {
-          "line_number": 11,
-          "relationship": "dependency",
-          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_pressure"
-        }
-      ],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_sim_pressure",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "bar",
-      "value_options": []
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_pressure_current_ma",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_run_fill",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_sample_age_s",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_sample_counter",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_sensor_valid",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_supply_fill",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 100.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_temperature_1",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_temperature_2",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
-      "creation_provenance": {
-        "ancestry": [],
-        "creator": {
-          "id": "",
-          "kind": ""
-        },
-        "creator_instance": "",
-        "dependencies": [],
-        "initiator": [],
-        "node": "",
-        "quality": "inferred",
-        "script": "",
-        "thread": "",
-        "version": 2
-      },
-      "key": "rocket_sim_temperature_3",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [
-        {
-          "line_number": 8,
-          "relationship": "target",
-          "script": "sensor_voting.dcode#channel_calculation:rocket_sim_temperature_spread"
-        },
-        {
-          "line_number": 11,
-          "relationship": "dependency",
-          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_disagreement"
-        }
-      ],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_sim_temperature_spread",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "K",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [
-        {
-          "line_number": 9,
-          "relationship": "dependency",
-          "script": "engine_abort.dcode#event_trigger:rocket_engine_abort"
-        },
-        {
-          "line_number": 2,
-          "relationship": "target",
-          "script": "sensor_voting.dcode#channel_calculation:rocket_sim_temperature_voted"
-        }
-      ],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_sim_temperature_voted",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "K",
-      "value_options": []
-    },
-    {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "rocket_device",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "rocket_read",
-          "kind": "task"
-        },
-        "creator_instance": "23385714512500",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "49648",
-        "version": 2
-      },
-      "key": "rocket_sim_vent_close_applied",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
@@ -2807,12 +3199,12 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2821,33 +3213,50 @@
           }
         ],
         "creator": {
-          "id": "rocket_write",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
-      "key": "rocket_sim_vent_close_coil",
+      "key": "rocket_sim_oxidizer_position",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
       "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_vent",
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_oxidizer_request",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:rocket_valve_oxidizer",
       "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_sim_vent_feedback_ok",
+      "key": "rocket_sim_oxidizer_state",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
@@ -2862,12 +3271,86 @@
       "value_options": []
     },
     {
-      "created_by": "task:rocket_read|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_phase",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 2,
+          "relationship": "target",
+          "script": "pressure_scaling.dcode#channel_calculation:rocket_sim_pressure"
+        },
+        {
+          "line_number": 12,
+          "relationship": "dependency",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_pressure"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_pressure",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "created_by": "thread:32560|node:MY_NODE",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "legacy",
+        "script": "",
+        "thread": "",
+        "version": 1
+      },
+      "key": "rocket_sim_pressure_current_ma",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2876,16 +3359,416 @@
           }
         ],
         "creator": {
-          "id": "rocket_read",
+          "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "23385714512500",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
+        "version": 2
+      },
+      "key": "rocket_sim_run_fill",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_run_fill_target",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_run_tank_pressure",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "created_by": "thread:38316|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "38316",
+        "version": 2
+      },
+      "key": "rocket_sim_sample_age_s",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "example_device_read",
+          "kind": "task"
+        },
+        "creator_instance": "26739876916800",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "47300",
+        "version": 2
+      },
+      "key": "rocket_sim_sample_counter",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "thread:38316|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "38316",
+        "version": 2
+      },
+      "key": "rocket_sim_sensor_valid",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_supply_fill",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_supply_tank_pressure",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "created_by": "thread:32560|node:MY_NODE",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "legacy",
+        "script": "",
+        "thread": "",
+        "version": 1
+      },
+      "key": "rocket_sim_temperature_1",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "thread:32560|node:MY_NODE",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "legacy",
+        "script": "",
+        "thread": "",
+        "version": 1
+      },
+      "key": "rocket_sim_temperature_2",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "thread:32560|node:MY_NODE",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "",
+          "kind": ""
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "",
+        "quality": "legacy",
+        "script": "",
+        "thread": "",
+        "version": 1
+      },
+      "key": "rocket_sim_temperature_3",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 8,
+          "relationship": "target",
+          "script": "sensor_voting.dcode#channel_calculation:rocket_sim_temperature_spread"
+        },
+        {
+          "line_number": 12,
+          "relationship": "dependency",
+          "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_disagreement"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_temperature_spread",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [
+        {
+          "line_number": 10,
+          "relationship": "dependency",
+          "script": "engine_abort.dcode#event_trigger:rocket_engine_abort"
+        },
+        {
+          "line_number": 2,
+          "relationship": "target",
+          "script": "sensor_voting.dcode#channel_calculation:rocket_sim_temperature_voted"
+        }
+      ],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_temperature_voted",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "example_device_read",
+          "kind": "task"
+        },
+        "creator_instance": "26739876916800",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "47300",
+        "version": 2
+      },
+      "key": "rocket_sim_vent_close_applied",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "loop:rocket_valve_vent|script:valves/double_acting_valves.dcode|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [],
+        "creator": {
+          "id": "rocket_valve_vent",
+          "kind": "loop"
+        },
+        "creator_instance": "",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "valves/double_acting_valves.dcode",
+        "thread": "22852",
+        "version": 2
+      },
+      "key": "rocket_sim_vent_close_coil",
+      "legacy_creation_enrichment": "",
+      "metadata_only": true,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "fixed"
+    },
+    {
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
+      "creation_provenance": {
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
+        "creator": {
+          "id": "example_device_read",
+          "kind": "task"
+        },
+        "creator_instance": "26739876916800",
+        "dependencies": [],
+        "initiator": [],
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
+        "script": "",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_vent_open_applied",
@@ -2898,12 +3781,12 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:rocket_write|module:rocket_device|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
         "ancestry": [
           {
-            "id": "rocket_device",
+            "id": "example_device_1",
             "kind": "module"
           },
           {
@@ -2912,67 +3795,75 @@
           }
         ],
         "creator": {
-          "id": "rocket_write",
+          "id": "example_device_write",
           "kind": "task"
         },
-        "creator_instance": "23385741909200",
+        "creator_instance": "26739926296800",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "49648",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_vent_open_coil",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
-      "created_by": "thread:49648|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": true,
+      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
+      "created_by_inferred": false,
       "creation_provenance": {
-        "ancestry": [],
+        "ancestry": [
+          {
+            "id": "example_device_1",
+            "kind": "module"
+          },
+          {
+            "id": "example_device_plugin",
+            "kind": "plugin"
+          }
+        ],
         "creator": {
-          "id": "",
-          "kind": ""
+          "id": "example_device_read",
+          "kind": "task"
         },
-        "creator_instance": "",
+        "creator_instance": "26739876916800",
         "dependencies": [],
         "initiator": [],
-        "node": "",
-        "quality": "inferred",
+        "node": "MOCK_ROCKET_GROUND",
+        "quality": "captured",
         "script": "",
-        "thread": "",
+        "thread": "47300",
         "version": 2
       },
       "key": "rocket_sim_vent_position",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "fixed"
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
+      "control_owner": "task:engine_tank_fill",
+      "control_policy": "automatic",
       "key": "rocket_sim_vent_request",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "dynamic",
@@ -2981,11 +3872,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_aborted",
-      "manual_restore_policy": "free",
+      "control_owner": "loop:rocket_valve_vent",
+      "control_policy": "observe_only",
+      "key": "rocket_sim_vent_state",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3002,7 +3892,24 @@
       "calculation_scripts": [],
       "control_owner": "timeline:rocket_test",
       "control_policy": "observe_only",
-      "data_frame": "",
+      "key": "rocket_test_aborted",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
       "key": "rocket_test_actual_frequency",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -3019,11 +3926,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_bucket_fill_ignite_fire_current_line",
-      "manual_restore_policy": "free",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_cleanup_current_line",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3038,11 +3944,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_bucket_fill_ignite_fire_duration",
-      "manual_restore_policy": "free",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_cleanup_duration",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3057,11 +3962,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_bucket_fill_ignite_fire_started_at",
-      "manual_restore_policy": "free",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_cleanup_ended_at",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3076,11 +3980,28 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_bucket_fill_ignite_fire_status",
-      "manual_restore_policy": "free",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_cleanup_started_at",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_cleanup_status",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3128,68 +4049,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_clock_absolute",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_clock_prepared",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_clock_running",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_current_line",
-      "manual_restore_policy": "free",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_ignition_current_line",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3204,11 +4067,451 @@
     },
     {
       "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_ignition_duration",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "s",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_ignition_ended_at",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_ignition_started_at",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_ignition_status",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": [
+        {
+          "label": "pending",
+          "value": 0.0
+        },
+        {
+          "label": "running",
+          "value": 1.0
+        },
+        {
+          "label": "waiting",
+          "value": 2.0
+        },
+        {
+          "label": "completed",
+          "value": 3.0
+        },
+        {
+          "label": "failed",
+          "value": 4.0
+        },
+        {
+          "label": "skipped",
+          "value": 5.0
+        },
+        {
+          "label": "cancelled",
+          "value": 6.0
+        },
+        {
+          "label": "uncertain",
+          "value": 7.0
+        }
+      ]
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_setup_current_line",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "line",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_setup_duration",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "s",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_setup_ended_at",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_setup_started_at",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_setup_status",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": [
+        {
+          "label": "pending",
+          "value": 0.0
+        },
+        {
+          "label": "running",
+          "value": 1.0
+        },
+        {
+          "label": "waiting",
+          "value": 2.0
+        },
+        {
+          "label": "completed",
+          "value": 3.0
+        },
+        {
+          "label": "failed",
+          "value": 4.0
+        },
+        {
+          "label": "skipped",
+          "value": 5.0
+        },
+        {
+          "label": "cancelled",
+          "value": 6.0
+        },
+        {
+          "label": "uncertain",
+          "value": 7.0
+        }
+      ]
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_tank_fill_current_line",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "line",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_tank_fill_duration",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "s",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_tank_fill_ended_at",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_tank_fill_started_at",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "format=mission-time",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_bucket_tank_fill_status",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": [
+        {
+          "label": "pending",
+          "value": 0.0
+        },
+        {
+          "label": "running",
+          "value": 1.0
+        },
+        {
+          "label": "waiting",
+          "value": 2.0
+        },
+        {
+          "label": "completed",
+          "value": 3.0
+        },
+        {
+          "label": "failed",
+          "value": 4.0
+        },
+        {
+          "label": "skipped",
+          "value": 5.0
+        },
+        {
+          "label": "cancelled",
+          "value": 6.0
+        },
+        {
+          "label": "uncertain",
+          "value": 7.0
+        }
+      ]
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_clock_absolute",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_test_effective_t0",
+      "key": "rocket_test_clock_hold",
       "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_clock_prepared",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_clock_running",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_current_line",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "line",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
+      "key": "rocket_test_effective_t0",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3225,7 +4528,6 @@
       "calculation_scripts": [],
       "control_owner": "timeline:rocket_test",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_test_execution_time",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -3244,7 +4546,6 @@
       "calculation_scripts": [],
       "control_owner": "timeline:rocket_test",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_test_failed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -3263,7 +4564,6 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_test_hold",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
@@ -3282,7 +4582,6 @@
       "calculation_scripts": [],
       "control_owner": "timeline:rocket_test",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_test_missed_cycles",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -3299,11 +4598,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
       "key": "rocket_test_mission_time",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3318,11 +4616,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
       "key": "rocket_test_recovered",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3337,11 +4634,10 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
+      "control_owner": "timeline:rocket_test",
+      "control_policy": "observe_only",
       "key": "rocket_test_revision",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3358,15 +4654,14 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_test_running",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
       "startup_value": {
-        "enabled": true,
+        "enabled": false,
         "value": 0.0
       },
       "storage": "dynamic",
@@ -3377,84 +4672,7 @@
       "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_test_target_frequency",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 20.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fill",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fill_actual_frequency",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fill",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fill_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ms",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fill",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fill_failed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_fill_hold",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
@@ -3463,462 +4681,6 @@
       "startup_value": {
         "enabled": false,
         "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fill",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fill_missed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_fill_running",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 1.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_fill_target_frequency",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 20.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fuel",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fuel_actual_frequency",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fuel",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fuel_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ms",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fuel",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fuel_failed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_fuel_hold",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_fuel",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_fuel_missed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_fuel_running",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 1.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_fuel_target_frequency",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 20.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_oxidizer",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_oxidizer_actual_frequency",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_oxidizer",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_oxidizer_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ms",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_oxidizer",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_oxidizer_failed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_oxidizer_hold",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_oxidizer",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_oxidizer_missed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_oxidizer_running",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 1.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_oxidizer_target_frequency",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 20.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_vent",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_vent_actual_frequency",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_vent",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_vent_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ms",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_vent",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_vent_failed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_vent_hold",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_valve_vent",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_valve_vent_missed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_vent_running",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 1.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_valve_vent_target_frequency",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 20.0
       },
       "storage": "dynamic",
       "units": "Hz",
@@ -3928,7 +4690,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_disagreement",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -3946,14 +4707,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 16,
+          "line_number": 17,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_disagreement"
         }
       ],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_disagreement_firing",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -3971,14 +4731,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 11,
+          "line_number": 12,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_disagreement"
         }
       ],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_warning_disagreement_trigger",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -3997,7 +4756,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_pressure",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4015,14 +4773,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 16,
+          "line_number": 17,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_pressure"
         }
       ],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_pressure_firing",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4040,14 +4797,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 11,
+          "line_number": 12,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_pressure"
         }
       ],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_warning_pressure_trigger",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -4066,7 +4822,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_temperature_1",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4084,14 +4839,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 16,
+          "line_number": 17,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_temperature_1"
         }
       ],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_temperature_1_firing",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4109,14 +4863,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 11,
+          "line_number": 12,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_temperature_1"
         }
       ],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_warning_temperature_1_trigger",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -4135,7 +4888,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_temperature_2",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4153,14 +4905,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 16,
+          "line_number": 17,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_temperature_2"
         }
       ],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_temperature_2_firing",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4178,14 +4929,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 11,
+          "line_number": 12,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_temperature_2"
         }
       ],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_warning_temperature_2_trigger",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -4204,7 +4954,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_temperature_3",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4222,14 +4971,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 16,
+          "line_number": 17,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_firing:rocket_warning_temperature_3"
         }
       ],
       "control_owner": "loop:dcode-declared-events",
       "control_policy": "observe_only",
-      "data_frame": "",
       "key": "rocket_warning_temperature_3_firing",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -4247,14 +4995,13 @@
     {
       "calculation_scripts": [
         {
-          "line_number": 11,
+          "line_number": 12,
           "relationship": "target",
           "script": "warnings/sensor_warnings.dcode#event_trigger:rocket_warning_temperature_3"
         }
       ],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
       "key": "rocket_warning_temperature_3_trigger",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -4271,67 +5018,9 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "task:rocket_write",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_write_actual_frequency",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_write",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_write_execution_time",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ms",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_write",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_write_failed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
       "control_owner": "",
       "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_write_hold",
+      "key": "test_channel",
       "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
@@ -4343,63 +5032,6 @@
       },
       "storage": "dynamic",
       "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "task:rocket_write",
-      "control_policy": "observe_only",
-      "data_frame": "",
-      "key": "rocket_write_missed_cycles",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "cycles",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_write_running",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 1.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "data_frame": "",
-      "key": "rocket_write_target_frequency",
-      "manual_restore_policy": "free",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": true,
-        "value": 20.0
-      },
-      "storage": "dynamic",
-      "units": "Hz",
       "value_options": []
     }
   ],

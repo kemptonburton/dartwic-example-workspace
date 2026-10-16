@@ -5,12 +5,13 @@ Open `flight-computer/main.cpp` here and `engine/src/example_transport.cpp` in t
 1. Stop any native flight process, then restore the plugin-defined connection:
 
 ```powershell
-python tools/peer_mode.py custom
+$env:DARTWIC_PASSWORD = Read-Host 'Demo admin password' -MaskInput
+python tools/peer_mode.py custom --port 7400
 ./flight-computer/bin/rocket-flight-peer.exe --transport custom
 ```
 
 2. Ground binds PULL 17600 and connects PUSH 17601; flight binds PULL 17601 and connects PUSH 17600. Configure both sides together when changing ports.
-3. Confirm battery and sample counter advance. Command telemetry rate and call `flight/set-mode`; inspect flight logs and the readiness event. Change ground ambient and confirm flight feedback changes.
+3. Open **Rocket Flight** and confirm battery and sample counter advance. Start `rocket_launch_sequence`; it releases the ground quick disconnect and calls the pinned launch operation. Confirm flight phase, altitude, and velocity change. Start `rocket_land_sequence` for the pinned land operation, then inspect flight logs and the readiness event.
 4. Inspect request IDs, replies, and telemetry in the transport source. Frames use a four-byte big-endian length followed by JSON. Peer owns correlation, registration, heartbeat, and reconnect; the transport owns bounded queues and framing.
 
 Failure exercise: stop/restart flight. Commands to the disconnected owner fail; reconnect restores new snapshots and acknowledged commands. This raw local transport has no authentication or encryption: use it on loopback for the exercise, and add your application's transport security before adapting it for a network.

@@ -1,7 +1,7 @@
 {
     "arguments": {
         "channel_prefix": "rocket_sim",
-        "module_instance_name": "rocket_device",
+        "module_instance_name": "example_device_1",
         "write_mappings": [
             {
                 "channel": "rocket_sim_fuel_open_coil",
@@ -41,8 +41,20 @@
             }
         ]
     },
-    "metadata": {},
+    "metadata": {
+        "fixed_input_channels": [
+            "rocket_sim_fuel_open_coil",
+            "rocket_sim_fuel_close_coil",
+            "rocket_sim_oxidizer_open_coil",
+            "rocket_sim_oxidizer_close_coil",
+            "rocket_sim_fill_open_coil",
+            "rocket_sim_fill_close_coil",
+            "rocket_sim_vent_open_coil",
+            "rocket_sim_vent_close_coil",
+            "rocket_sim_igniter_command"
+        ]
+    },
     "schema_version": 2,
-    "task_name": "rocket_write",
-    "task_type": "example_device_plugin.rocket_write"
+    "task_name": "example_device_write",
+    "task_type": "example_device_plugin.example_write"
 }

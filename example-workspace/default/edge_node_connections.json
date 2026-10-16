@@ -11,8 +11,7 @@
       "port": 7200,
       "rapid": {
         "channels": [
-          "rocket_sim_ground_ambient",
-          "rocket_test_running"
+          "rocket_qd_released"
         ],
         "enabled": true,
         "publish_all": false

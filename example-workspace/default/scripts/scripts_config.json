@@ -15,11 +15,19 @@
     "execution_mode": "lua",
     "run_on_startup": true
   },
+  "ox_tank_sim.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  },
   "valves/double_acting_valves.dcode": {
     "execution_mode": "lua",
     "run_on_startup": true
   },
   "warnings/sensor_warnings.dcode": {
+    "execution_mode": "lua",
+    "run_on_startup": true
+  },
+  "rocket_flight.dcode": {
     "execution_mode": "lua",
     "run_on_startup": true
   }

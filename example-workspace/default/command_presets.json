@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "presets": [
+    {
+      "id": "launch-rocket",
+      "peer_id": "example_device_plugin.example_flight_link",
+      "node": "FLIGHT_COMPUTER",
+      "label": "Launch rocket",
+      "kind": "command",
+      "operation": "flight/launch",
+      "arguments": {},
+      "secret_fields": []
+    },
+    {
+      "id": "land-rocket",
+      "peer_id": "example_device_plugin.example_flight_link",
+      "node": "FLIGHT_COMPUTER",
+      "label": "Land rocket",
+      "kind": "command",
+      "operation": "flight/land",
+      "arguments": {},
+      "secret_fields": []
+    }
+  ]
+}

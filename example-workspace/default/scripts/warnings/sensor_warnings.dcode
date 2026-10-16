@@ -7,6 +7,7 @@ template(params) event rocket_warning_{params.name}:
     resolution: "Inspect the graph and injected faults; clear the fault, then acknowledge the occurrence."
     system: "MOCK ROCKET"
     subsystem: "SENSORS"
+    separation_seconds: 0
     channels: |{params.channel}|, >{params.high}; |rocket_sim_sensor_valid|, |rocket_sim_sample_age_s|
     trigger:
         if |rocket_sim_sensor_valid| != 1 or |rocket_sim_sample_age_s| > 0.3:

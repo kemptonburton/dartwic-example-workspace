@@ -11,6 +11,8 @@ import time
 import urllib.error
 import urllib.request
 
+TEMPEST_COMPATIBILITY_VERSION = 2
+
 
 class Session:
     def __init__(self, host="127.0.0.1", port=7400, password=None, viewer=False):
@@ -20,6 +22,7 @@ class Session:
             "serverPassword": password if password is not None else os.environ["DARTWIC_PASSWORD"],
             "username": "rocket-example",
         }
+        payload["tempestCompatibilityVersion"] = TEMPEST_COMPATIBILITY_VERSION
         registration = self.operation("register_client", payload)
         self.client_id, self.token = registration["clientId"], registration["sessionToken"]
 
@@ -54,9 +57,11 @@ class Session:
         socket.setsockopt(zmq.LINGER, 0)
         socket.setsockopt_string(zmq.SUBSCRIBE, "rapid/channels/snapshot")
         socket.connect(f"tcp://{self.host}:{self.port+1}")
-        self.operation("dartwic/add-channel-to-telemetry", {"channel_name": channel})
         deadline, heartbeat = time.monotonic()+seconds, time.monotonic()+5
+        subscribed = False
         try:
+            self.operation("dartwic/add-channel-to-telemetry", {"channel_name": channel})
+            subscribed = True
             while time.monotonic() < deadline:
                 if time.monotonic() >= heartbeat:
                     self.operation("heartbeat")
@@ -70,9 +75,12 @@ class Session:
                         print(json.dumps({"channel":channel, "available":record.get("available"),
                             "value":fields.get("value"), "units":fields.get("units"), "timestamp":fields.get("timestamp")}))
         finally:
-            self.operation("dartwic/remove-channel-from-telemetry", {"channel_name": channel})
-            socket.close()
-            context.term()
+            try:
+                if subscribed:
+                    self.operation("dartwic/remove-channel-from-telemetry", {"channel_name": channel})
+            finally:
+                socket.close()
+                context.term()
 
     def close(self):
         self.operation("unregister_client")

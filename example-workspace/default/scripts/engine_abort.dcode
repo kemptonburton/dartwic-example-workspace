@@ -2,9 +2,10 @@ event rocket_engine_abort:
     title: "Mock rocket automatic abort"
     type: abort
     description: "Voted temperature exceeds 1500 K, or the simulated sensor input is invalid."
-    resolution: "Clear the injected fault to release shutdown overrides automatically. The test resumes if RUN TEST is still on."
+    resolution: "Stop the test, clear the injected fault, and verify the outputs before starting a new run."
     system: "MOCK ROCKET"
     subsystem: "AUTOMATION"
+    separation_seconds: 0
     channels: |rocket_sim_temperature_voted|, >1500; |rocket_sim_sensor_valid|
     trigger:
         if |rocket_sim_temperature_voted| > 1500 or |rocket_sim_sensor_valid| != 1:
@@ -23,4 +24,4 @@ event rocket_engine_abort:
             free |rocket_sim_fill_request|
             free |rocket_sim_igniter_command|
             |rocket_sim_abort_active| = 0
-            log("Rocket sequence", "Abort cleared: released overrides; active controller can resume")
+            log("Rocket sequence", "Abort cleared: released overrides; verify state before restarting")

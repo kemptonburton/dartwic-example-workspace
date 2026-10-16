@@ -4,11 +4,11 @@ Open `example-workspace/default/scripts/engine_abort.dcode`. Its trigger watches
 
 1. Start a dataframe and run the test until phase 3.
 2. Inject **HIGH TEMP ON IGNITION**. Voted temperature becomes 1800 K; abort active becomes 1; feed/fill requests become 0 and igniter applied becomes 0.
-3. Inspect a feed request: the underlying owner is `task:rocket_test`, while the active controller and policy reflect the abort's `automatic_override`.
+3. Inspect a feed request: the underlying owner is the active controller, such as `task:engine_ignition` for a feed request, while the active controller and policy reflect the abort's `automatic_override`.
 4. Acknowledge or silence the event while the fault remains active. Verify the shutdown remains applied.
-5. Leave RUN TEST on and clear overtemperature. Abort active becomes 0, `free` releases the overrides, and the sequence's feed and igniter requests resume.
+5. Turn RUN TEST off, then clear overtemperature. Abort active becomes 0 and `free` releases the overrides. Check authority and output values separately: releasing control does not restore a previous command value.
 
-**Automatic release is intentional in this example.** Turn RUN TEST off before clearing the fault to remain idle. The code uses the live firing condition, not the event's board status, as the release criterion.
+**Automatic release is intentional in this example.** If RUN TEST remains on, sequence work may continue when its conditions allow. The code uses the live firing condition, not event-board status, as the release criterion. Run a fresh test after investigating the fault.
 
 Failure exercise: inject **DISCONNECT DEVICE** during firing. Applied igniter goes off immediately in the device; retained temperatures become invalid. Clear the disconnect and verify valid samples and controller recovery. Finish with RUN TEST off.
 

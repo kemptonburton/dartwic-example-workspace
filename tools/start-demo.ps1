@@ -21,4 +21,12 @@ else { $arguments+=@('--host',$HostAddress,'--port',"$Port") }
 New-Item -ItemType Directory -Force -Path $statePath | Out-Null
 $flightProcess=Start-Process -FilePath $flightPath -ArgumentList $arguments -WorkingDirectory (Split-Path $flightPath) -WindowStyle Hidden -RedirectStandardOutput (Join-Path $statePath 'flight.stdout.log') -RedirectStandardError (Join-Path $statePath 'flight.stderr.log') -PassThru
 @{pid=$flightProcess.Id;executable=$flightPath;start_time_ticks="$($flightProcess.StartTime.ToUniversalTime().Ticks)"} | ConvertTo-Json | Set-Content -LiteralPath $recordPath -Encoding utf8
-Write-Host "Started flight demo PID $($flightProcess.Id) ($Transport). Logs: $statePath"
+Start-Sleep -Seconds 3
+$flightProcess.Refresh()
+if ($flightProcess.HasExited) {
+    Remove-Item -LiteralPath $recordPath
+    $stderrPath=Join-Path $statePath 'flight.stderr.log'
+    $details=if (Test-Path -LiteralPath $stderrPath) { (Get-Content -LiteralPath $stderrPath -Tail 8) -join ' ' } else { '' }
+    throw "Flight peer exited during startup (code $($flightProcess.ExitCode)). $details Logs: $statePath"
+}
+Write-Host "Started flight demo PID $($flightProcess.Id) ($Transport). The Engine runs separately. Logs: $statePath"

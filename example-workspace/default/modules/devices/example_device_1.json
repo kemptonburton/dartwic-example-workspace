@@ -1,0 +1,8 @@
+{
+  "module_type": "example_device",
+  "name": "example_device_1",
+  "plugin": "example_device_plugin",
+  "parameters": {
+    "channel_prefix": "rocket_sim"
+  }
+}

@@ -1,13 +1,15 @@
 {
   "diagnostics": {
     "internal_caesar_warnings": {
-      "loop|dartwic/project_action_telemetry_loop": false
+      "loop|dartwic/project_action_telemetry_loop": false,
+      "task|example_device_read": false
     }
   },
   "plugins": {
     "example_device_plugin": {
       "display": {
         "decimal_places": 3,
+        "resource_title": "Engine test fire data",
         "show_units": true
       }
     }
