@@ -11,7 +11,8 @@
       "settings": {
         "windowSeconds": 30,
         "cullScale": 3,
-        "enableHistoricalRequests": true
+        "enableHistoricalRequests": true,
+        "showCard": false
       }
     },
     "height": 400,

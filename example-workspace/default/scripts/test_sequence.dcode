@@ -1,5 +1,13 @@
 # The periodic ox-tank task supplies tank values. This state machine controls
 # the fill and vent requests; the device read task supplies applied positions.
+# Refresh the phase labels whenever this file is activated.
+|rocket_sim_phase|:value_options = [
+    {value: 0, label: "idle"},
+    {value: 1, label: "tank fill"},
+    {value: 2, label: "ignition"},
+    {value: 3, label: "firing"}
+]
+
 task_state_machine engine_tank_fill:
     start:
         |engine_tank_fill_complete| = 0

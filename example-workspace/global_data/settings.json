@@ -1,6 +1,7 @@
 {
   "diagnostics": {
     "internal_caesar_warnings": {
+      "loop|argus/board_snapshot_telemetry_loop": false,
       "loop|dartwic/project_action_telemetry_loop": false,
       "task|example_device_read": false
     }

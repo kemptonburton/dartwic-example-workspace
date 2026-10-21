@@ -11,3 +11,5 @@ Open **Engine Test Fire**, `example-workspace/default/scripts/ox_tank_sim.dcode`
 Confirm the current state and completion channels as well as the task cards. An abort reaction can take control of outputs while the timeline is still running. Stop the test before clearing a fault when you want to remain idle.
 
 [Review the dataframe](../README.md#operate-and-record): compare fill target, fill, pressure, valve position, and phase. Repeat with another fill target through the prompt. To change ignition duration, edit the waits in `test_sequence.dcode`, activate it while the procedure is stopped, and run a fresh test.
+
+Activating `test_sequence.dcode` also labels `rocket_sim_phase`: `0` idle, `1` tank fill, `2` ignition, and `3` firing.

@@ -690,42 +690,6 @@
       "calculation_scripts": [],
       "control_owner": "loop:engine_diagnostics",
       "control_policy": "observe_only",
-      "key": "engine_rapid_dynamic_reads_per_sec",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ops/sec",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "key": "engine_rapid_dynamic_writes_per_sec",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ops/sec",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
       "key": "engine_rapid_fixed_capacity_used_percent",
       "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
@@ -738,24 +702,6 @@
       },
       "storage": "dynamic",
       "units": "%",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "key": "engine_rapid_fixed_reads_per_sec",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ops/sec",
       "value_options": []
     },
     {
@@ -792,24 +738,6 @@
       },
       "storage": "dynamic",
       "units": "slots",
-      "value_options": []
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "loop:engine_diagnostics",
-      "control_policy": "observe_only",
-      "key": "engine_rapid_fixed_writes_per_sec",
-      "manual_restore_policy": "observe_only",
-      "override_restore_policy": "free",
-      "record_mode": "never",
-      "remote_mirror": false,
-      "stale_timeout": 2.5,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "ops/sec",
       "value_options": []
     },
     {
@@ -2724,10 +2652,10 @@
     {
       "calculation_scripts": [],
       "control_owner": "task:engine_tank_fill",
-      "control_policy": "automatic",
+      "control_policy": "automatic_override",
       "key": "rocket_sim_fill_request",
       "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
+      "override_restore_policy": "automatic",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
@@ -2967,7 +2895,7 @@
     {
       "calculation_scripts": [],
       "control_owner": "",
-      "control_policy": "free",
+      "control_policy": "automatic_override",
       "key": "rocket_sim_fuel_request",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -3237,7 +3165,7 @@
     {
       "calculation_scripts": [],
       "control_owner": "",
-      "control_policy": "free",
+      "control_policy": "automatic_override",
       "key": "rocket_sim_oxidizer_request",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -3286,7 +3214,24 @@
       },
       "storage": "dynamic",
       "units": "",
-      "value_options": []
+      "value_options": [
+        {
+          "label": "idle",
+          "value": 0.0
+        },
+        {
+          "label": "tank fill",
+          "value": 1.0
+        },
+        {
+          "label": "ignition",
+          "value": 2.0
+        },
+        {
+          "label": "firing",
+          "value": 3.0
+        }
+      ]
     },
     {
       "calculation_scripts": [

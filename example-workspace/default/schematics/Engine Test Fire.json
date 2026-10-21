@@ -272,7 +272,7 @@
                 "type": "channel_control",
                 "position": {
                     "x": -1164,
-                    "y": 72
+                    "y": 60
                 },
                 "data": {
                     "source_channel": "rocket_sim_run_fill_target",
@@ -407,8 +407,8 @@
                 "id": "display-rocket_sim_sensor_valid",
                 "type": "channel_display",
                 "position": {
-                    "x": 240.66287465382345,
-                    "y": 206.95579534082526
+                    "x": 36,
+                    "y": 588
                 },
                 "data": {
                     "source_channel": "rocket_sim_sensor_valid",
@@ -444,8 +444,8 @@
                 "id": "display-rocket_sim_connected",
                 "type": "channel_display",
                 "position": {
-                    "x": 492.66287465382345,
-                    "y": 206.95579534082526
+                    "x": 36,
+                    "y": 276
                 },
                 "data": {
                     "source_channel": "rocket_sim_connected",
@@ -481,8 +481,8 @@
                 "id": "display-rocket_sim_abort_active",
                 "type": "channel_display",
                 "position": {
-                    "x": 240.66287465382345,
-                    "y": 302.95579534082526
+                    "x": 204,
+                    "y": 588
                 },
                 "data": {
                     "source_channel": "rocket_sim_abort_active",
@@ -515,36 +515,11 @@
                 }
             },
             {
-                "id": "switch-rocket_test_running",
-                "type": "switch",
-                "position": {
-                    "x": 72.66287465382345,
-                    "y": 194.95579534082526
-                },
-                "data": {
-                    "selected_tag": "|rocket_test_running|",
-                    "actualValueConfigurableInput": {
-                        "type": "tag_value",
-                        "value": "|rocket_test_running|"
-                    },
-                    "true_value": "1",
-                    "false_value": "0",
-                    "show_commanded_position": true,
-                    "general_settings": {
-                        "top_label": "RUN TEST",
-                        "bottom_label": "",
-                        "general_alarming_tags": []
-                    }
-                },
-                "width": 160,
-                "height": 60
-            },
-            {
                 "id": "switch-rocket_sim_fault_overtemperature",
                 "type": "switch",
                 "position": {
-                    "x": 72.66287465382345,
-                    "y": 374.95579534082526
+                    "x": 816,
+                    "y": 360
                 },
                 "data": {
                     "selected_tag": "|rocket_sim_fault_overtemperature|",
@@ -568,8 +543,8 @@
                 "id": "switch-rocket_sim_fault_sensor_bias",
                 "type": "switch",
                 "position": {
-                    "x": 72.66287465382345,
-                    "y": 434.95579534082526
+                    "x": 516,
+                    "y": 432
                 },
                 "data": {
                     "selected_tag": "|rocket_sim_fault_sensor_bias|",
@@ -593,8 +568,8 @@
                 "id": "switch-rocket_sim_fault_missing_sensor",
                 "type": "switch",
                 "position": {
-                    "x": 72.66287465382345,
-                    "y": 314.95579534082526
+                    "x": 660,
+                    "y": 360
                 },
                 "data": {
                     "selected_tag": "|rocket_sim_fault_missing_sensor|",
@@ -606,9 +581,10 @@
                     "false_value": "0",
                     "show_commanded_position": true,
                     "general_settings": {
-                        "top_label": "MISSING READINGS",
+                        "top_label": "Missing readings",
                         "bottom_label": "",
-                        "general_alarming_tags": []
+                        "general_alarming_tags": [],
+                        "config_selected_tab": "general_settings"
                     }
                 },
                 "width": 160,
@@ -618,8 +594,8 @@
                 "id": "switch-rocket_sim_fault_disconnect",
                 "type": "switch",
                 "position": {
-                    "x": 72.66287465382345,
-                    "y": 254.95579534082526
+                    "x": 516,
+                    "y": 360
                 },
                 "data": {
                     "selected_tag": "|rocket_sim_fault_disconnect|",
@@ -643,8 +619,8 @@
                 "id": "task-example_device_read",
                 "type": "task_control",
                 "position": {
-                    "x": 492.66287465382345,
-                    "y": 302.95579534082526
+                    "x": 36,
+                    "y": 372
                 },
                 "data": {
                     "task_instance_key": "example_device_read",
@@ -665,8 +641,8 @@
                 "id": "task-example_device_write",
                 "type": "task_control",
                 "position": {
-                    "x": 492.66287465382345,
-                    "y": 350.95579534082526
+                    "x": 36,
+                    "y": 420
                 },
                 "data": {
                     "task_instance_key": "example_device_write",
@@ -687,8 +663,8 @@
                 "id": "task-rocket_test",
                 "type": "task_control",
                 "position": {
-                    "x": 60.66287465382345,
-                    "y": 530.9557953408253
+                    "x": 36,
+                    "y": 696
                 },
                 "data": {
                     "task_instance_key": "rocket_test",
@@ -1034,8 +1010,8 @@
                 "id": "display-phase",
                 "type": "channel_display",
                 "position": {
-                    "x": 480.66287465382345,
-                    "y": 470.95579534082526
+                    "x": 372,
+                    "y": 588
                 },
                 "data": {
                     "source_channel": "rocket_sim_phase",
@@ -1215,8 +1191,8 @@
                 "id": "task-engine_tank_fill",
                 "type": "state_machine_control",
                 "position": {
-                    "x": 480.66287465382345,
-                    "y": 590.9557953408253
+                    "x": 456,
+                    "y": 696
                 },
                 "data": {
                     "task_instance_key": "engine_tank_fill",
@@ -1250,8 +1226,8 @@
                 "id": "task-engine_ignition",
                 "type": "task_control",
                 "position": {
-                    "x": 480.66287465382345,
-                    "y": 674.9557953408253
+                    "x": 456,
+                    "y": 792
                 },
                 "data": {
                     "task_instance_key": "engine_ignition",
@@ -1278,8 +1254,8 @@
                 "id": "task-rocket_ox_tank_sim",
                 "type": "task_control",
                 "position": {
-                    "x": 480.66287465382345,
-                    "y": 530.9557953408253
+                    "x": 492,
+                    "y": 276
                 },
                 "data": {
                     "task_instance_key": "rocket_ox_tank_sim",
@@ -1421,6 +1397,57 @@
                 },
                 "width": 8,
                 "height": 8
+            },
+            {
+                "id": "sYX1p4FySakIzttFPlaBC",
+                "type": "box",
+                "position": {
+                    "x": 12,
+                    "y": 228
+                },
+                "data": {
+                    "class_name": "",
+                    "general_settings": {
+                        "top_label": "Device"
+                    }
+                },
+                "width": 396,
+                "height": 252,
+                "zIndex": -1000
+            },
+            {
+                "id": "MDNyPsD8I-TIf2j_U9xES",
+                "type": "box",
+                "position": {
+                    "x": 12,
+                    "y": 540
+                },
+                "data": {
+                    "class_name": "",
+                    "general_settings": {
+                        "top_label": "automation "
+                    }
+                },
+                "width": 816,
+                "height": 504,
+                "zIndex": -1000
+            },
+            {
+                "id": "3P3kMFt0Jj6BAfBvDU4LX",
+                "type": "box",
+                "position": {
+                    "x": 468,
+                    "y": 228
+                },
+                "data": {
+                    "class_name": "",
+                    "general_settings": {
+                        "top_label": "simulation"
+                    }
+                },
+                "width": 480,
+                "height": 276,
+                "zIndex": -1000
             }
         ],
         "edges": [
@@ -1775,12 +1802,44 @@
                     "perimeter": false
                 },
                 "routingStyle": "orthogonal"
+            },
+            {
+                "id": "c160bb4b-fc0c-4ad9-8d70-26a6ea644641",
+                "type": "edge",
+                "source": "switch-rocket_sim_fault_disconnect",
+                "target": "switch-rocket_sim_fault_disconnect",
+                "data": {
+                    "fillColorConfigurableInput": {
+                        "type": "hex_color",
+                        "value": "#555555"
+                    },
+                    "strokeWidthConfigurableInput": {
+                        "type": "discrete_input_numerical",
+                        "value": 2
+                    }
+                },
+                "style": {
+                    "stroke": "var(--schematic-edge)",
+                    "strokeWidth": 2
+                },
+                "waypoints": [],
+                "sourceConstraint": {
+                    "x": 0.15301915908853267,
+                    "y": 0.13300976913203424,
+                    "perimeter": true
+                },
+                "targetConstraint": {
+                    "x": 0.05491747852752234,
+                    "y": 0.14644660940672719,
+                    "perimeter": false
+                },
+                "routingStyle": "orthogonal"
             }
         ],
         "viewport": {
             "x": 0,
             "y": 0,
-            "zoom": 0.8012579289756453
+            "zoom": 0.9207182020229232
         }
     },
     "background_settings": {
@@ -1790,7 +1849,7 @@
         "color": "#606060"
     },
     "view_settings": {
-        "zoom": 0.8012579289756453,
+        "zoom": 0.9207182020229232,
         "view_mode": "manual",
         "two_click_commands_enabled": false
     }
