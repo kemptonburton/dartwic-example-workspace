@@ -8,7 +8,7 @@ The actual workspace is `example-workspace/`. The adjacent `walkthroughs/`, `too
 
 1. Use DARTWIC Engine and Interface 2.0.0 or newer and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). The downloadable ZIP includes the built plugin at `example-workspace/default/downloads/plugin-win32-x64.zip`, so running that download needs no C++ compiler. Your license must permit the example tasks.
 2. Clone this repository into `workspaces/dartwic-example-workspace`, or extract `dartwic-example-workspace.zip` under `workspaces/`. Keep `example-workspace/`, `tools/`, `flight-computer/`, and `walkthroughs/` together.
-3. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. The updated development Interface also accepts the repository root and resolves its nested workspace automatically; older Interface releases require the explicit `example-workspace/` folder. Do not select `default/`. Install the required plugins and start the local Engine from the Interface. The command examples below use base port 7400; select that port for the exercise or pass your actual port to the client and native-peer commands. Engine installation, instance configuration, credentials, and runtime storage are managed by DARTWIC, not by this repository's scripts.
+3. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. Select the actual `example-workspace/` folder manually; its containing repository is not an authored workspace. Do not select `default/`. Install the required plugins and start the local Engine from the Interface. The command examples below use base port 7400; select that port for the exercise or pass your actual port to the client and native-peer commands. Engine installation, instance configuration, credentials, and runtime storage are managed by DARTWIC, not by this repository's scripts.
 4. Open **Schematics -> Engine Test Fire**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off. **Rocket Flight** is a separate schematic for the flight peer.
 
 ## Optional flight node
@@ -33,7 +33,7 @@ The authored idle channels are tracked under `default/rapid/channel_snapshot.jso
 
 ## Storage layout
 
-The workspace's portable settings live in `global_data/settings.json`; project overrides belong in `default/settings.json`. The rocket model is a shared asset at `global_data/assets/models/`, referenced as `assets/models/...` by its schematic. Tasks, scripts, modules, and authored channel definitions are portable too. Local instance configuration, passwords, license keys, recordings, and caches are not part of this repository or release archive.
+The workspace's portable settings live in `settings.json`; project overrides belong in `default/settings.json`. The rocket model is a shared asset at `assets/models/`, referenced as `assets/models/...` by its schematic. Tasks, scripts, modules, and authored channel definitions are portable too. Local instance configuration, passwords, license keys, recordings, and caches are not part of this repository or release archive.
 
 The flight scripts keep only a process record and flight stdout/stderr logs under `%LOCALAPPDATA%/DARTWIC Flight Demo/<repository-hash>/`. The hash keeps separate clones independent. Engine binaries and shared plugins remain in your Engine installation; this repository does not ship or create an `engine/` directory.
 

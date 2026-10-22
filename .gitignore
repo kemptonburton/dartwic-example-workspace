@@ -10,7 +10,7 @@
 /example-workspace/default/argus/
 /example-workspace/default/runtime/
 /example-workspace/default/dataframes.json
-/example-workspace/global_data/client_info.json
+/example-workspace/client_info.json
 **/__pycache__/
 *.log
 *.duckdb*

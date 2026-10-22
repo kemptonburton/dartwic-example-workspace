@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 # the same public source at a locked commit; no private checkout is required.
 set(DARTWIC_EXAMPLE_PLUGIN_SOURCE "" CACHE PATH "Local dartwic-example-plugin checkout")
 if(NOT DARTWIC_EXAMPLE_PLUGIN_SOURCE)
-    set(local_plugin "${CMAKE_CURRENT_SOURCE_DIR}/../../plugins/dartwic-example-plugin")
+    set(local_plugin "${CMAKE_CURRENT_SOURCE_DIR}/../../../plugins/dartwic-example-plugin")
     if(EXISTS "${local_plugin}/engine/src/example_transport.cpp")
         set(DARTWIC_EXAMPLE_PLUGIN_SOURCE "${local_plugin}")
     else()
