@@ -2,7 +2,7 @@
 
 Open `example-workspace/default/scripts/valves/double_acting_valves.dcode` and `valves.yaml`. Each YAML row creates a 10 Hz loop for fuel, oxidizer, fill, or vent, using the same simple pattern as the primary workspace.
 
-The loop remembers the last request. When the request changes to `1`, it pulses the open coil for half a second; `0` pulses the close coil. After the pulse, it updates `rocket_sim_<valve>_state`. That channel records the completed command, while `rocket_sim_<valve>_position` comes from the simulated device.
+The loop remembers the last request. When the request changes to `1`, it pulses the open coil for half a second; `0` pulses the close coil. The read task reports the resulting travel as `rocket_sim_<valve>_open_coil_state` and its complement as `rocket_sim_<valve>_close_coil_state`. These values persist after the command pulse ends.
 
 1. Turn RUN TEST off and stop `rocket_test` before trying individual valves.
 2. Request open, then close. Compare the request, commanded coil, applied coil, completed-command state, and measured position.

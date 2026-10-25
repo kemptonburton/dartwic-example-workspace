@@ -15,9 +15,7 @@ template(params) loop rocket_valve_{params.valve} 10 disable_warnings:
         command |rocket_sim_{params.valve}_open_coil| = 1
         wait(0.5)
         command |rocket_sim_{params.valve}_open_coil| = 0
-        set |rocket_sim_{params.valve}_state| = 1
     elif value == 0:
         command |rocket_sim_{params.valve}_close_coil| = 1
         wait(0.5)
         command |rocket_sim_{params.valve}_close_coil| = 0
-        set |rocket_sim_{params.valve}_state| = 0

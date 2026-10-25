@@ -6,8 +6,8 @@ The actual workspace is `example-workspace/`. The adjacent `walkthroughs/`, `too
 
 ## Start
 
-1. Use DARTWIC Engine and Interface 2.0.0 or newer and the matching [example plugin](https://github.com/kemptonburton/dartwic-example-plugin). The downloadable ZIP includes the built plugin at `example-workspace/default/downloads/plugin-win32-x64.zip`, so running that download needs no C++ compiler. Your license must permit the example tasks.
-2. Clone this repository into `workspaces/dartwic-example-workspace`, or extract `dartwic-example-workspace.zip` under `workspaces/`. Keep `example-workspace/`, `tools/`, `flight-computer/`, and `walkthroughs/` together.
+1. Use DARTWIC Engine and Interface 2.0.0 or newer and install [example plugin 2.0.4](https://github.com/kemptonburton/dartwic-example-plugin/releases/tag/v2.0.4). The workspace release is source-only; its automatic source archive does not contain plugin binaries. Your license must permit the example tasks.
+2. Clone this repository into `workspaces/dartwic-example-workspace`, or extract GitHub's source ZIP under `workspaces/`. Keep `example-workspace/`, `tools/`, `flight-computer/`, and `walkthroughs/` together.
 3. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. Select the actual `example-workspace/` folder manually; its containing repository is not an authored workspace. Do not select `default/`. Install the required plugins and start the local Engine from the Interface. The command examples below use base port 7400; select that port for the exercise or pass your actual port to the client and native-peer commands. Engine installation, instance configuration, credentials, and runtime storage are managed by DARTWIC, not by this repository's scripts.
 4. Open **Schematics -> Engine Test Fire**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off. **Rocket Flight** is a separate schematic for the flight peer.
 
@@ -19,7 +19,7 @@ The test-stand exercises work without the flight computer. For the peer exercise
 ./tools/start-demo.ps1
 ```
 
-The script starts only `flight-computer/bin/rocket-flight-peer.exe`, in the background. It does not start or stop an Engine, install plugins, prompt for Engine credentials, or change workspace files. It checks for an immediate process exit and reports the flight error log if startup fails. A successful start means the process is running; confirm the **FLIGHT_COMPUTER** peer is connected and its sample counter advances before using it. The packaged ZIP includes the flight executable; for a source clone, build it with this repository's CMake project or use its Windows download. Pass `-FlightExecutable` to use another build. You can also run the flight peer directly in a terminal:
+The script starts only `flight-computer/bin/rocket-flight-peer.exe`, in the background. It does not start or stop an Engine, install plugins, prompt for Engine credentials, or change workspace files. It checks for an immediate process exit and reports the flight error log if startup fails. A successful start means the process is running; confirm the **FLIGHT_COMPUTER** peer is connected and its sample counter advances before using it. Build the flight executable from this source checkout as described in [Flight computer simulator](flight-computer/README.md), then copy it into `flight-computer/bin/` with its runtime DLL. Pass `-FlightExecutable` to use another build. You can also run the flight peer directly in a terminal:
 
 ```powershell
 ./flight-computer/bin/rocket-flight-peer.exe --transport custom
@@ -47,7 +47,7 @@ Open **Engine Test Fire** and turn RUN TEST on. The timeline begins at T-2m with
 
 The controller alternates filling and venting as pressure rises. The supply level stays at 100% in this simulation. The timeline holds at the next bucket if filling is unfinished. Once fill completes, the T+0s ignition bucket starts the igniter, waits two seconds, and opens the feed valves for an eight-second firing interval. The T+15s cleanup bucket stops the dataframe.
 
-Follow [the timeline exercise](walkthroughs/02-fill-test.md) for the complete procedure. Requests, applied coils, and measured valve positions are separate channels; compare them when checking a result.
+Follow [the timeline exercise](walkthroughs/02-fill-test.md) for the complete procedure. Commands and device-reported states are separate channels: each command's readback appends `_state` to its full name, such as `rocket_sim_oxidizer_close_coil_state`. Valve states persist after the coil pulse ends; compare them with the request when checking a result.
 
 The other switches inject overtemperature, disagreement, missing readings, or disconnection. The [abort exercise](walkthroughs/05-automatic-abort.md) explains their effect on control authority. Clearing a fault releases its overrides automatically; it does not reset the sequence or restore an old command value. Stop RUN TEST before clearing an abort when you intend to remain idle.
 

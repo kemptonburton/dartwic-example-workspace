@@ -16,8 +16,8 @@ def main():
     faults = ['overtemperature', 'sensor_bias', 'missing_sensor', 'disconnect']
     names = ['sample_counter', 'sensor_valid', 'connected', 'phase', 'pressure',
              'temperature_voted', 'temperature_spread', 'abort_active', 'sample_age_s',
-             'run_fill', 'supply_fill', 'fuel_request', 'igniter_applied', 'fuel_position',
-             'fuel_open_coil', 'fuel_close_coil', 'fuel_open_applied', 'fuel_close_applied']
+             'run_fill', 'supply_fill', 'fuel_request', 'igniter_command_state',
+             'fuel_open_coil', 'fuel_close_coil', 'fuel_open_coil_state', 'fuel_close_coil_state']
     channels = ['rocket_sim_'+name for name in names]
     frame = None
     passed = []
@@ -32,7 +32,7 @@ def main():
         while time.monotonic() < end:
             last = values()
             assert not (last['fuel_open_coil'] and last['fuel_close_coil']), 'Opposing coil requests'
-            assert not (last['fuel_open_applied'] and last['fuel_close_applied']), 'Opposing applied coils'
+            assert abs(last['fuel_open_coil_state'] + last['fuel_close_coil_state'] - 1) < .01, 'Valve states must be complementary'
             if predicate(last):
                 passed.append(label)
                 print('PASS '+label, flush=True)
@@ -52,39 +52,39 @@ def main():
         wait('read task advances', lambda v: v['sample_counter']>first+5)
         initial_tanks = values()
         record_channels = ['rocket_sim_'+name for name in
-                           ['phase', 'pressure', 'temperature_voted', 'abort_active', 'fuel_position', 'igniter_applied']]
+                           ['phase', 'pressure', 'temperature_voted', 'abort_active', 'fuel_open_coil_state', 'igniter_command_state']]
         frame = client.operation('rapid/dataframes/start', {'name':'Rocket acceptance', 'channels':record_channels, 'events':'all', 'logs':'all'})
         write('fault_overtemperature', 1)
         time.sleep(.4)
         assert values()['abort_active']==0, 'High-temp switch must wait for ignition'
         write('timeline_run', 1)
-        wait('high-temp switch aborts at ignition', lambda v: v['phase']==2 and v['abort_active']==1 and v['igniter_applied']==0, 20)
+        wait('high-temp switch aborts at ignition', lambda v: v['phase']==2 and v['abort_active']==1 and v['igniter_command_state']==0, 20)
         filled = values()
         assert filled['run_fill']>=59.5, 'Run tank did not reach the fill target'
         if initial_tanks['run_fill']<59.5:
             assert filled['supply_fill']<initial_tanks['supply_fill'], 'Supply-to-run transfer missing'
         write('fault_overtemperature', 0)
-        wait('fill and ignition reach firing', lambda v: v['phase']==3 and v['igniter_applied']==1, 20)
+        wait('fill and ignition reach firing', lambda v: v['phase']==3 and v['igniter_command_state']==1, 20)
         wait('pressure and temperature respond', lambda v: v['pressure']>40 and v['temperature_voted']>900)
-        wait('bounded pulse returns off with open feedback', lambda v: v['fuel_open_coil']==0 and v['fuel_close_coil']==0 and v['fuel_position']>.95)
+        wait('bounded pulse returns off with open feedback', lambda v: v['fuel_open_coil']==0 and v['fuel_close_coil']==0 and v['fuel_open_coil_state']>.95)
         write('fault_sensor_bias', 1)
         wait('median rejects one biased sensor', lambda v: v['temperature_spread']>300 and v['temperature_voted']<1500 and v['abort_active']==0)
         write('fault_sensor_bias', 0)
         write('fault_overtemperature', 1)
-        wait('active abort shuts down', lambda v: v['abort_active']==1 and v['fuel_request']==0 and v['igniter_applied']==0)
+        wait('active abort shuts down', lambda v: v['abort_active']==1 and v['fuel_request']==0 and v['igniter_command_state']==0)
         events = client.operation('argus/query-events', {'text':'Mock rocket automatic abort','limit':20})['events']
         event_id = next(event['event_id'] for event in events if event.get('correlation_key')=='dcode_declared_event|rocket_engine_abort')
         for status in ['acknowledged', 'silenced']:
             client.operation('argus/update-event-status', {'event_id':event_id,'status':status})
-            wait(status+' preserves active abort', lambda v: v['abort_active']==1 and v['fuel_request']==0 and v['igniter_applied']==0)
+            wait(status+' preserves active abort', lambda v: v['abort_active']==1 and v['fuel_request']==0 and v['igniter_command_state']==0)
         write('fault_overtemperature', 0)
-        wait('clear releases override and resumes', lambda v: v['abort_active']==0 and v['fuel_request']==1 and v['igniter_applied']==1)
+        wait('clear releases override and resumes', lambda v: v['abort_active']==0 and v['fuel_request']==1 and v['igniter_command_state']==1)
         write('fault_missing_sensor', 1)
         wait('missing samples marked invalid and stale', lambda v: v['sensor_valid']==0 and v['sample_age_s']>.3 and v['abort_active']==1)
         write('fault_missing_sensor', 0)
-        wait('missing recovery resumes', lambda v: v['sensor_valid']==1 and v['abort_active']==0 and v['igniter_applied']==1)
+        wait('missing recovery resumes', lambda v: v['sensor_valid']==1 and v['abort_active']==0 and v['igniter_command_state']==1)
         write('fault_disconnect', 1)
-        wait('disconnect disables applied outputs', lambda v: v['connected']==0 and v['igniter_applied']==0 and v['fuel_open_applied']==0 and v['fuel_close_applied']==0)
+        wait('disconnect disables igniter output', lambda v: v['connected']==0 and v['igniter_command_state']==0)
         write('timeline_run', 0)
         write('fault_disconnect', 0)
         wait('reconnect returns idle', lambda v: v['connected']==1 and v['sensor_valid']==1 and v['phase']==0 and v['abort_active']==0)

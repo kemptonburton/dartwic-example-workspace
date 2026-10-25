@@ -827,12 +827,12 @@
                     ],
                     "areaSeries": [
                         {
-                            "channel_reference": "|rocket_sim_fill_position|",
+                            "channel_reference": "|rocket_sim_fill_open_coil_state|",
                             "label": "fill",
                             "color": "#4d8f60"
                         },
                         {
-                            "channel_reference": "|rocket_sim_vent_position|",
+                            "channel_reference": "|rocket_sim_vent_open_coil_state|",
                             "label": "vent",
                             "color": "#963c3c"
                         }
@@ -880,12 +880,12 @@
                     ],
                     "areaSeries": [
                         {
-                            "channel_reference": "|rocket_sim_fill_position|",
+                            "channel_reference": "|rocket_sim_fill_open_coil_state|",
                             "label": "fill",
                             "color": "#4d8f60"
                         },
                         {
-                            "channel_reference": "|rocket_sim_vent_position|",
+                            "channel_reference": "|rocket_sim_vent_open_coil_state|",
                             "label": "vent",
                             "color": "#963c3c"
                         }
@@ -983,7 +983,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_fill_position|"
+                            "value": "|rocket_sim_fill_open_coil_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}
@@ -1068,7 +1068,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_fuel_position|"
+                            "value": "|rocket_sim_fuel_open_coil_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}
@@ -1116,7 +1116,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_oxidizer_position|"
+                            "value": "|rocket_sim_oxidizer_open_coil_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}
@@ -1164,7 +1164,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_vent_position|"
+                            "value": "|rocket_sim_vent_open_coil_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}

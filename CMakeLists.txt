@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.23)
-project(dartwic_example_workspace VERSION 2.0.4 LANGUAGES CXX)
+project(dartwic_example_workspace VERSION 2.0.5 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -15,7 +15,7 @@ if(NOT DARTWIC_EXAMPLE_PLUGIN_SOURCE)
         include(FetchContent)
         FetchContent_Declare(example_plugin
             GIT_REPOSITORY https://github.com/kemptonburton/dartwic-example-plugin.git
-            GIT_TAG 6a22de14aa8442d7787c2b0dbe404fc1c86b2369)
+            GIT_TAG ec26dced981c92f1f97b31ef374ddf2a18ec7d55)
         FetchContent_GetProperties(example_plugin)
         if(NOT example_plugin_POPULATED)
             FetchContent_Populate(example_plugin)
