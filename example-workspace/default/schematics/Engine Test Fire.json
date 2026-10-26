@@ -708,7 +708,7 @@
                     "show_frequency": true,
                     "show_target_frequency": true,
                     "general_settings": {
-                        "top_label": "FILL → IGNITION TIMELINE",
+                        "top_label": "FILL \u00e2\u2020\u2019 IGNITION TIMELINE",
                         "bottom_label": "",
                         "general_alarming_tags": []
                     },
@@ -745,6 +745,18 @@
                             "label": "Flow",
                             "yAxis": 2,
                             "color": "#f97316"
+                        }
+                    ],
+                    "areaSeries": [
+                        {
+                            "channel_reference": "|rocket_sim_fuel_state|",
+                            "label": "fuel open",
+                            "color": "#4d8f60"
+                        },
+                        {
+                            "channel_reference": "|rocket_sim_oxidizer_state|",
+                            "label": "oxidizer open",
+                            "color": "#a47b39"
                         }
                     ],
                     "general_settings": {
@@ -827,13 +839,13 @@
                     ],
                     "areaSeries": [
                         {
-                            "channel_reference": "|rocket_sim_fill_open_coil_state|",
-                            "label": "fill",
+                            "channel_reference": "|rocket_sim_fill_state|",
+                            "label": "fill open",
                             "color": "#4d8f60"
                         },
                         {
-                            "channel_reference": "|rocket_sim_vent_open_coil_state|",
-                            "label": "vent",
+                            "channel_reference": "|rocket_sim_vent_state|",
+                            "label": "vent open",
                             "color": "#963c3c"
                         }
                     ],
@@ -880,13 +892,13 @@
                     ],
                     "areaSeries": [
                         {
-                            "channel_reference": "|rocket_sim_fill_open_coil_state|",
-                            "label": "fill",
+                            "channel_reference": "|rocket_sim_fill_state|",
+                            "label": "fill open",
                             "color": "#4d8f60"
                         },
                         {
-                            "channel_reference": "|rocket_sim_vent_open_coil_state|",
-                            "label": "vent",
+                            "channel_reference": "|rocket_sim_vent_state|",
+                            "label": "vent open",
                             "color": "#963c3c"
                         }
                     ],
@@ -983,7 +995,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_fill_open_coil_state|"
+                            "value": "|rocket_sim_fill_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}
@@ -1068,7 +1080,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_fuel_open_coil_state|"
+                            "value": "|rocket_sim_fuel_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}
@@ -1116,7 +1128,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_oxidizer_open_coil_state|"
+                            "value": "|rocket_sim_oxidizer_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}
@@ -1164,7 +1176,7 @@
                     "openStateIfElseBlock": {
                         "elseConfigurableInput": {
                             "type": "tag_value",
-                            "value": "|rocket_sim_vent_open_coil_state|"
+                            "value": "|rocket_sim_vent_state|"
                         },
                         "ifChecks": [],
                         "ifConfigurableInput": {}
@@ -1214,7 +1226,7 @@
                     "show_frequency": true,
                     "show_target_frequency": true,
                     "general_settings": {
-                        "top_label": "T−1s FILL CONTROLS",
+                        "top_label": "T\u00e2\u02c6\u20191s FILL CONTROLS",
                         "bottom_label": "",
                         "general_alarming_tags": []
                     }

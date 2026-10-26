@@ -36,44 +36,8 @@
                 "device_field": "sample_age_s"
             },
             {
-                "channel": "rocket_sim_igniter_command_state",
-                "device_field": "igniter_command_state"
-            },
-            {
                 "channel": "rocket_sim_sample_counter",
                 "device_field": "sample_counter"
-            },
-            {
-                "channel": "rocket_sim_fuel_open_coil_state",
-                "device_field": "fuel_open_coil_state"
-            },
-            {
-                "channel": "rocket_sim_fuel_close_coil_state",
-                "device_field": "fuel_close_coil_state"
-            },
-            {
-                "channel": "rocket_sim_oxidizer_open_coil_state",
-                "device_field": "oxidizer_open_coil_state"
-            },
-            {
-                "channel": "rocket_sim_oxidizer_close_coil_state",
-                "device_field": "oxidizer_close_coil_state"
-            },
-            {
-                "channel": "rocket_sim_fill_open_coil_state",
-                "device_field": "fill_open_coil_state"
-            },
-            {
-                "channel": "rocket_sim_fill_close_coil_state",
-                "device_field": "fill_close_coil_state"
-            },
-            {
-                "channel": "rocket_sim_vent_open_coil_state",
-                "device_field": "vent_open_coil_state"
-            },
-            {
-                "channel": "rocket_sim_vent_close_coil_state",
-                "device_field": "vent_close_coil_state"
             }
         ]
     },

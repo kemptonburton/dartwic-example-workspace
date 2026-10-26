@@ -12,4 +12,4 @@ Open `example-workspace/default/scripts/engine_abort.dcode`. Its trigger watches
 
 Failure exercise: inject **DISCONNECT DEVICE** during firing. Applied igniter goes off immediately in the device; retained temperatures become invalid. Clear the disconnect and verify valid samples and controller recovery. Finish with RUN TEST off.
 
-[Review the dataframe](../README.md#operate-and-record), including abort transitions, requests, applied igniter, measured positions, and event/log timestamps. A command response does not establish physical shutdown timing.
+[Review the dataframe](../README.md#operate-and-record), including abort transitions, requests, applied igniter, DCode's last-commanded-open estimates, and event/log timestamps. A command response does not establish physical shutdown timing.

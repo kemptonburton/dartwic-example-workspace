@@ -1,4 +1,4 @@
-# The periodic physics task advances tank measurements from device-reported valve states.
+# The periodic physics task uses the last-known valve state: 1 open, 0 closed.
 # The fill controller in test_sequence.dcode owns the requests.
 task_periodic rocket_ox_tank_sim:
     start:
@@ -12,7 +12,7 @@ task_periodic rocket_ox_tank_sim:
         local run_fill = |rocket_sim_run_fill|
         local run_pressure = |rocket_sim_run_tank_pressure|
         if run_pressure < 900:
-            if |rocket_sim_fill_open_coil_state| > 0:
+            if |rocket_sim_fill_state| > 0:
                 if run_fill < 99.8:
                     run_fill = run_fill + 0.2
                 else:
@@ -20,7 +20,7 @@ task_periodic rocket_ox_tank_sim:
                 if run_pressure < 1000:
                     run_pressure = run_pressure + 5
 
-        if |rocket_sim_vent_open_coil_state| > 0:
+        if |rocket_sim_vent_state| > 0:
             if run_fill > 0.1:
                 run_fill = run_fill - 0.1
             else:

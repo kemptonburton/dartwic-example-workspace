@@ -2,20 +2,22 @@ params = yaml "./valves.yaml#valves"
 
 template(params) loop rocket_valve_{params.valve} 10 disable_warnings:
     once when true:
-        last_value = null
+        state.last_value = null
 
     value = |rocket_sim_{params.valve}_request|
 
-    if value == last_value:
+    if value == state.last_value:
         return
 
-    last_value = value
+    state.last_value = value
 
     if value == 1:
         command |rocket_sim_{params.valve}_open_coil| = 1
         wait(0.5)
         command |rocket_sim_{params.valve}_open_coil| = 0
+        set |rocket_sim_{params.valve}_state| = 1
     elif value == 0:
         command |rocket_sim_{params.valve}_close_coil| = 1
         wait(0.5)
         command |rocket_sim_{params.valve}_close_coil| = 0
+        set |rocket_sim_{params.valve}_state| = 0

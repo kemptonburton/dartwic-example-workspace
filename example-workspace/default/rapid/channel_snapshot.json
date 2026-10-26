@@ -637,7 +637,7 @@
       "control_owner": "",
       "control_policy": "free",
       "key": "engine_ignition_running",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -1266,7 +1266,7 @@
       "control_owner": "",
       "control_policy": "free",
       "key": "engine_tank_fill_running",
-      "manual_restore_policy": "free",
+      "manual_restore_policy": "automatic",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -2352,13 +2352,13 @@
           "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "26739876916800",
+        "creator_instance": "2079850804100",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "47300",
+        "thread": "34104",
         "version": 2
       },
       "key": "rocket_sim_fault_disconnect",
@@ -2388,13 +2388,13 @@
           "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "26739876916800",
+        "creator_instance": "2079850804100",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "47300",
+        "thread": "34104",
         "version": 2
       },
       "key": "rocket_sim_fault_missing_sensor",
@@ -2424,13 +2424,13 @@
           "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "26739876916800",
+        "creator_instance": "2079850804100",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "47300",
+        "thread": "34104",
         "version": 2
       },
       "key": "rocket_sim_fault_overtemperature",
@@ -2460,52 +2460,16 @@
           "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "26739876916800",
+        "creator_instance": "2079850804100",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "47300",
+        "thread": "34104",
         "version": 2
       },
       "key": "rocket_sim_fault_sensor_bias",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_fill_close_coil_state",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
@@ -2542,40 +2506,22 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_fill_open_coil_state",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_fill_close_coil_state",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
       },
-      "storage": "fixed"
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
@@ -2615,11 +2561,29 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "task:engine_tank_fill",
-      "control_policy": "automatic_override",
+      "control_owner": "",
+      "control_policy": "free",
       "key": "rocket_sim_fill_request",
       "manual_restore_policy": "automatic",
-      "override_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:rocket_valve_fill",
+      "control_policy": "observe_only",
+      "key": "rocket_sim_fill_state",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
       "stale_timeout": 0.0,
@@ -2668,42 +2632,6 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_fuel_close_coil_state",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
       "created_by": "loop:rocket_valve_fuel|script:valves/double_acting_valves.dcode|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
@@ -2731,40 +2659,22 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_fuel_open_coil_state",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_fuel_close_coil_state",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
       },
-      "storage": "fixed"
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
@@ -2805,7 +2715,25 @@
     {
       "calculation_scripts": [],
       "control_owner": "",
-      "control_policy": "automatic_override",
+      "control_policy": "free",
+      "key": "rocket_sim_fuel_open_coil_state",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
       "key": "rocket_sim_fuel_request",
       "manual_restore_policy": "free",
       "override_restore_policy": "free",
@@ -2821,40 +2749,22 @@
       "value_options": []
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_igniter_command_state",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
+      "calculation_scripts": [],
+      "control_owner": "loop:rocket_valve_fuel",
+      "control_policy": "observe_only",
+      "key": "rocket_sim_fuel_state",
+      "manual_restore_policy": "observe_only",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
       },
-      "storage": "fixed"
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
       "created_by": "loop:dcode-declared-events|script:engine_abort.dcode|node:MOCK_ROCKET_GROUND",
@@ -2875,42 +2785,6 @@
         "version": 2
       },
       "key": "rocket_sim_igniter_command",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_oxidizer_close_coil_state",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
@@ -2947,40 +2821,22 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_oxidizer_open_coil_state",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_oxidizer_close_coil_state",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
       },
-      "storage": "fixed"
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
@@ -3021,9 +2877,45 @@
     {
       "calculation_scripts": [],
       "control_owner": "",
-      "control_policy": "automatic_override",
+      "control_policy": "free",
+      "key": "rocket_sim_oxidizer_open_coil_state",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
       "key": "rocket_sim_oxidizer_request",
       "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:rocket_valve_oxidizer",
+      "control_policy": "observe_only",
+      "key": "rocket_sim_oxidizer_state",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,
@@ -3145,13 +3037,13 @@
           "id": "example_device_read",
           "kind": "task"
         },
-        "creator_instance": "26739876916800",
+        "creator_instance": "2079850804100",
         "dependencies": [],
         "initiator": [],
         "node": "MOCK_ROCKET_GROUND",
         "quality": "captured",
         "script": "",
-        "thread": "47300",
+        "thread": "34104",
         "version": 2
       },
       "key": "rocket_sim_run_fill",
@@ -3465,42 +3357,6 @@
       "value_options": []
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_vent_close_coil_state",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
       "created_by": "loop:rocket_valve_vent|script:valves/double_acting_valves.dcode|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
@@ -3528,40 +3384,22 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "26739876916800",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "47300",
-        "version": 2
-      },
-      "key": "rocket_sim_vent_open_coil_state",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
+      "calculation_scripts": [],
+      "control_owner": "",
+      "control_policy": "free",
+      "key": "rocket_sim_vent_close_coil_state",
+      "manual_restore_policy": "automatic",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
       "startup_value": {
         "enabled": false,
         "value": 0.0
       },
-      "storage": "fixed"
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
     },
     {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
@@ -3601,10 +3439,28 @@
     },
     {
       "calculation_scripts": [],
-      "control_owner": "task:engine_tank_fill",
-      "control_policy": "automatic",
+      "control_owner": "",
+      "control_policy": "free",
       "key": "rocket_sim_vent_request",
-      "manual_restore_policy": "automatic",
+      "manual_restore_policy": "free",
+      "override_restore_policy": "free",
+      "record_mode": "on_value_change",
+      "remote_mirror": false,
+      "stale_timeout": 0.0,
+      "startup_value": {
+        "enabled": false,
+        "value": 0.0
+      },
+      "storage": "dynamic",
+      "units": "",
+      "value_options": []
+    },
+    {
+      "calculation_scripts": [],
+      "control_owner": "loop:rocket_valve_vent",
+      "control_policy": "observe_only",
+      "key": "rocket_sim_vent_state",
+      "manual_restore_policy": "observe_only",
       "override_restore_policy": "free",
       "record_mode": "on_value_change",
       "remote_mirror": false,

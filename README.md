@@ -47,7 +47,7 @@ Open **Engine Test Fire** and turn RUN TEST on. The timeline begins at T-2m with
 
 The controller alternates filling and venting as pressure rises. The supply level stays at 100% in this simulation. The timeline holds at the next bucket if filling is unfinished. Once fill completes, the T+0s ignition bucket starts the igniter, waits two seconds, and opens the feed valves for an eight-second firing interval. The T+15s cleanup bucket stops the dataframe.
 
-Follow [the timeline exercise](walkthroughs/02-fill-test.md) for the complete procedure. Commands and device-reported states are separate channels: each command's readback appends `_state` to its full name, such as `rocket_sim_oxidizer_close_coil_state`. Valve states persist after the coil pulse ends; compare them with the request when checking a result.
+Follow [the timeline exercise](walkthroughs/02-fill-test.md) for the complete procedure. Each valve has one last-known state channel, `rocket_sim_<valve>_state`: `1` is open and `0` is closed. The DCode loop updates it after the half-second coil pulse ends. The schematic icons, graphs, and tank physics use this state; it is not measured position feedback.
 
 The other switches inject overtemperature, disagreement, missing readings, or disconnection. The [abort exercise](walkthroughs/05-automatic-abort.md) explains their effect on control authority. Clearing a fault releases its overrides automatically; it does not reset the sequence or restore an old command value. Stop RUN TEST before clearing an abort when you intend to remain idle.
 
