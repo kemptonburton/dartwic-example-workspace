@@ -3,23 +3,25 @@
   "presets": [
     {
       "id": "launch-rocket",
-      "peer_id": "example_device_plugin.example_flight_link",
+      "peer_id": "tempest.engine",
       "node": "FLIGHT_COMPUTER",
       "label": "Launch rocket",
       "kind": "command",
       "operation": "flight/launch",
       "arguments": {},
-      "secret_fields": []
+      "secret_fields": [],
+      "transport_id": "example_device_plugin.example_flight_link"
     },
     {
       "id": "land-rocket",
-      "peer_id": "example_device_plugin.example_flight_link",
+      "peer_id": "tempest.engine",
       "node": "FLIGHT_COMPUTER",
       "label": "Land rocket",
       "kind": "command",
       "operation": "flight/land",
       "arguments": {},
-      "secret_fields": []
+      "secret_fields": [],
+      "transport_id": "example_device_plugin.example_flight_link"
     }
   ]
 }

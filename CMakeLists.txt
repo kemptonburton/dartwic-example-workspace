@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.23)
-project(dartwic_example_workspace VERSION 2.0.5 LANGUAGES CXX)
+project(dartwic_example_workspace VERSION 2.1.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -15,7 +15,7 @@ if(NOT DARTWIC_EXAMPLE_PLUGIN_SOURCE)
         include(FetchContent)
         FetchContent_Declare(example_plugin
             GIT_REPOSITORY https://github.com/kemptonburton/dartwic-example-plugin.git
-            GIT_TAG ec26dced981c92f1f97b31ef374ddf2a18ec7d55)
+            GIT_TAG 14df7f7881631e7909e6a405fe76ea77e30ed52f)
         FetchContent_GetProperties(example_plugin)
         if(NOT example_plugin_POPULATED)
             FetchContent_Populate(example_plugin)
@@ -31,7 +31,9 @@ endif()
 
 add_subdirectory("${plugin}/vendor/messaging" "${CMAKE_CURRENT_BINARY_DIR}/vendor/messaging")
 add_subdirectory("${plugin}/vendor/peer" "${CMAKE_CURRENT_BINARY_DIR}/vendor/peer")
+if(NOT TARGET DARTWIC::EngineProtocol)
 add_subdirectory("${plugin}/vendor/engine-protocol" "${CMAKE_CURRENT_BINARY_DIR}/vendor/engine-protocol")
+endif()
 find_package(nlohmann_json CONFIG REQUIRED)
 find_package(cppzmq CONFIG REQUIRED)
 
@@ -40,7 +42,7 @@ add_executable(rocket-flight-peer
     "${plugin}/engine/src/example_transport.cpp")
 target_include_directories(rocket-flight-peer PRIVATE "${plugin}/engine/include")
 target_link_libraries(rocket-flight-peer PRIVATE
-    TEMPEST::Peer DARTWIC::EngineProtocol cppzmq nlohmann_json::nlohmann_json)
+    DARTWIC::PeerClient cppzmq nlohmann_json::nlohmann_json)
 if(WIN32)
     add_custom_command(TARGET rocket-flight-peer POST_BUILD
         COMMAND ${CMAKE_COMMAND} -E copy_if_different

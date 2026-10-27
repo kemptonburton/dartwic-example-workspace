@@ -1,5 +1,5 @@
 {
-  "peer_id": "example_device_plugin.example_flight_link",
+  "peer_id": "tempest.engine",
   "node_name": "FLIGHT_COMPUTER",
   "receive_endpoint": "tcp://127.0.0.1:17600",
   "send_endpoint": "tcp://127.0.0.1:17601",
@@ -13,5 +13,6 @@
   "argus": {
     "enabled": true
   },
-  "remember": true
+  "remember": true,
+  "transport_id": "example_device_plugin.example_flight_link"
 }

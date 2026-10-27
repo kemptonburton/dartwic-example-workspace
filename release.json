@@ -1,10 +1,10 @@
 {
-  "version": "2.0.5",
+  "version": "2.1.0",
   "plugin": "example_device_plugin",
-  "plugin_version": "2.0.4",
+  "plugin_version": "2.1.0",
   "workspace_directory": "example-workspace",
   "platform": "windows-x64",
-  "storage_host": "DARTWIC Engine and Interface 2.0.0 or newer.",
-  "minEngineVersion": "2.0.0",
+  "storage_host": "DARTWIC Engine 2.1.0 and Interface 2.0.0 or newer.",
+  "minEngineVersion": "2.1.0",
   "minInterfaceVersion": "2.0.0"
 }

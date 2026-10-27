@@ -6,7 +6,7 @@ The actual workspace is `example-workspace/`. The adjacent `walkthroughs/`, `too
 
 ## Start
 
-1. Use DARTWIC Engine and Interface 2.0.0 or newer and install [example plugin 2.0.4](https://github.com/kemptonburton/dartwic-example-plugin/releases/tag/v2.0.4). The workspace release is source-only; its automatic source archive does not contain plugin binaries. Your license must permit the example tasks.
+1. Use DARTWIC Engine 2.1.0 and Interface 2.0.0 or newer and install matching example plugin 2.1.0. The workspace release is source-only; its automatic source archive does not contain plugin binaries. Your license must permit the example tasks.
 2. Clone this repository into `workspaces/dartwic-example-workspace`, or extract GitHub's source ZIP under `workspaces/`. Keep `example-workspace/`, `tools/`, `flight-computer/`, and `walkthroughs/` together.
 3. In the Interface, choose **Add workspace** and select `workspaces/dartwic-example-workspace/example-workspace`. Select the actual `example-workspace/` folder manually; its containing repository is not an authored workspace. Do not select `default/`. Install the required plugins and start the local Engine from the Interface. The command examples below use base port 7400; select that port for the exercise or pass your actual port to the client and native-peer commands. Engine installation, instance configuration, credentials, and runtime storage are managed by DARTWIC, not by this repository's scripts.
 4. Open **Schematics -> Engine Test Fire**. Confirm CONNECTED and SENSOR VALID are 1 and the sample counter advances. The driver and Lua controllers start; RUN TEST stays off. **Rocket Flight** is a separate schematic for the flight peer.
@@ -37,7 +37,7 @@ The workspace's portable settings live in `settings.json`; project overrides bel
 
 The flight scripts keep only a process record and flight stdout/stderr logs under `%LOCALAPPDATA%/DARTWIC Flight Demo/<repository-hash>/`. The hash keeps separate clones independent. Engine binaries and shared plugins remain in your Engine installation; this repository does not ship or create an `engine/` directory.
 
-Use Engine and Interface 2.0.0 or newer for layered settings and shared asset APIs. See the plugin's [storage and settings guide](https://github.com/kemptonburton/dartwic-example-plugin/blob/main/docs/storage-and-settings.md) for plugin settings, module settings, and Model3D asset examples.
+Use Engine 2.1.0 and Interface 2.0.0 or newer for layered settings and shared asset APIs. See the plugin's [storage and settings guide](https://github.com/kemptonburton/dartwic-example-plugin/blob/main/docs/storage-and-settings.md) for plugin settings, module settings, and Model3D asset examples.
 
 The example plugin's settings panel saves decimal precision, unit display, and a resource title at project scope. Open **Example Telemetry** to see those settings applied to live values from the device binding tables. The workspace supplies portable defaults; these display settings do not change the simulated hardware.
 
