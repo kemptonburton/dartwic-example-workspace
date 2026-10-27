@@ -1,3 +1,10 @@
+# Example Workspace 2.1.0
+
+- Use PeerClient and shared EngineProtocol APIs for the flight application; application storage is optional.
+- Keep the standard DARTWIC peer identity and select the custom link with transport_id.
+- Pin Example Plugin 2.1.0 source; require Engine 2.1.0. Interface minimum remains 2.0.0.
+- Prepared locally; not published.
+
 # Example Workspace 2.0.3
 
 - Pinned Example Plugin 2.0.2 with the debounced, project-scoped formatting settings demo.

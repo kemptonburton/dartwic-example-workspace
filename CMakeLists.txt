@@ -15,7 +15,7 @@ if(NOT DARTWIC_EXAMPLE_PLUGIN_SOURCE)
         include(FetchContent)
         FetchContent_Declare(example_plugin
             GIT_REPOSITORY https://github.com/kemptonburton/dartwic-example-plugin.git
-            GIT_TAG 14df7f7881631e7909e6a405fe76ea77e30ed52f)
+            GIT_TAG 30eba35438b2e327d405335459b556add3baf08a)
         FetchContent_GetProperties(example_plugin)
         if(NOT example_plugin_POPULATED)
             FetchContent_Populate(example_plugin)
