@@ -1,7 +1,7 @@
 params = yaml "./valves.yaml#valves"
 
 template(params) loop rocket_valve_{params.valve} 10 disable_warnings:
-    once when true:
+    once:
         state.last_value = null
 
     value = |rocket_sim_{params.valve}_request|

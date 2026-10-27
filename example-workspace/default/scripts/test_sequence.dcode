@@ -106,8 +106,7 @@ task_sequence engine_ignition:
         command |rocket_sim_igniter_command| = 0
 
 task_timeline rocket_test 20:
-    clock:
-        start: T-2m
+    clock_start: T-2m
 
     at T-2m (setup):
         hold_at: next_bucket
