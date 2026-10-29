@@ -5,7 +5,7 @@ event rocket_engine_abort:
     resolution: "Stop the test, clear the injected fault, and verify the outputs before starting a new run."
     system: "MOCK ROCKET"
     subsystem: "AUTOMATION"
-    separation_seconds: 0
+    firing_timeout_seconds: 0
     channels: |rocket_sim_temperature_voted|, >1500; |rocket_sim_sensor_valid|
     trigger:
         if |rocket_sim_temperature_voted| > 1500 or |rocket_sim_sensor_valid| != 1:

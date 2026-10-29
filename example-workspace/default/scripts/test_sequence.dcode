@@ -29,7 +29,6 @@ task_state_machine engine_tank_fill:
                 "Enter the target fill percentage for this engine test.",
                 ["rocket_sim_run_fill_target"],
                 "Enter a percentage from 1 to 100.",
-                0,
                 0
             )
             if fill_target <= 0 or fill_target > 100:
@@ -116,7 +115,6 @@ task_timeline rocket_test 20:
                 "Name the data frame for this engine test.",
                 [],
                 "Enter a test name.",
-                0,
                 0
             )
             test_data_frame = startDataFrame(test_name, {"channels": [
