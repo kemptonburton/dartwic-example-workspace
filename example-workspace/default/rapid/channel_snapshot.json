@@ -2335,150 +2335,6 @@
       "storage": "fixed"
     },
     {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "2079850804100",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "34104",
-        "version": 2
-      },
-      "key": "rocket_sim_fault_disconnect",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "2079850804100",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "34104",
-        "version": 2
-      },
-      "key": "rocket_sim_fault_missing_sensor",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "2079850804100",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "34104",
-        "version": 2
-      },
-      "key": "rocket_sim_fault_overtemperature",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "2079850804100",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "34104",
-        "version": 2
-      },
-      "key": "rocket_sim_fault_sensor_bias",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
       "created_by": "loop:rocket_valve_fill|script:valves/double_acting_valves.dcode|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
@@ -2504,24 +2360,6 @@
         "value": 0.0
       },
       "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "key": "rocket_sim_fill_close_coil_state",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
     },
     {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
@@ -2659,24 +2497,6 @@
       "storage": "fixed"
     },
     {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "key": "rocket_sim_fuel_close_coil_state",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
@@ -2711,24 +2531,6 @@
         "value": 0.0
       },
       "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "key": "rocket_sim_fuel_open_coil_state",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
     },
     {
       "calculation_scripts": [],
@@ -2821,24 +2623,6 @@
       "storage": "fixed"
     },
     {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "key": "rocket_sim_oxidizer_close_coil_state",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
-    },
-    {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
       "created_by_inferred": false,
       "creation_provenance": {
@@ -2873,24 +2657,6 @@
         "value": 0.0
       },
       "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "key": "rocket_sim_oxidizer_open_coil_state",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
     },
     {
       "calculation_scripts": [],
@@ -3011,42 +2777,6 @@
         "version": 1
       },
       "key": "rocket_sim_pressure_current_ma",
-      "legacy_creation_enrichment": "",
-      "metadata_only": true,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "fixed"
-    },
-    {
-      "created_by": "task:example_device_read|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
-      "created_by_inferred": false,
-      "creation_provenance": {
-        "ancestry": [
-          {
-            "id": "example_device_1",
-            "kind": "module"
-          },
-          {
-            "id": "example_device_plugin",
-            "kind": "plugin"
-          }
-        ],
-        "creator": {
-          "id": "example_device_read",
-          "kind": "task"
-        },
-        "creator_instance": "2079850804100",
-        "dependencies": [],
-        "initiator": [],
-        "node": "MOCK_ROCKET_GROUND",
-        "quality": "captured",
-        "script": "",
-        "thread": "34104",
-        "version": 2
-      },
-      "key": "rocket_sim_run_fill",
       "legacy_creation_enrichment": "",
       "metadata_only": true,
       "startup_value": {
@@ -3382,24 +3112,6 @@
         "value": 0.0
       },
       "storage": "fixed"
-    },
-    {
-      "calculation_scripts": [],
-      "control_owner": "",
-      "control_policy": "free",
-      "key": "rocket_sim_vent_close_coil_state",
-      "manual_restore_policy": "automatic",
-      "override_restore_policy": "free",
-      "record_mode": "on_value_change",
-      "remote_mirror": false,
-      "stale_timeout": 0.0,
-      "startup_value": {
-        "enabled": false,
-        "value": 0.0
-      },
-      "storage": "dynamic",
-      "units": "",
-      "value_options": []
     },
     {
       "created_by": "task:example_device_write|module:example_device_1|plugin:example_device_plugin|node:MOCK_ROCKET_GROUND",
