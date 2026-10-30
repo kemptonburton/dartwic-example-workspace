@@ -2,5 +2,5 @@
   "schema_version": 1,
   "node_name": "MOCK_ROCKET_GROUND",
   "min_engine_version": "2.1.0",
-  "min_interface_version": "2.0.0"
+  "min_interface_version": "2.1.0"
 }
