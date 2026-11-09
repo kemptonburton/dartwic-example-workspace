@@ -1277,7 +1277,7 @@
                         "running_channel": "rocket_ox_tank_sim_running",
                         "hold_channel": "rocket_ox_tank_sim_hold",
                         "target_frequency_channel": "rocket_ox_tank_sim_target_frequency",
-                        "actual_frequency_channel": "rocket_ox_tank_sim_actual_frequency"
+                        "actual_frequency_channel": "rocket_ox_tank_sim_average_frequency"
                     },
                     "show_task_name": true,
                     "general_settings": {
