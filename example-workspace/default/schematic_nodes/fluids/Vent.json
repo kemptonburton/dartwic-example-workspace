@@ -1,16 +1,25 @@
 {
-    "data": {
-        "asset_name": "Drawing.svg",
-        "asset_path": "assets/media/f8c1652803d7df924ccc5168e89fd2a6659e8c770a4243e9e19556cfe5d69dff.media.json",
-        "crop": {
-            "height": 26.56,
-            "width": 28.56,
-            "x": -0.280030517578125,
-            "y": -0.28
-        },
-        "fit": "contain"
+  "data": {
+    "asset_name": "Drawing.svg",
+    "asset_path": "assets/media/f8c1652803d7df924ccc5168e89fd2a6659e8c770a4243e9e19556cfe5d69dff.media.json",
+    "crop": {
+      "height": 26.56,
+      "width": 28.56,
+      "x": -0.280030517578125,
+      "y": -0.28
     },
-    "height": 240,
-    "type": "media",
-    "width": 240
+    "fit": "contain",
+    "general_settings": {
+      "content": "artwork",
+      "commandable": false,
+      "readout": {
+        "type": "hidden",
+        "source": "hidden"
+      }
+    },
+    "preset_name": "Media"
+  },
+  "height": 240,
+  "type": "general",
+  "width": 240
 }

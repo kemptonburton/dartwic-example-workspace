@@ -3,7 +3,7 @@
     "nodes": [
       {
         "id": "display-FLIGHT_COMPUTER:flight_phase",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 30,
           "y": 210
@@ -36,13 +36,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|FLIGHT_COMPUTER:flight_phase|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|FLIGHT_COMPUTER:flight_phase|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "FLIGHT PHASE",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "FLIGHT PHASE"
+              },
+              "units": "",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-FLIGHT_COMPUTER:altitude_m",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 265,
           "y": 210
@@ -75,13 +109,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|FLIGHT_COMPUTER:altitude_m|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|FLIGHT_COMPUTER:altitude_m|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "ALTITUDE",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "ALTITUDE"
+              },
+              "units": "m",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": "m"
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-FLIGHT_COMPUTER:velocity_mps",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 500,
           "y": 210
@@ -114,13 +182,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|FLIGHT_COMPUTER:velocity_mps|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|FLIGHT_COMPUTER:velocity_mps|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "VELOCITY",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "VELOCITY"
+              },
+              "units": "m/s",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": "m/s"
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-FLIGHT_COMPUTER:battery_voltage",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 30,
           "y": 310
@@ -153,13 +255,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|FLIGHT_COMPUTER:battery_voltage|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|FLIGHT_COMPUTER:battery_voltage|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "BATTERY",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "BATTERY"
+              },
+              "units": "V",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": "V"
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-FLIGHT_COMPUTER:sample_counter",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 265,
           "y": 310
@@ -192,13 +328,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|FLIGHT_COMPUTER:sample_counter|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|FLIGHT_COMPUTER:sample_counter|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "FLIGHT SAMPLES",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "FLIGHT SAMPLES"
+              },
+              "units": "",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-FLIGHT_COMPUTER:ground_qd_released",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 500,
           "y": 310
@@ -231,13 +401,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|FLIGHT_COMPUTER:ground_qd_released|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|FLIGHT_COMPUTER:ground_qd_released|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "PEER QD READBACK",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "PEER QD READBACK"
+              },
+              "units": "",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-rocket_qd_released",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 30,
           "y": 410
@@ -270,13 +474,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|rocket_qd_released|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|rocket_qd_released|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "GROUND QD RELEASED",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "GROUND QD RELEASED"
+              },
+              "units": "",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-rocket_launch_acknowledged",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 265,
           "y": 410
@@ -309,13 +547,47 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|rocket_launch_acknowledged|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|rocket_launch_acknowledged|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "LAUNCH ACK",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "LAUNCH ACK"
+              },
+              "units": "",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
         "id": "display-rocket_land_acknowledged",
-        "type": "channel_display",
+        "type": "general",
         "position": {
           "x": 500,
           "y": 410
@@ -348,8 +620,42 @@
           "general_settings": {
             "top_label": "",
             "bottom_label": "",
-            "general_alarming_tags": []
-          }
+            "general_alarming_tags": [],
+            "content": "readout",
+            "body_style": "card",
+            "body_shape": "rectangle",
+            "glyph": "",
+            "commandable": false,
+            "readout": {
+              "source": "input",
+              "conditional": {
+                "ifChecks": [],
+                "ifConfigurableInput": {},
+                "elseConfigurableInput": {
+                  "type": "tag_value",
+                  "value": "|rocket_land_acknowledged|"
+                }
+              },
+              "input": {
+                "type": "tag_value",
+                "value": "|rocket_land_acknowledged|"
+              },
+              "type": "value",
+              "show_title": true,
+              "title": "LAND ACK",
+              "titleInput": {
+                "type": "discrete_input",
+                "value": "LAND ACK"
+              },
+              "units": "",
+              "unitsInput": {
+                "type": "discrete_input",
+                "value": ""
+              },
+              "show_sparkline": true
+            }
+          },
+          "preset_name": "Readout"
         }
       },
       {
